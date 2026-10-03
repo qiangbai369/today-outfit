@@ -1,9 +1,9 @@
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
 const C=require('../catalog-v2.js');
-test('all fifty designs expose thirty real fitted garments per selected character',()=>{
- assert.equal(C.ITEMS.length,50);
+test('legacy designs and the approved capsule expose real fitted garments per character',()=>{
+ assert.equal(C.ITEMS.length,83);
  for(const character of ['sweet','cool','literary']){
-  const list=C.itemsFor(character);assert.equal(list.length,30);assert.equal(new Set(list.map(i=>i.id)).size,30);
+  const list=C.itemsFor(character);assert.equal(list.length,character==='cool'?35:30);assert.equal(new Set(list.map(i=>i.id)).size,list.length);
   for(const item of list){const fit=C.fit(character,item.id);assert.equal(fit.character,character);assert.equal(fit.itemId,item.id);assert.equal(fit.version,'native-2');assert.ok(fs.existsSync(path.resolve(__dirname,'..',fit.file)),character+':'+item.id);}
  }
  assert.throws(()=>C.fit('sweet','cool-outer-01'));

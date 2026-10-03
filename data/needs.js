@@ -26,6 +26,6 @@ function normalizeNeed(input){
  if(activity.trip&&(!Number.isInteger(days)||days<activity.range[0]||days>activity.range[1]))errors.push(activity.label+'请选'+activity.range.join('—')+'天');
  return {activity:activity.id,detail:d.id,season:season.id,warmth,walking,style:STYLES.some(x=>x.id===o.style)?o.style:'character',days,destination:activity.trip?d.id:null,formal:d.formal,errors};
 }
-function summary(input){const n=normalizeNeed(input),a=ACTIVITIES.find(x=>x.id===n.activity),d=a.details.find(x=>x.id===n.detail),w=WARMTH.find(x=>x.id===n.warmth);return [a.label,d.label,w.label,n.walking==='many'?'走路较多':null,a.trip?n.days+'天':null].filter(Boolean).join(' · ');}
+function summary(input){const n=normalizeNeed(input),a=ACTIVITIES.find(x=>x.id===n.activity),d=a.details.find(x=>x.id===n.detail),w=WARMTH.find(x=>x.id===n.warmth);return [a.label,SEASONS.find(s=>s.id===n.season).label+'季',d.label,w.label,n.walking==='many'?'走路较多':null,a.trip?n.days+'天':null].filter(Boolean).join(' · ');}
 const api={ACTIVITIES,SEASONS,WARMTH,STYLES,normalizeNeed,summary};if(typeof module!=='undefined')module.exports=api;else root.PlannerNeeds=api;
 })(typeof globalThis!=='undefined'?globalThis:this);

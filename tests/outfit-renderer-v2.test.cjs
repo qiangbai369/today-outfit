@@ -1,6 +1,6 @@
 const test=require('node:test'),assert=require('node:assert/strict'),path=require('node:path');
 const {createCanvas,loadImage}=require('@napi-rs/canvas'),R=require('../renderer-v2.js');
-const root=path.resolve(__dirname,'..');
+const root=path.resolve(__dirname,'..'),legacyCool={top:'cool-top-01',bottom:'cool-bottom-02',shoes:'cool-shoes-02',dress:null,outer:null,bag:null,legwear:null};
 const renderer=R.createRenderer({createCanvas,loadImage:f=>loadImage(path.join(root,f))});
 test('changing a fitted top keeps the exact approved head and chosen trousers and shoes',async()=>{
  const outfit={top:'shared-top-01',bottom:'sweet-bottom-02',dress:null,shoes:'sweet-shoes-01',outer:null,bag:null,legwear:null};
@@ -37,13 +37,13 @@ test('pinafore inner changes retain the navy bib and remove blue horizontal frag
  assert.ok(q[0]>=q[2]-5,'white shirt sleeve must not retain an old blue band');
 });
 test('cool tights cover both complete legs without importing their source shorts',async()=>{
- const a=await renderer.compose({character:'cool',outfit:{...require('../catalog-v2').defaultOutfit('cool'),legwear:'shared-legwear-01'}}),x=a.figure.getContext('2d');
+ const a=await renderer.compose({character:'cool',outfit:{...legacyCool,legwear:'shared-legwear-01'}}),x=a.figure.getContext('2d');
  const leg=x.getImageData(375,1200,1,1).data,hem=x.getImageData(410,955,1,1).data;
  assert.ok(Math.max(...leg.slice(0,3))<150&&leg[3]>200,'left leg must not retain a stripe of bare skin');
  assert.ok(hem[2]>hem[0],'selected blue denim shorts must remain blue');
 });
 test('a cool untucked tee retains its curved native hem below the waist',async()=>{
- const a=await renderer.compose({character:'cool',outfit:require('../catalog-v2').defaultOutfit('cool')}),p=a.figure.getContext('2d').getImageData(386,790,1,1).data;
+ const a=await renderer.compose({character:'cool',outfit:legacyCool}),p=a.figure.getContext('2d').getImageData(386,790,1,1).data;
  assert.ok(p[0]>p[2]&&p[1]>p[2]&&p[0]<160,'olive native hem must cover the former black master hem');
 });
 test('blinking changes only the eyes while preserving every worn garment',async()=>{
@@ -52,7 +52,7 @@ test('blinking changes only the eyes while preserving every worn garment',async(
  assert.deepEqual(pixels(a,470,1066),pixels(b,470,1066));assert.notDeepEqual(pixels(a,250,90),pixels(b,250,90));
 });
 test('boots worn under long trousers cannot paint shaft rectangles over the trouser legs',async()=>{
- const C=require('../catalog-v2'),outfit={...C.defaultOutfit('cool'),top:'shared-top-04',bottom:'shared-bottom-01'};
+ const C=require('../catalog-v2'),outfit={...legacyCool,top:'shared-top-04',bottom:'shared-bottom-01'};
  const a=await renderer.compose({character:'cool',outfit:{...outfit,shoes:'shared-shoes-01'}}),b=await renderer.compose({character:'cool',outfit:{...outfit,shoes:'shared-shoes-04'}});
  assert.deepEqual(Buffer.from(a.figure.getContext('2d').getImageData(350,1285,390,85).data),Buffer.from(b.figure.getContext('2d').getImageData(350,1285,390,85).data));
 });
@@ -65,7 +65,7 @@ test('light cardigan fabric highlights stay intact rather than becoming transpar
  assert.ok(p[0]>190&&Math.max(...p.slice(0,3))-Math.min(...p.slice(0,3))<15,'native grey highlight must remain grey');
 });
 test('native wide trouser hems are not clipped by the narrow ankle repair region',async()=>{
- const C=require('../catalog-v2'),a=await renderer.compose({character:'cool',outfit:{...C.defaultOutfit('cool'),bottom:'cool-bottom-01',shoes:'shared-shoes-04'}}),source=await loadImage(path.join(root,C.fit('cool','cool-bottom-01').file)),c=createCanvas(1024,1536),x=c.getContext('2d');x.drawImage(source,0,0);
+ const C=require('../catalog-v2'),a=await renderer.compose({character:'cool',outfit:{...legacyCool,bottom:'cool-bottom-01',shoes:'shared-shoes-04'}}),source=await loadImage(path.join(root,C.fit('cool','cool-bottom-01').file)),c=createCanvas(1024,1536),x=c.getContext('2d');x.drawImage(source,0,0);
  const native=x.getImageData(340,1378,1,1).data,actual=a.figure.getContext('2d').getImageData(340,1378,1,1).data;assert.ok(native[3]>200);assert.ok(actual[3]>200,'outer trouser seam must survive the shoe change');
 });
 test('approved hair overlay cannot carry original sleeve or skin fragments over a new outer sleeve',async()=>{

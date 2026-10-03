@@ -13,6 +13,12 @@ from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 ROOT = Path(__file__).resolve().parent
 
 
+class StudioServer(ThreadingHTTPServer):
+    # Browsers fetch scripts, garment layers and thumbnails concurrently.
+    # The default queue of five resets bursts on the local macOS server.
+    request_queue_size = 64
+
+
 class StudioHandler(SimpleHTTPRequestHandler):
     range_remaining = None
 
@@ -82,15 +88,16 @@ def main():
     args = parser.parse_args()
     handler = functools.partial(StudioHandler, directory=str(ROOT))
     try:
-        server = ThreadingHTTPServer(('127.0.0.1', args.port), handler)
+        server = StudioServer(('127.0.0.1', args.port), handler)
     except OSError as error:
         print(f'Cannot start port {args.port}: {error}')
         print('If the studio is already running, open the address below. Otherwise choose another --port.')
         print(f'http://127.0.0.1:{args.port}')
         return 1
     server.daemon_threads = True
-    url = f'http://127.0.0.1:{args.port}'
-    print(f'Today Outfit: {url}', flush=True)
+    actual_port = server.server_address[1]
+    url = f'http://127.0.0.1:{actual_port}'
+    print(f'Today Outfit: {url} (port {actual_port})', flush=True)
     print('Keep this window open. Press Ctrl+C to stop the studio.', flush=True)
     if args.open:
         threading.Timer(0.3, lambda: webbrowser.open(url)).start()

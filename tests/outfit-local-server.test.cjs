@@ -1,0 +1,7 @@
+const test=require('node:test'),assert=require('node:assert/strict'),{spawn}=require('node:child_process'),net=require('node:net'),path=require('node:path');
+const root=path.resolve(__dirname,'..');
+test('project preview server advertises its real port and serves a burst without resetting runtime files',async()=>{
+ const server=spawn('python3',['-u','serve.py','--port','0'],{cwd:root});server.stderr.resume();try{const port=await new Promise((ok,no)=>{const timer=setTimeout(()=>no(Error('No preview server address')),5000);server.stdout.on('data',b=>{const m=String(b).match(/http:\/\/127\.0\.0\.1:(\d+)/);if(m){clearTimeout(timer);ok(Number(m[1]));}});server.on('error',no);});assert.ok(port>0,'the published preview address must contain the actual allocated port');
+ const rows=await Promise.all(Array.from({length:48},()=>new Promise(ok=>{const socket=net.createConnection({port,host:'127.0.0.1'});let response='',error;socket.on('connect',()=>socket.end('GET /model-v2.js HTTP/1.0\r\nHost: localhost\r\n\r\n'));socket.on('data',b=>response+=b);socket.on('error',e=>error=e.code);socket.setTimeout(5000,()=>{error='timeout';socket.destroy();});socket.on('close',()=>ok({error,complete:response.includes('HTTP/1.0 200')&&response.includes('defaultOutfit')}));})));assert.equal(rows.filter(r=>r.error||!r.complete).length,0,'every requested runtime file must finish rather than strand initialization');
+ }finally{server.kill();}
+});

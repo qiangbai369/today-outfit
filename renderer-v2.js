@@ -8,7 +8,7 @@
  };
  function createRenderer(options={}){
   const make=options.createCanvas||((w,h)=>Object.assign(document.createElement('canvas'),{width:w,height:h}));
-  const read=options.loadImage||(f=>new Promise((resolve,reject)=>{const i=new Image();i.onload=()=>resolve(i);i.onerror=()=>reject(Error('这件衣服暂时未加载，请重试'));i.src=f;}));
+  const read=options.loadImage||(f=>new Promise((resolve,reject)=>{const i=new Image();i.onload=()=>resolve(i);i.onerror=()=>{const error=Error('这件衣服暂时未加载，请重试');error.asset=f;console.warn('Outfit image unavailable:',f);reject(error);};i.src=f;}));
   const cache=new Map();function image(file){if(cache.has(file)){const p=cache.get(file);cache.delete(file);cache.set(file,p);return p;}const p=Promise.resolve().then(()=>read(file)).catch(e=>{cache.delete(file);throw e;});cache.set(file,p);while(cache.size>12)cache.delete(cache.keys().next().value);return p;}
   function poly(x,points){x.beginPath();points.forEach((p,i)=>i?x.lineTo(...p):x.moveTo(...p));x.closePath();}
   const rect=(x,y,w,h)=>[[x,y],[x+w,y],[x+w,y+h],[x,y+h]];
@@ -28,11 +28,40 @@
    if(item.id==='shared-bag-01'||item.id==='sweet-bag-01'){const hand={sweet:[344,940],cool:[278,1008],literary:[304,1010]}[id],h=item.id==='sweet-bag-01'?270:330,scale=h/(b-t);x.drawImage(source,l,t,r-l+1,b-t+1,hand[0]-(r-l)*scale*.52,hand[1]-65,(r-l+1)*scale,(b-t+1)*scale);}
    else{const shoulder={sweet:[382,525],cool:[354,495],literary:[339,530]}[id];const scale=.91;x.drawImage(source,(shoulder[0]-(sx/n)*scale),(shoulder[1]-t*scale),W*scale,H*scale);}return c;
   }
+  const boundsCache=new WeakMap();
+  function sprite(ctx,source,item){
+   let box=item.registration.source||boundsCache.get(source);
+   if(!box){const c=make(source.width,source.height),x=c.getContext('2d');x.drawImage(source,0,0);const d=x.getImageData(0,0,c.width,c.height).data;let l=c.width,t=c.height,r=-1,b=-1;for(let y=0;y<c.height;y++)for(let p=0;p<c.width;p++)if(d[(y*c.width+p)*4+3]>16){l=Math.min(l,p);t=Math.min(t,y);r=Math.max(r,p);b=Math.max(b,y);}if(r<l)throw Error('服装素材为空，请重试');box=[l,t,r-l+1,b-t+1];boundsCache.set(source,box);}
+   ctx.drawImage(source,...box,...item.registration.target);
+  }
+  async function composeCapsule(character,outfit){
+   const g=geometry[character],ids=C.SLOTS.filter(s=>outfit[s]),files=[C.capsuleBody,`assets/characters/${character}/original.png`,...ids.map(s=>C.fit(character,outfit[s]).file)];
+   const [loaded,blink,blinkHalf]=await Promise.all([Promise.all(files.map(image)),image(`assets/v2/${character}/blink-detail.png`).catch(()=>null),image(`assets/v2/${character}/blink-half.png`).catch(()=>null)]),body=loaded[0],approved=loaded[1],sources=Object.fromEntries(ids.map((s,i)=>[s,loaded[i+2]]));
+   const figure=make(W,H),ctx=figure.getContext('2d');ctx.drawImage(body,0,0);ctx.clearRect(0,g.waist,W,H-g.waist);ctx.drawImage(patch(body,[g.left,g.right]),0,0);
+   // Keep the approved face and blend its neck into the common underlayer.
+   ctx.clearRect(0,0,W,g.head);
+   const neck=make(W,H),nx=neck.getContext('2d');nx.drawImage(approved,0,0);nx.globalCompositeOperation='destination-in';const fade=nx.createLinearGradient(0,g.head,0,g.head+45);fade.addColorStop(0,'#000');fade.addColorStop(1,'#0000');nx.fillStyle=fade;nx.fillRect(0,g.head,W,45);nx.clearRect(0,0,W,g.head);nx.clearRect(0,g.head+45,W,H-g.head-45);ctx.drawImage(neck,0,0);
+   for(const slot of ['top','shoes','bottom','outer','bag']){
+    const item=C.item(outfit[slot]);if(!item)continue;
+    if(item.nativeLayer)sprite(ctx,sources[slot],item);
+    else if(slot==='bag')ctx.drawImage(bag(sources.bag,character,item),0,0);
+    else if(slot==='outer')ctx.drawImage(outer(sources.outer,character,item),0,0);
+    else if(slot==='top'){replace(ctx,sources.top,rect(0,g.head,W,g.waist-g.head));if(item.length==='long')for(const p of [g.left,g.right])replace(ctx,sources.top,p);}
+    else if(slot==='bottom')replace(ctx,sources.bottom,rect(0,g.waist,W,g.feet+45-g.waist));
+    else if(slot==='shoes')foot(ctx,sources.shoes,g,false);
+   }
+   // The original tank straps start below the bob; stop before those pixels.
+   ctx.drawImage(patch(approved,[rect(0,g.head,W,49)],(r,b,c,x)=>(x<427||x>626)&&r<195&&r>b*1.13&&b>c*1.06),0,0);
+   if(outfit.bag)ctx.drawImage(patch(body,[[[252,970],[318,970],[318,1064],[252,1064]]],(r,b,c)=>r>150&&r>b*1.14&&b>c*1.1),0,0);
+   ctx.drawImage(approved,0,0,W,g.head,0,0,W,g.head);
+   return {figure,blink,blinkHalf,character,outfit:{...outfit}};
+  }
   async function compose({character,outfit}){
    const v=C.visualValidate(character,outfit);if(!v.valid)throw Error(v.reasons.join('；'));const g=geometry[character];
+   if(character==='cool'&&C.SLOTS.some(s=>C.item(outfit[s])?.nativeLayer))return composeCapsule(character,outfit);
    const ids=C.SLOTS.filter(s=>outfit[s]),files=[`assets/v2/${character}/master.webp`,`assets/characters/${character}/original.png`,`assets/v2/${character}/shared-bottom-04.webp`,...ids.map(s=>C.fit(character,outfit[s]).file)];
    // Load all layers before creating a frame; no half-dressed commits.
-   const [loaded,blink]=await Promise.all([Promise.all(files.map(image)),image(`assets/v2/${character}/blink.png`).catch(()=>null)]),master=loaded[0],approved=loaded[1],bare=loaded[2],sources=Object.fromEntries(ids.map((s,i)=>[s,loaded[i+3]]));
+   const [loaded,blink,blinkHalf]=await Promise.all([Promise.all(files.map(image)),image(`assets/v2/${character}/blink-detail.png`).catch(()=>null),image(`assets/v2/${character}/blink-half.png`).catch(()=>null)]),master=loaded[0],approved=loaded[1],bare=loaded[2],sources=Object.fromEntries(ids.map((s,i)=>[s,loaded[i+3]]));
    const figure=make(W,H),ctx=figure.getContext('2d');ctx.drawImage(master,0,0);
    const lower=C.item(outfit.bottom),dress=C.item(outfit.dress),long=lower?.length==='long';
    if(dress){replace(ctx,sources.dress,rect(0,g.head,W,g.feet+45-g.head));if(dress.requiresTop){replace(ctx,sources.top,rect(0,g.head,W,g.waist-g.head));for(const points of [g.left,g.right])replace(ctx,sources.top,points);ctx.drawImage(patch(sources.dress,[rect(350,g.head,365,g.waist-g.head)],(r,b,c)=>r<110&&c>r*1.06),0,0);}}
@@ -66,15 +95,34 @@
    const hairSource=character==='sweet'?(sources.outer||sources.top||sources.dress):approved;
    ctx.drawImage(hair(hairSource,character),0,0);
    ctx.clearRect(0,0,W,g.head);ctx.drawImage(approved,0,0,W,g.head,0,0,W,g.head);
-   return {figure,blink,character,outfit:{...outfit}};
+   return {figure,blink,blinkHalf,character,outfit:{...outfit}};
   }
   async function ensureBlink(prepared){
-   if(prepared.blink)return prepared.blink;
-   try{prepared.blink=await image(`assets/v2/${prepared.character}/blink.png`);return prepared.blink;}
-   catch(e){throw Error('眨眼眼部素材加载失败，点击眨眼可重试');}
+   try{const jobs=[];if(!prepared.blink)jobs.push(image(`assets/v2/${prepared.character}/blink-detail.png`).then(i=>prepared.blink=i));if(!prepared.blinkHalf)jobs.push(image(`assets/v2/${prepared.character}/blink-half.png`).then(i=>prepared.blinkHalf=i));await Promise.all(jobs);return prepared.blink;}
+   catch(e){throw Error('眨眼素材加载失败，点击眨眼可重试');}
+  }
+
+  const litFrames=new WeakMap(),faces={sweet:{center:[500,350],eyes:[[438,293],[562,293]],nose:[501,330],chin:444},cool:{center:[517,342],eyes:[[440,285],[570,275]],nose:[516,330],chin:430},literary:{center:[493,385],eyes:[[431,320],[556,306]],nose:[493,365],chin:461}};
+  function illuminate(prepared,light='neutral'){
+   if(light!=='warm'&&light!=='cool')return prepared;
+   const old=litFrames.get(prepared);if(old?.light===light)return old;
+   const c=make(W,H),x=c.getContext('2d'),face=faces[prepared.character],warm=light==='warm',color=warm?'255,230,199':'205,228,247';
+   // Bake the existing color tone and soft local light into one displayed frame.
+   // This is a restrained 2D treatment; the approved outline never changes.
+   x.filter=warm?'sepia(.10) saturate(.96)':'saturate(.91)';x.drawImage(prepared.figure,0,0);x.filter='none';x.globalCompositeOperation='source-atop';
+   function glow(cx,cy,rx,ry,rgb,opacity){x.save();x.translate(cx,cy);x.scale(rx,ry);const g=x.createRadialGradient(0,0,0,0,0,1);g.addColorStop(0,`rgba(${rgb},${opacity})`);g.addColorStop(1,`rgba(${rgb},0)`);x.fillStyle=g;x.fillRect(-1,-1,2,2);x.restore();}
+   glow(warm?340:650,420,490,900,color,.075);
+   glow(warm?710:295,660,310,730,'40,35,42',.035);
+   glow(face.center[0]+(warm?-65:65),face.center[1]-30,90,135,color,.045);
+   glow(face.center[0]+(warm?85:-85),face.center[1]+20,95,105,'57,37,35',.035);
+   glow(face.nose[0]-5,face.nose[1]-12,15,32,'255,242,225',.055);
+   glow(face.nose[0],face.nose[1]+17,26,8,'78,45,40',.035);
+   for(const [cx,cy]of face.eyes)glow(cx,cy+17,49,13,'83,46,43',.024);
+   glow(face.center[0],face.chin+12,72,14,'63,41,39',.045);
+   x.globalCompositeOperation='source-over';const result={...prepared,figure:c,light};litFrames.set(prepared,result);return result;
   }
   function draw(canvas,prepared,{blink=false}={}){const x=canvas.getContext('2d'),s=Math.min(canvas.width/W,canvas.height/H),dx=(canvas.width-W*s)/2,dy=(canvas.height-H*s)/2;x.clearRect(0,0,canvas.width,canvas.height);x.drawImage(prepared.figure,dx,dy,W*s,H*s);if(blink&&prepared.blink)x.drawImage(prepared.blink,dx,dy,W*s,H*s);}
-  return {compose,ensureBlink,draw,clear:()=>cache.clear()};
+  return {compose,ensureBlink,illuminate,draw,clear:()=>cache.clear()};
  }
  return {W,H,geometry,createRenderer};
 });
