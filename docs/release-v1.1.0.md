@@ -11,3 +11,7 @@
 发布前验证与上线记录保存在本地 output/release-v1.1.0/，不进入仓库；原始制作图与完整提示词在 source-art/，仅本地。历史检查见 docs/guidance-face-refinement-2026-10-03.md；正式v1.0.0基线说明仍为 docs/release-v1.md。
 
 保存方式：发布提交与 v1.1.0 Git 标签，保留完整源码和运行素材；本地独立压缩包及Git备份在 /Users/zen/Documents/ChatGPT/制作/today-outfit-backups/ 。不把制作期照片、日志或凭据上传。
+
+上线：运行版本提交 511b3467b46656ca9bd67690b32e862ee1a8364c，GitHub Pages 状态 built；后续发布文档提交不改运行内容。本轮本地69/69回归通过；公开站三人换装/眨眼/标签/保存重开、推荐、3日旅行/去重行李、照片下载、刷新收藏、桌面及390手机画幅通过，无脚本错误或页面资源失败。公开资源内容核对见本地 public-integrity.json；初次批量请求超时日志保留，不当作首次通过。
+
+备份文件：today-outfit-v1.1.0-20261003.tar.gz（源码及运行素材）、today-outfit-v1.1.0-20261003.bundle（完整Git历史）及 checksums.json，均在上述独立备份目录。真实制作原件仍仅在项目 source-art/，未上传。
