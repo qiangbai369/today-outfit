@@ -1,0 +1,18 @@
+{
+  "name": "today-outfit",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Practical outfit inspiration and travel packing planner",
+  "scripts": {
+    "check": "node tools/check-site.cjs",
+    "test": "node --test --test-concurrency=1 tests/*.test.cjs",
+    "test:smoke": "node tools/smoke-site.cjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@napi-rs/canvas": "0.1.100",
+    "playwright": "1.62.1"
+  }
+}
