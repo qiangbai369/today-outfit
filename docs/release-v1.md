@@ -16,6 +16,6 @@
 
 GitHub：qiangbai369/today-outfit，Pages来源main分支根目录。旧qiangbai369/character-studio的main在发布前为840d738d04df4453b78e38127738bc058ef18ee7，不覆盖该仓库。
 
-检查日志保存在本地output/release/，新路径回归及上线检查结果在交付时记录于HANDOFF.md。
+52/52独立路径回归通过；209运行文件校验通过。公开网址已检查209份资源HTTP200、三角色换装/眨眼/标签/保存重开、建议、三日旅行及行李、照片真实下载、刷新后收藏；桌面和390px手机画幅无横向溢出，无JS/资源错误。实际日志和截图仅在本地output/release/。发布通过GitHub官方Git数据接口完成，上传图像和完整230文件tree均逐项校验，远程与本地主分支同步。v1.0.0标签为正式基线。
 
 `2026-10-02-outfit-planner-design.md`和配套CSV为历史设计参考；其中旧预览路径及待批准状态不代表本项目当前状态，以本文件和AGENTS.md为准。
