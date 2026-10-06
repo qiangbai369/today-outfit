@@ -1,0 +1,98 @@
+[
+  {
+    "id": "sweet-spring-a",
+    "sha256": "ffd086d77fdeae759981f7157334e8a7dcdb2cf567193ec2023a3e0ecb6c19b2"
+  },
+  {
+    "id": "sweet-spring-b",
+    "sha256": "15100c66fe029e071324c33f320abc3fed5bfb9c8e3f66e506cbe241bafac462"
+  },
+  {
+    "id": "sweet-summer-a",
+    "sha256": "35cb88edccebc3f94bb2a5d52eaa008b8108a3b4e7b1f7080e28a4564d17a1ea"
+  },
+  {
+    "id": "sweet-summer-b",
+    "sha256": "33e3757c0a648147dc41b63cc5710b30bb1e0246ddffb8ec945fca55ac40e51b"
+  },
+  {
+    "id": "sweet-autumn-a",
+    "sha256": "548bde6fa0f799adccfd9ef04fadaa7fa29861b1d64a157cda31f92e859171da"
+  },
+  {
+    "id": "sweet-autumn-b",
+    "sha256": "61a406e57f6856ff78c6e2b807e6482c0821cf0a83aa1e49f5c1547bd7953309"
+  },
+  {
+    "id": "sweet-winter-a",
+    "sha256": "d6ba986d19ebed2755f275e82e2bffd495e9e227a92a7bb11c2401157c4c6b6b"
+  },
+  {
+    "id": "sweet-winter-b",
+    "sha256": "efe6cd672e38c0c44662ff7c2a605ca967247d804c0a1b50d494150a2a829cfe"
+  },
+  {
+    "id": "cool-spring-a",
+    "sha256": "f9c0c818bd5efa100489e9f2350a50a274fbbf774f30022055a1330922bfc017"
+  },
+  {
+    "id": "cool-spring-b",
+    "sha256": "fa179be159ae1d7614943477bd6d29d3d2ea24cf3a818ae9e9dc5341207139e6"
+  },
+  {
+    "id": "cool-summer-a",
+    "sha256": "1de3df37b81fb93e7cea6fa7eba6751c6290c3e6b74e765a7be9537d9d337936"
+  },
+  {
+    "id": "cool-summer-b",
+    "sha256": "48c1b792a2fdadb5f766d9ae69be748f0d530e62b725449bb6d6a33a9ac6a839"
+  },
+  {
+    "id": "cool-autumn-a",
+    "sha256": "71724865185102d7fe0da7946c5fe4b1cddc56cbfb3fb04dbf8b2715c0b1726e"
+  },
+  {
+    "id": "cool-autumn-b",
+    "sha256": "1a310092d4fc6e6c45a39857fcb76dabd87aa079848a67cf590eacd04c27fbd1"
+  },
+  {
+    "id": "cool-winter-a",
+    "sha256": "41b1096ad702e150c8a0473c8afbdf79531f2708cf14058d1378168ec5600283"
+  },
+  {
+    "id": "cool-winter-b",
+    "sha256": "d90871ef13f6fc5b4571a3b1b7a7a10730e4fecdf1a751bf25896fb677a3b205"
+  },
+  {
+    "id": "literary-spring-a",
+    "sha256": "33f712a25e07e70fbbc07324735d6358b13025299ce97fc24cfeed5ade0a6d3a"
+  },
+  {
+    "id": "literary-spring-b",
+    "sha256": "99cf4beaee6df9e79ba8d8f4b4e3dcdefae9c70d02958dc04daaee7815266474"
+  },
+  {
+    "id": "literary-summer-a",
+    "sha256": "6e0396851a1f88c0b9d8483d58a8b2bd06143c64da44c537cb7b5d333c6bfccb"
+  },
+  {
+    "id": "literary-summer-b",
+    "sha256": "58ff18f4c8f56c35be5f1924b24968ee2ebae99f05061cf1934b13d46a01efbf"
+  },
+  {
+    "id": "literary-autumn-a",
+    "sha256": "c16c19e471b24f1844cf0524f87a9b5aac8c955d1ca80619504cd56b30257a29"
+  },
+  {
+    "id": "literary-autumn-b",
+    "sha256": "32439296df8f511a285199f8ff806f7a1f39be6a0e0ca203a659a3d048652fae"
+  },
+  {
+    "id": "literary-winter-a",
+    "sha256": "61c04a6c17cc2758be00d90d643a94874a1ef9bcd34bdbf192755042b925a8d5"
+  },
+  {
+    "id": "literary-winter-b",
+    "sha256": "8ed15a2ce2128c2c5198a2a3d9460e5591f1505e30714dad833b5bb69343c07b"
+  }
+]

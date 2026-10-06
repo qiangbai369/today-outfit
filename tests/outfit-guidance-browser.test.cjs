@@ -1,7 +1,7 @@
 const test=require('node:test'),assert=require('node:assert/strict'),path=require('node:path'),fs=require('node:fs'),{spawn}=require('node:child_process');
 const {chromium}=require('playwright');
 const root=path.resolve(__dirname,'..'),out=path.join(root,'output/guidance-blink-review');
-async function server(){const p=spawn('python3',['-u','serve.py','--port','0'],{cwd:root});const port=await new Promise((ok,no)=>{p.stdout.on('data',b=>{const m=String(b).match(/port (\d+)/);if(m)ok(m[1]);});p.on('error',no);});return {p,url:`http://127.0.0.1:${port}/index.html`};}
+async function server(){const p=spawn('python3',['-u','serve.py','--port','0'],{cwd:root});const port=await new Promise((ok,no)=>{p.stdout.on('data',b=>{const m=String(b).match(/port (\d+)/);if(m)ok(m[1]);});p.on('error',no);});return {p,url:`http://127.0.0.1:${port}/legacy/index.html`};}
 const idle=p=>p.waitForFunction(()=>document.querySelector('#stage').getAttribute('aria-busy')==='false'&&!document.querySelector('#save').disabled);
 const state=p=>p.evaluate(()=>JSON.parse(localStorage.getItem('today-outfit-session-v1')));
 test('recommendation browse returns to clothes from both result and exhaustion without losing outfit, locks or owned choices',async()=>{

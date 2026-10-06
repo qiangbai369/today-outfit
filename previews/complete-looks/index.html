@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="挑选三个角色的四季完整穿搭，选择表情动作与摄影棚光线，收藏并下载喜欢的照片。">
+  <title>穿搭照相馆 · 四季穿搭与角色拍照</title>
+  <link rel="icon" href="../../assets/favicon.svg">
+  <link rel="stylesheet" href="gallery.css">
+  <script defer src="data.js"></script>
+  <script defer src="cartoon.js"></script>
+  <script defer src="gallery.js"></script>
+  <script defer src="lighting.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../../"><span class="brand-mark" aria-hidden="true">W</span>穿搭照相馆</a>
+    <nav class="header-links" aria-label="网站入口"><a class="text-button" href="../../legacy/">旧版 ↗</a><button id="library" class="text-button">我的收藏<span id="favorite-count"></span> ↗</button></nav>
+  </header>
+  <main class="workspace">
+    <section id="stage" class="stage" aria-label="完整穿搭" aria-busy="true">
+      <div class="stage-caption"><span class="stage-identity"><span id="stage-name">吴心媛</span><span class="studio-label">摄影棚</span></span><div id="motions" class="motions" role="group" aria-label="人物动作"></div></div>
+      <p id="motion-note" class="motion-note" hidden>这套动作待适配</p>
+      <div class="figure-wrap"><img id="look-image" src="assets/cartoon-v1/sweet-autumn-b.png" alt="吴心媛 · 莓色针织，完整穿搭" fetchpriority="high"><canvas id="motion-canvas" width="900" height="1200" role="img" hidden></canvas></div>
+      <div class="stage-foot"><div class="stage-look-row"><span id="look-name">秋日款</span><div class="look-navigation"><button id="previous" aria-label="上一套">←</button><span id="look-counter">01 / 02</span><button id="next" aria-label="下一套">→</button></div></div><div id="lights" class="lights" role="group" aria-label="摄影棚光线"></div></div>
+      <p id="loading" role="status" hidden>正在加载…</p>
+    </section>
+    <aside class="controls" aria-label="浏览穿搭">
+      <div id="characters" class="characters" aria-label="选择人物"></div>
+      <div id="seasons" class="seasons" aria-label="选择季节"></div>
+      <div class="look-heading"><h1>整套穿搭</h1><span id="pair-count">2 套</span></div>
+      <div id="looks" class="looks" aria-label="选择整套穿搭"></div>
+      <footer class="controls-bottom">
+        <p id="status" role="status" hidden></p><button id="retry" class="text-button" hidden>重新加载</button>
+        <div class="action-bar"><button id="favorite" class="outline-button" aria-pressed="false" disabled><span id="favorite-icon" aria-hidden="true">♡</span><span id="favorite-label">收藏这套</span></button><a id="download" class="dark-button" href="assets/sweet-autumn-a.png" download="吴心媛-秋日款.png" aria-disabled="true">下载整图 ↓</a></div>
+      </footer>
+    </aside>
+  </main>
+  <dialog id="favorites-dialog" aria-labelledby="favorites-title">
+    <div class="dialog-header"><h2 id="favorites-title">我的收藏</h2><button id="close-favorites" aria-label="关闭收藏">×</button></div>
+    <div id="saved-looks"></div>
+  </dialog>
+  <noscript><p>请开启浏览器的 JavaScript 以切换穿搭。</p></noscript>
+</body>
+</html>

@@ -2,7 +2,7 @@ const test=require('node:test'),assert=require('node:assert/strict'),fs=require(
 const {createCanvas,loadImage}=require('@napi-rs/canvas'),{chromium}=require('playwright');
 const root=path.resolve(__dirname,'..'),out=path.join(root,'output/guidance-blink-review'),C=require('../catalog-v2.js'),R=require('../renderer-v2.js');
 const renderer=R.createRenderer({createCanvas,loadImage:f=>loadImage(path.join(root,f))});
-async function server(){const p=spawn('python3',['-u','serve.py','--port','0'],{cwd:root});const port=await new Promise((ok,no)=>{p.stdout.on('data',b=>{const m=String(b).match(/port (\d+)/);if(m)ok(m[1]);});p.on('error',no);});return {p,url:`http://127.0.0.1:${port}/index.html`};}
+async function server(){const p=spawn('python3',['-u','serve.py','--port','0'],{cwd:root});const port=await new Promise((ok,no)=>{p.stdout.on('data',b=>{const m=String(b).match(/port (\d+)/);if(m)ok(m[1]);});p.on('error',no);});return {p,url:`http://127.0.0.1:${port}/legacy/index.html`};}
 const idle=p=>p.waitForFunction(()=>document.querySelector('#stage').getAttribute('aria-busy')==='false'&&!document.querySelector('#save').disabled);
 test('local light preserves character alpha, the original face registration and all garment metadata',async()=>{
  const results=[];for(const character of ['sweet','cool','literary']){

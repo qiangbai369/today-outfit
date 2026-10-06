@@ -1,0 +1,10 @@
+const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),assert=require('node:assert/strict');
+const root=path.resolve(__dirname,'../previews/complete-looks'),manifestFile=path.join(root,'runtime-manifest.json');
+const walk=dir=>fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(path.join(dir,e.name)):[path.join(dir,e.name)]);
+const files=walk(root).filter(f=>f!==manifestFile&&path.basename(f)!=='sources.json').sort();
+const hashes=Object.fromEntries(files.map(f=>[path.relative(root,f),crypto.createHash('sha256').update(fs.readFileSync(f)).digest('hex')]));
+if(process.argv.includes('--record'))fs.writeFileSync(manifestFile,JSON.stringify(hashes,null,2)+'\n');
+else assert.deepEqual(hashes,JSON.parse(fs.readFileSync(manifestFile)),'Preview runtime files changed; review before recording a new manifest');
+const G=require('../previews/complete-looks/gallery.js');
+for(const look of G.LOOKS)for(const action of G.actionsFor(look.id))assert.ok(action.supported,look.id+':'+action.id);
+console.log('Checked '+files.length+' local preview files, 24 complete looks and 72 public actions.');

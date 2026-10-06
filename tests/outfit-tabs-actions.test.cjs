@@ -2,7 +2,7 @@ const test=require('node:test'),assert=require('node:assert/strict'),path=requir
 const {chromium}=require('playwright');
 const root=path.resolve(__dirname,'..'),out=path.join(root,'output/outfit-tabs-actions');
 const {spawn}=require('node:child_process');
-async function server(){const p=spawn('python3',['-u','serve.py','--port','0'],{cwd:root});const port=await new Promise((ok,no)=>{const timer=setTimeout(()=>no(Error('server timeout')),10000);p.stdout.on('data',b=>{const m=String(b).match(/port (\d+)/);if(m){clearTimeout(timer);ok(m[1]);}});p.on('error',no);});return {p,url:`http://127.0.0.1:${port}/index.html`};}
+async function server(){const p=spawn('python3',['-u','serve.py','--port','0'],{cwd:root});const port=await new Promise((ok,no)=>{const timer=setTimeout(()=>no(Error('server timeout')),10000);p.stdout.on('data',b=>{const m=String(b).match(/port (\d+)/);if(m){clearTimeout(timer);ok(m[1]);}});p.on('error',no);});return {p,url:`http://127.0.0.1:${port}/legacy/index.html`};}
 const idle=p=>p.waitForFunction(()=>document.querySelector('#stage').getAttribute('aria-busy')==='false');
 const session=p=>p.evaluate(()=>JSON.parse(localStorage.getItem('today-outfit-session-v1')));
 const thumbnail=p=>p.locator('#figure').evaluate(c=>{const t=document.createElement('canvas');t.width=240;t.height=360;t.getContext('2d').drawImage(c,0,0,240,360);return t.toDataURL('image/webp',.8);});

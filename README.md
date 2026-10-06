@@ -1,28 +1,26 @@
-# 今天怎么穿
+# 穿搭照相馆
 
-根据今天的安排寻找穿搭灵感，换单件、锁定喜欢的衣服，保存搭配；旅行时安排逐日穿搭并整理行李。
+挑选角色与四季穿搭，选择表情动作和摄影棚光线，收藏并下载喜欢的照片。
 
-- 在线使用：[今天怎么穿](https://qiangbai369.github.io/today-outfit/)
-- 独立仓库：[today-outfit](https://github.com/qiangbai369/today-outfit)
-- 上一版：[互动摄影棚](https://qiangbai369.github.io/character-studio/)；两个网站分别维护。
+- [进入穿搭照相馆](https://qiangbai369.github.io/today-outfit/)
+- [旧版穿搭与旅行衣橱](https://qiangbai369.github.io/today-outfit/legacy/)
+- [源码仓库](https://github.com/qiangbai369/today-outfit)
 
-## 当前功能
+当前 v2.0.0：吴心媛、陈墨白、顾书宁，每人四季各两套，共24套完整穿搭、72个动作。支持自然光、暖光、柔冷光和900×1200 PNG下载。顾书宁轻挥手仅在手腕局部摆动，身体保持固定。桌面与手机共用网址，沿用已确认的简洁摄影棚布局。
 
-三位角色：吴心媛、陈墨白、顾书宁。83款设计，共95份角色服装适配；吴心媛30件、陈墨白35件、顾书宁30件可换单品；按用途、季节和冷暖看建议，也可直接逛衣橱。支持单件替换、锁定再搭、已有单品偏好、保存重开、1—7天旅行、去重行李清单、摄影棚光线和纯图照片下载。
+新版收藏独立保存，旧版搭配与旅行清单可从“旧版”入口继续查看。收藏位于当前浏览器，不跨设备自动同步；本地预览收藏也不会自动同步到线上。未改动旧版衣橱、推荐、旅行和存储实现。
 
-已有手机端自适应布局：人物在上、衣橱在下，支持换装、建议、保存及照片下载；桌面与手机使用同一网址。真实手机和微信浏览器尚未实机核对。
-
-保存内容位于使用者自己的浏览器，不上传服务器；不同设备或浏览器不自动同步。可以下载照片、清单和方案。三人都有独立眨眼和局部性格表情，旧的固定服装肢体动作暂不兼容并明确禁用。当前版本 v1.1.0；上一版 v1.0.0 保留。两版网站使用不同的存储名称；本地预览中的收藏不自动迁移到线上。
-
-## 本地启动
+## 本地运行
 
 ```sh
 python3 serve.py --port 8876
 ```
 
-打开 http://127.0.0.1:8876/ 。运行不需要npm、API Key或账号。GitHub Pages从`main`分支根目录发布；所有运行资源均使用相对路径。
+首页 http://127.0.0.1:8876/ ；旧版 http://127.0.0.1:8876/legacy/ 。运行不需要账号或API Key。
 
-## 检查与维护
+## 维护
+
+GitHub Pages从main分支根目录发布。完整穿搭运行文件沿用 `previews/complete-looks/`，根首页通过相对base路径复用它；旧版入口 `legacy/index.html` 继续使用原根目录脚本和素材。两版收藏使用不同的存储名称，禁止清理真实收藏。
 
 使用Node.js20以上，安装开发依赖后运行：
 
@@ -31,9 +29,9 @@ npm install
 npx playwright install chromium
 npm run check
 npm test
-node tools/smoke-site.cjs https://qiangbai369.github.io/today-outfit/
+npm run test:smoke -- https://qiangbai369.github.io/today-outfit/
 ```
 
-`runtime-manifest.json`校验运行资源；`tests/`覆盖换装、建议、旅行、保存、错误恢复、分类滚动和眼部眨眼。`tools/smoke-site.cjs`可以检查本地或线上正式入口。
+`runtime-manifest.json`核对两版运行资源。修改完整穿搭后先验收，再运行 `node tools/check-complete-looks.cjs --record` 和 `node tools/update-runtime-manifest.cjs` 更新清单。旧版浏览器回归改为访问 `/legacy/`；动作与光线验证继续覆盖完整穿搭。
 
-运行所需源码和图片全部随仓库发布。制作期原PNG在本地`source-art/`，原项目和旧能力仍保留；不把制作日志或个人参考照片发布到仓库。已知动作兼容边界和发布记录见[发布说明](docs/release-v1.md)。
+制作日志、个人参考照片及原始生成记录仅保留在本地 `output/` 和 `source-art/`，不上传。发布内容说明见 [v2.0.0](docs/release-v2.0.0.md)。真实iPhone、安卓和微信浏览器尚未实机验收。

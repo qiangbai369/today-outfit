@@ -4,3 +4,6 @@ __pycache__/
 node_modules/
 output/
 source-art/
+
+# Local provenance; approved image hashes are in tests/fixtures.
+previews/complete-looks/sources.json

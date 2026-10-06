@@ -1,7 +1,7 @@
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),{spawn}=require('node:child_process');
 const {chromium}=require('playwright');
 const root=path.resolve(__dirname,'..'),out=path.join(root,'output/guidance-blink-review');
-async function server(){const p=spawn('python3',['-u','serve.py','--port','0'],{cwd:root});const port=await new Promise((ok,no)=>{p.stdout.on('data',b=>{const m=String(b).match(/port (\d+)/);if(m)ok(m[1]);});p.on('error',no);});return {p,url:`http://127.0.0.1:${port}/index.html`};}
+async function server(){const p=spawn('python3',['-u','serve.py','--port','0'],{cwd:root});const port=await new Promise((ok,no)=>{p.stdout.on('data',b=>{const m=String(b).match(/port (\d+)/);if(m)ok(m[1]);});p.on('error',no);});return {p,url:`http://127.0.0.1:${port}/legacy/index.html`};}
 const idle=p=>p.waitForFunction(()=>document.querySelector('#stage').getAttribute('aria-busy')==='false'&&!document.querySelector('#save').disabled);
 test('all registered blink phases change only the eyes across new cool looks and other characters outfits',async()=>{
  const s=await server(),b=await chromium.launch({headless:true});try{const p=await b.newPage({reducedMotion:'reduce'});await p.goto(s.url);await idle(p);const result=await p.evaluate(async()=>{

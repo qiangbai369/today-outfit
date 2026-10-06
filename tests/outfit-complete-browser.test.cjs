@@ -1,7 +1,7 @@
 const test=require('node:test'),assert=require('node:assert/strict'),path=require('node:path'),fs=require('node:fs'),{spawn}=require('node:child_process');
 const {chromium}=require('playwright');
 const root=path.resolve(__dirname,'..'),out=path.join(root,'output/outfit-complete-review');
-async function server(){const p=spawn('python3',['-u','serve.py','--port','0'],{cwd:root});const port=await new Promise((resolve,reject)=>{const timer=setTimeout(()=>reject(Error('server timeout')),10000);p.stdout.on('data',b=>{const m=String(b).match(/port (\d+)/);if(m){clearTimeout(timer);resolve(m[1]);}});p.on('error',reject);});return {p,url:`http://127.0.0.1:${port}/index.html`};}
+async function server(){const p=spawn('python3',['-u','serve.py','--port','0'],{cwd:root});const port=await new Promise((resolve,reject)=>{const timer=setTimeout(()=>reject(Error('server timeout')),10000);p.stdout.on('data',b=>{const m=String(b).match(/port (\d+)/);if(m){clearTimeout(timer);resolve(m[1]);}});p.on('error',reject);});return {p,url:`http://127.0.0.1:${port}/legacy/index.html`};}
 const idle=p=>p.waitForFunction(()=>document.querySelector('#stage').getAttribute('aria-busy')==='false');
 test('compact desktop controls keep a complete garment row visible through both existing entries',async()=>{
  const s=await server();let browser;try{browser=await chromium.launch({headless:true});
