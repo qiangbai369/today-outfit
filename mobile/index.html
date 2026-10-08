@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>穿搭照相馆</title>
+  <link rel="stylesheet" href="拆解演示.css">
+  <script defer src="../previews/complete-looks/data.js"></script>
+  <script defer src="手势逻辑.js"></script>
+  <script defer src="拆解演示.js"></script>
+</head>
+<body>
+  <main class="studio">
+    <section id="picker" class="mobile-page">
+      <header class="mobile-header"><span></span><button id="picker-favorites">收藏</button></header>
+      <div id="character-choices" class="character-choices"></div>
+    </section>
+    <section id="favorites" class="mobile-page" hidden>
+      <header class="mobile-header"><button id="favorites-back" aria-label="返回">‹</button><span>收藏</span><span></span></header>
+      <nav id="favorite-tabs" class="favorite-tabs" aria-label="收藏人物"></nav>
+      <div id="favorite-photos" class="favorite-photos"></div>
+      <p id="favorite-empty" class="favorite-empty" hidden>暂无收藏</p>
+    </section>
+    <section class="stage" id="stage" hidden aria-label="薄荷夏日穿搭">
+      <button class="identity" id="character-back" aria-label="返回选角色">‹ <span id="character-name">吴心媛</span></button>
+      <button class="stage-favorites" id="stage-favorites">收藏</button>
+      <button class="collapse" id="collapse" hidden>收起</button>
+      <button class="figure" id="figure" aria-label="查看薄荷夏日穿搭拆解" aria-expanded="false" aria-controls="items" disabled>
+        <img id="look-image" src="../previews/complete-looks/assets/sweet-summer-a.png" alt="吴心媛身穿薄荷绿上衣与奶白小花半裙，搭配浅粉凉鞋和草编包" draggable="false">
+      </button>
+      <div class="items" id="items" aria-label="四件穿搭单品" aria-hidden="true" inert></div>
+      <img id="heart" class="heart" src="糖丝爱心-效果预览.png" alt="" aria-hidden="true" draggable="false">
+      <p id="notice" class="notice" hidden></p><p id="status" class="sr-only" role="status" aria-live="polite"></p>
+    </section>
+  </main>
+  <noscript>请开启 JavaScript 查看穿搭拆解。</noscript>
+</body>
+</html>

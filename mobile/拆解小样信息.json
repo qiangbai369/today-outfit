@@ -1,0 +1,1650 @@
+{
+  "sweet-summer-a": {
+    "items": [
+      {
+        "name": "泡泡袖上衣",
+        "description": "浅薄荷绿 · 圆领细褶",
+        "image": "上衣-v2.png"
+      },
+      {
+        "name": "小花半裙",
+        "description": "奶白底 · 轻盈小花裙摆",
+        "image": "半裙-v2.png"
+      },
+      {
+        "name": "蝴蝶结凉鞋",
+        "description": "浅桃粉 · 踝带平底",
+        "image": "凉鞋-v2.png"
+      },
+      {
+        "name": "草编手提包",
+        "description": "原色编织 · 奶白蝴蝶结",
+        "image": "手提包-v2.png"
+      }
+    ]
+  },
+  "cool-summer-a": {
+    "items": [
+      {
+        "name": "斜肩上衣",
+        "description": "炭黑色 · 不对称领口",
+        "image": "陈墨白-斜肩上衣.png"
+      },
+      {
+        "name": "高腰阔腿裤",
+        "description": "灰色织纹 · 宽松长裤",
+        "image": "陈墨白-阔腿裤.png"
+      },
+      {
+        "name": "双带凉鞋",
+        "description": "黑色 · 低跟厚底",
+        "image": "陈墨白-凉鞋.png"
+      }
+    ]
+  },
+  "literary-summer-a": {
+    "items": [
+      {
+        "name": "短袖衬衫",
+        "description": "浅蓝色 · 翻领胸袋",
+        "image": "顾书宁-衬衫.png"
+      },
+      {
+        "name": "高腰短裤",
+        "description": "奶白色 · 翻边裤脚",
+        "image": "顾书宁-短裤.png"
+      },
+      {
+        "name": "短袜",
+        "description": "奶白色 · 罗纹袜口",
+        "image": "顾书宁-袜子.png"
+      },
+      {
+        "name": "帆布鞋",
+        "description": "浅黄色 · 白色系带",
+        "image": "顾书宁-帆布鞋.png"
+      }
+    ]
+  },
+  "sweet-spring-a": {
+    "items": [
+      {
+        "name": "短袖针织衫",
+        "description": "浅蓝 · 柔软针织纹",
+        "image": "sweet-spring-a-单品.png",
+        "cell": [
+          0,
+          0,
+          2
+        ],
+        "bounds": [
+          0.0,
+          0,
+          627.0,
+          627
+        ]
+      },
+      {
+        "name": "蝴蝶结半裙",
+        "description": "奶白 · 展开A字裙摆",
+        "image": "sweet-spring-a-单品.png",
+        "cell": [
+          1,
+          0,
+          2
+        ],
+        "bounds": [
+          627.0,
+          0,
+          1254.0,
+          627
+        ]
+      },
+      {
+        "name": "手提包",
+        "description": "棕色 · 双提手造型",
+        "image": "sweet-spring-a-单品.png",
+        "cell": [
+          0,
+          1,
+          2
+        ],
+        "bounds": [
+          0.0,
+          627,
+          627.0,
+          1254
+        ]
+      },
+      {
+        "name": "芭蕾鞋",
+        "description": "奶白 · 小巧蝴蝶结",
+        "image": "sweet-spring-a-单品.png",
+        "cell": [
+          1,
+          1,
+          2
+        ],
+        "bounds": [
+          627.0,
+          627,
+          1254.0,
+          1254
+        ]
+      }
+    ]
+  },
+  "sweet-spring-b": {
+    "items": [
+      {
+        "name": "藏蓝领Polo衫",
+        "description": "奶白 · 翻领胸袋",
+        "image": "sweet-spring-b-单品.png",
+        "cell": [
+          0,
+          0,
+          3
+        ],
+        "bounds": [
+          0.0,
+          0,
+          627.0,
+          442
+        ]
+      },
+      {
+        "name": "百褶裙",
+        "description": "藏蓝 · 利落褶裥",
+        "image": "sweet-spring-b-单品.png",
+        "cell": [
+          1,
+          0,
+          3
+        ],
+        "bounds": [
+          627.0,
+          0,
+          1254.0,
+          442
+        ]
+      },
+      {
+        "name": "短袜",
+        "description": "白色 · 罗纹袜口",
+        "image": "sweet-spring-b-单品.png",
+        "cell": [
+          0,
+          1,
+          3
+        ],
+        "bounds": [
+          0.0,
+          442,
+          627.0,
+          836
+        ]
+      },
+      {
+        "name": "白蓝运动鞋",
+        "description": "白蓝运动鞋 · 系带厚底",
+        "image": "sweet-spring-b-单品.png",
+        "cell": [
+          1,
+          1,
+          3
+        ],
+        "bounds": [
+          627.0,
+          442,
+          1254.0,
+          836
+        ]
+      },
+      {
+        "name": "手提包",
+        "description": "棕色 · 双提手造型",
+        "image": "sweet-spring-b-单品.png",
+        "cell": [
+          0,
+          2,
+          3
+        ],
+        "bounds": [
+          0.0,
+          836,
+          627.0,
+          1254
+        ]
+      }
+    ]
+  },
+  "sweet-summer-b": {
+    "items": [
+      {
+        "name": "小花连衣裙",
+        "description": "蜜桃粉 · 娃娃领小花",
+        "image": "sweet-summer-b-单品.png",
+        "cell": [
+          0,
+          0,
+          2
+        ],
+        "bounds": [
+          0.0,
+          0,
+          627.0,
+          627
+        ]
+      },
+      {
+        "name": "编织手提包",
+        "description": "奶白 · 双提手造型",
+        "image": "sweet-summer-b-单品.png",
+        "cell": [
+          1,
+          0,
+          2
+        ],
+        "bounds": [
+          627.0,
+          0,
+          1254.0,
+          627
+        ]
+      },
+      {
+        "name": "踝带奶白鞋",
+        "description": "粉色 · 简洁轮廓",
+        "image": "sweet-summer-b-单品.png",
+        "cell": [
+          0,
+          1,
+          2
+        ],
+        "bounds": [
+          0.0,
+          627,
+          627.0,
+          1254
+        ]
+      }
+    ]
+  },
+  "sweet-autumn-a": {
+    "items": [
+      {
+        "name": "翻领大衣",
+        "description": "棕色 · 翻领口袋",
+        "image": "sweet-autumn-a-单品.png",
+        "cell": [
+          0,
+          0,
+          3
+        ],
+        "bounds": [
+          0.0,
+          0,
+          627.0,
+          418
+        ]
+      },
+      {
+        "name": "半裙",
+        "description": "奶白 · 展开A字裙摆",
+        "image": "sweet-autumn-a-单品.png",
+        "cell": [
+          1,
+          0,
+          3
+        ],
+        "bounds": [
+          627.0,
+          0,
+          1254.0,
+          418
+        ]
+      },
+      {
+        "name": "格纹围巾",
+        "description": "棕色 · 针织流苏",
+        "image": "sweet-autumn-a-单品.png",
+        "cell": [
+          0,
+          1,
+          3
+        ],
+        "bounds": [
+          0.0,
+          418,
+          627.0,
+          836
+        ]
+      },
+      {
+        "name": "手提包",
+        "description": "棕色 · 双提手造型",
+        "image": "sweet-autumn-a-单品.png",
+        "cell": [
+          1,
+          1,
+          3
+        ],
+        "bounds": [
+          627.0,
+          418,
+          1254.0,
+          836
+        ]
+      },
+      {
+        "name": "短靴",
+        "description": "深棕 · 圆头厚底",
+        "image": "sweet-autumn-a-单品.png",
+        "cell": [
+          0,
+          2,
+          3
+        ],
+        "bounds": [
+          0.0,
+          836,
+          627.0,
+          1254
+        ]
+      }
+    ]
+  },
+  "sweet-autumn-b": {
+    "items": [
+      {
+        "name": "针织开衫",
+        "description": "莓色 · 纽扣罗纹边",
+        "image": "sweet-autumn-b-单品.png",
+        "cell": [
+          0,
+          0,
+          3
+        ],
+        "bounds": [
+          0.0,
+          0,
+          627.0,
+          418
+        ]
+      },
+      {
+        "name": "娃娃领衬衫",
+        "description": "奶白 · 翻领纽扣",
+        "image": "sweet-autumn-b-单品.png",
+        "cell": [
+          1,
+          0,
+          3
+        ],
+        "bounds": [
+          627.0,
+          0,
+          1254.0,
+          418
+        ]
+      },
+      {
+        "name": "格纹百褶裙",
+        "description": "棕色 · 利落褶裥",
+        "image": "sweet-autumn-b-单品.png",
+        "cell": [
+          0,
+          1,
+          3
+        ],
+        "bounds": [
+          0.0,
+          418,
+          627.0,
+          836
+        ]
+      },
+      {
+        "name": "长袜",
+        "description": "奶白 · 罗纹袜口",
+        "image": "sweet-autumn-b-单品.png",
+        "cell": [
+          1,
+          1,
+          3
+        ],
+        "bounds": [
+          627.0,
+          418,
+          1254.0,
+          836
+        ]
+      },
+      {
+        "name": "玛丽珍鞋",
+        "description": "棕色 · 搭扣鞋带",
+        "image": "sweet-autumn-b-单品.png",
+        "cell": [
+          0,
+          2,
+          3
+        ],
+        "bounds": [
+          0.0,
+          836,
+          627.0,
+          1254
+        ]
+      },
+      {
+        "name": "手提包",
+        "description": "棕色 · 双提手造型",
+        "image": "sweet-autumn-b-单品.png",
+        "cell": [
+          1,
+          2,
+          3
+        ],
+        "bounds": [
+          627.0,
+          836,
+          1254.0,
+          1254
+        ]
+      }
+    ]
+  },
+  "sweet-winter-a": {
+    "items": [
+      {
+        "name": "棉服",
+        "description": "粉色 · 绗缝蓬松轮廓",
+        "image": "sweet-winter-a-单品.png",
+        "cell": [
+          0,
+          0,
+          3
+        ],
+        "bounds": [
+          0.0,
+          0,
+          627.0,
+          418
+        ]
+      },
+      {
+        "name": "针织围巾",
+        "description": "奶白 · 针织流苏",
+        "image": "sweet-winter-a-单品.png",
+        "cell": [
+          1,
+          0,
+          3
+        ],
+        "bounds": [
+          627.0,
+          0,
+          1254.0,
+          418
+        ]
+      },
+      {
+        "name": "半裙",
+        "description": "奶白 · 展开A字裙摆",
+        "image": "sweet-winter-a-单品.png",
+        "cell": [
+          0,
+          1,
+          3
+        ],
+        "bounds": [
+          0.0,
+          418,
+          627.0,
+          836
+        ]
+      },
+      {
+        "name": "连裤袜",
+        "description": "奶白 · 柔软织纹",
+        "image": "sweet-winter-a-单品.png",
+        "cell": [
+          1,
+          1,
+          3
+        ],
+        "bounds": [
+          627.0,
+          418,
+          1254.0,
+          836
+        ]
+      },
+      {
+        "name": "短靴",
+        "description": "棕灰 · 圆头厚底",
+        "image": "sweet-winter-a-单品.png",
+        "cell": [
+          0,
+          2,
+          3
+        ],
+        "bounds": [
+          0.0,
+          836,
+          627.0,
+          1254
+        ]
+      },
+      {
+        "name": "手提包",
+        "description": "棕灰 · 双提手造型",
+        "image": "sweet-winter-a-单品.png",
+        "cell": [
+          1,
+          2,
+          3
+        ],
+        "bounds": [
+          627.0,
+          836,
+          1254.0,
+          1254
+        ]
+      }
+    ]
+  },
+  "sweet-winter-b": {
+    "items": [
+      {
+        "name": "牛角扣大衣",
+        "description": "奶白 · 连帽牛角扣",
+        "image": "sweet-winter-b-单品.png",
+        "cell": [
+          0,
+          0,
+          3
+        ],
+        "bounds": [
+          0.0,
+          0,
+          627.0,
+          418
+        ]
+      },
+      {
+        "name": "高领毛衣",
+        "description": "粉色 · 柔软针织纹",
+        "image": "sweet-winter-b-单品.png",
+        "cell": [
+          1,
+          0,
+          3
+        ],
+        "bounds": [
+          627.0,
+          0,
+          1254.0,
+          418
+        ]
+      },
+      {
+        "name": "麻花半裙",
+        "description": "奶白 · 展开A字裙摆",
+        "image": "sweet-winter-b-单品.png",
+        "cell": [
+          0,
+          1,
+          3
+        ],
+        "bounds": [
+          0.0,
+          418,
+          627.0,
+          836
+        ]
+      },
+      {
+        "name": "连裤袜",
+        "description": "棕色 · 柔软织纹",
+        "image": "sweet-winter-b-单品.png",
+        "cell": [
+          1,
+          1,
+          3
+        ],
+        "bounds": [
+          627.0,
+          418,
+          1254.0,
+          836
+        ]
+      },
+      {
+        "name": "系带靴",
+        "description": "棕色 · 圆头厚底",
+        "image": "sweet-winter-b-单品.png",
+        "cell": [
+          0,
+          2,
+          3
+        ],
+        "bounds": [
+          0.0,
+          836,
+          627.0,
+          1254
+        ]
+      },
+      {
+        "name": "手提包",
+        "description": "棕色 · 双提手造型",
+        "image": "sweet-winter-b-单品.png",
+        "cell": [
+          1,
+          2,
+          3
+        ],
+        "bounds": [
+          627.0,
+          836,
+          1254.0,
+          1254
+        ]
+      }
+    ]
+  },
+  "cool-spring-a": {
+    "items": [
+      {
+        "name": "飞行夹克",
+        "description": "藏蓝 · 拉链短款",
+        "image": "cool-spring-a-单品.png",
+        "cell": [
+          0,
+          0,
+          2
+        ],
+        "bounds": [
+          0.0,
+          0,
+          627.0,
+          627
+        ]
+      },
+      {
+        "name": "罗纹内搭",
+        "description": "奶白 · 简洁轮廓",
+        "image": "cool-spring-a-单品.png",
+        "cell": [
+          1,
+          0,
+          2
+        ],
+        "bounds": [
+          627.0,
+          0,
+          1254.0,
+          627
+        ]
+      },
+      {
+        "name": "工装裤",
+        "description": "灰色 · 宽松口袋",
+        "image": "cool-spring-a-单品.png",
+        "cell": [
+          0,
+          1,
+          2
+        ],
+        "bounds": [
+          0.0,
+          627,
+          627.0,
+          1254
+        ]
+      },
+      {
+        "name": "银灰运动鞋",
+        "description": "银灰 · 运动鞋",
+        "image": "cool-spring-a-鞋.png"
+      }
+    ]
+  },
+  "cool-spring-b": {
+    "items": [
+      {
+        "name": "短夹克",
+        "description": "灰色 · 拉链短款",
+        "image": "cool-spring-b-单品.png",
+        "cell": [
+          0,
+          0,
+          3
+        ],
+        "bounds": [
+          0.0,
+          0,
+          627.0,
+          440
+        ]
+      },
+      {
+        "name": "罗纹内搭",
+        "description": "炭黑 · 简洁轮廓",
+        "image": "cool-spring-b-单品.png",
+        "cell": [
+          1,
+          0,
+          3
+        ],
+        "bounds": [
+          627.0,
+          0,
+          1254.0,
+          440
+        ]
+      },
+      {
+        "name": "工装裤",
+        "description": "灰绿 · 宽松口袋",
+        "image": "cool-spring-b-单品.png",
+        "cell": [
+          0,
+          1,
+          3
+        ],
+        "bounds": [
+          0.0,
+          440,
+          627.0,
+          870
+        ]
+      },
+      {
+        "name": "黑白板鞋",
+        "description": "黑白 · 板鞋",
+        "image": "cool-spring-b-鞋.png"
+      },
+      {
+        "name": "斜挎包",
+        "description": "黑色 · 可调长肩带",
+        "image": "cool-spring-b-单品.png",
+        "cell": [
+          0,
+          2,
+          3
+        ],
+        "bounds": [
+          0.0,
+          870,
+          627.0,
+          1254
+        ]
+      }
+    ]
+  },
+  "cool-summer-b": {
+    "items": [
+      {
+        "name": "方领背心",
+        "description": "炭灰 · 简洁领口",
+        "image": "cool-summer-b-单品.png",
+        "cell": [
+          0,
+          0,
+          2
+        ],
+        "bounds": [
+          0.0,
+          0,
+          627.0,
+          650
+        ]
+      },
+      {
+        "name": "阔腿裤",
+        "description": "藏蓝 · 宽松裤腿",
+        "image": "cool-summer-b-单品.png",
+        "cell": [
+          1,
+          0,
+          2
+        ],
+        "bounds": [
+          627.0,
+          0,
+          1254.0,
+          650
+        ]
+      },
+      {
+        "name": "帆布鞋",
+        "description": "酒红 · 撞色系带",
+        "image": "cool-summer-b-单品.png",
+        "cell": [
+          0,
+          1,
+          2
+        ],
+        "bounds": [
+          0.0,
+          650,
+          627.0,
+          1254
+        ]
+      },
+      {
+        "name": "肩包",
+        "description": "银灰 · 柔软弧形包身",
+        "image": "cool-summer-b-单品.png",
+        "cell": [
+          1,
+          1,
+          2
+        ],
+        "bounds": [
+          627.0,
+          650,
+          1254.0,
+          1254
+        ]
+      }
+    ]
+  },
+  "cool-autumn-a": {
+    "items": [
+      {
+        "name": "机车皮衣",
+        "description": "棕色 · 翻领拉链",
+        "image": "cool-autumn-a-单品.png",
+        "cell": [
+          0,
+          0,
+          2
+        ],
+        "bounds": [
+          0.0,
+          0,
+          627.0,
+          627
+        ]
+      },
+      {
+        "name": "短款内搭",
+        "description": "奶白 · 简洁轮廓",
+        "image": "cool-autumn-a-单品.png",
+        "cell": [
+          1,
+          0,
+          2
+        ],
+        "bounds": [
+          627.0,
+          0,
+          1254.0,
+          627
+        ]
+      },
+      {
+        "name": "牛仔裤",
+        "description": "深灰 · 清晰车缝线",
+        "image": "cool-autumn-a-单品.png",
+        "cell": [
+          0,
+          1,
+          2
+        ],
+        "bounds": [
+          0.0,
+          627,
+          627.0,
+          1254
+        ]
+      },
+      {
+        "name": "黑色高帮帆布鞋",
+        "description": "黑色 · 高帮帆布鞋",
+        "image": "cool-autumn-a-鞋.png"
+      }
+    ]
+  },
+  "cool-autumn-b": {
+    "items": [
+      {
+        "name": "牛仔夹克",
+        "description": "蓝色 · 清晰车缝线",
+        "image": "cool-autumn-b-单品.png",
+        "cell": [
+          0,
+          0,
+          3
+        ],
+        "bounds": [
+          0.0,
+          0,
+          627.0,
+          418
+        ]
+      },
+      {
+        "name": "高领针织衫",
+        "description": "莓紫 · 柔软针织纹",
+        "image": "cool-autumn-b-单品.png",
+        "cell": [
+          1,
+          0,
+          3
+        ],
+        "bounds": [
+          627.0,
+          0,
+          1254.0,
+          418
+        ]
+      },
+      {
+        "name": "灯芯绒长裤",
+        "description": "深灰 · 细密纵向织纹",
+        "image": "cool-autumn-b-单品.png",
+        "cell": [
+          0,
+          1,
+          3
+        ],
+        "bounds": [
+          0.0,
+          418,
+          627.0,
+          836
+        ]
+      },
+      {
+        "name": "黑色运动鞋",
+        "description": "黑色 · 运动鞋",
+        "image": "cool-autumn-b-鞋.png"
+      },
+      {
+        "name": "肩包",
+        "description": "黑色 · 柔软弧形包身",
+        "image": "cool-autumn-b-单品.png",
+        "cell": [
+          0,
+          2,
+          3
+        ],
+        "bounds": [
+          0.0,
+          836,
+          627.0,
+          1254
+        ]
+      }
+    ]
+  },
+  "cool-winter-a": {
+    "items": [
+      {
+        "name": "短棉服",
+        "description": "灰紫 · 绗缝蓬松轮廓",
+        "image": "cool-winter-a-单品.png",
+        "cell": [
+          0,
+          0,
+          2
+        ],
+        "bounds": [
+          0.0,
+          0,
+          627.0,
+          627
+        ]
+      },
+      {
+        "name": "高领毛衣",
+        "description": "浅灰 · 柔软针织纹",
+        "image": "cool-winter-a-单品.png",
+        "cell": [
+          1,
+          0,
+          2
+        ],
+        "bounds": [
+          627.0,
+          0,
+          1254.0,
+          627
+        ]
+      },
+      {
+        "name": "阔腿裤",
+        "description": "深灰 · 宽松裤腿",
+        "image": "cool-winter-a-单品.png",
+        "cell": [
+          0,
+          1,
+          2
+        ],
+        "bounds": [
+          0.0,
+          627,
+          627.0,
+          1254
+        ]
+      },
+      {
+        "name": "黑色系带短靴",
+        "description": "黑色 · 系带短靴",
+        "image": "cool-winter-a-鞋.png"
+      }
+    ]
+  },
+  "cool-winter-b": {
+    "items": [
+      {
+        "name": "羊羔绒夹克",
+        "description": "黑色 · 拉链短款",
+        "image": "cool-winter-b-单品.png",
+        "cell": [
+          0,
+          0,
+          3
+        ],
+        "bounds": [
+          0.0,
+          0,
+          627.0,
+          418
+        ]
+      },
+      {
+        "name": "针织衫",
+        "description": "蓝色 · 柔软针织纹",
+        "image": "cool-winter-b-单品.png",
+        "cell": [
+          1,
+          0,
+          3
+        ],
+        "bounds": [
+          627.0,
+          0,
+          1254.0,
+          418
+        ]
+      },
+      {
+        "name": "宽松长裤",
+        "description": "军绿 · 简洁轮廓",
+        "image": "cool-winter-b-单品.png",
+        "cell": [
+          0,
+          1,
+          3
+        ],
+        "bounds": [
+          0.0,
+          418,
+          627.0,
+          847
+        ]
+      },
+      {
+        "name": "高帮运动鞋",
+        "description": "灰色 · 系带厚底",
+        "image": "cool-winter-b-单品.png",
+        "cell": [
+          1,
+          1,
+          3
+        ],
+        "bounds": [
+          627.0,
+          418,
+          1254.0,
+          847
+        ]
+      },
+      {
+        "name": "斜挎包",
+        "description": "黑色 · 可调长肩带",
+        "image": "cool-winter-b-单品.png",
+        "cell": [
+          0,
+          2,
+          3
+        ],
+        "bounds": [
+          0.0,
+          847,
+          627.0,
+          1254
+        ]
+      }
+    ]
+  },
+  "literary-spring-a": {
+    "items": [
+      {
+        "name": "针织开衫",
+        "description": "浅绿 · 纽扣罗纹边",
+        "image": "literary-spring-a-单品.png",
+        "cell": [
+          0,
+          0,
+          3
+        ],
+        "bounds": [
+          0.0,
+          0,
+          627.0,
+          418
+        ]
+      },
+      {
+        "name": "圆领内搭",
+        "description": "奶白 · 简洁轮廓",
+        "image": "literary-spring-a-单品.png",
+        "cell": [
+          1,
+          0,
+          3
+        ],
+        "bounds": [
+          627.0,
+          0,
+          1254.0,
+          418
+        ]
+      },
+      {
+        "name": "翻边牛仔裤",
+        "description": "浅蓝 · 清晰车缝线",
+        "image": "literary-spring-a-单品.png",
+        "cell": [
+          0,
+          1,
+          3
+        ],
+        "bounds": [
+          0.0,
+          418,
+          627.0,
+          838
+        ]
+      },
+      {
+        "name": "短袜",
+        "description": "奶白 · 罗纹袜口",
+        "image": "literary-spring-a-单品.png",
+        "cell": [
+          1,
+          1,
+          3
+        ],
+        "bounds": [
+          627.0,
+          418,
+          1254.0,
+          838
+        ]
+      },
+      {
+        "name": "棕边乐福鞋",
+        "description": "奶白 · 简洁轮廓",
+        "image": "literary-spring-a-单品.png",
+        "cell": [
+          0,
+          2,
+          3
+        ],
+        "bounds": [
+          0.0,
+          838,
+          627.0,
+          1254
+        ]
+      }
+    ]
+  },
+  "literary-spring-b": {
+    "items": [
+      {
+        "name": "针织背心",
+        "description": "藏蓝 · 简洁领口",
+        "image": "literary-spring-b-单品.png",
+        "cell": [
+          0,
+          0,
+          3
+        ],
+        "bounds": [
+          0.0,
+          0,
+          627.0,
+          418
+        ]
+      },
+      {
+        "name": "长袖衬衫",
+        "description": "白色 · 翻领纽扣",
+        "image": "literary-spring-b-单品.png",
+        "cell": [
+          1,
+          0,
+          3
+        ],
+        "bounds": [
+          627.0,
+          0,
+          1254.0,
+          418
+        ]
+      },
+      {
+        "name": "百褶裙",
+        "description": "米色 · 利落褶裥",
+        "image": "literary-spring-b-单品.png",
+        "cell": [
+          0,
+          1,
+          3
+        ],
+        "bounds": [
+          0.0,
+          418,
+          627.0,
+          842
+        ]
+      },
+      {
+        "name": "短袜",
+        "description": "奶白 · 罗纹袜口",
+        "image": "literary-spring-b-单品.png",
+        "cell": [
+          1,
+          1,
+          3
+        ],
+        "bounds": [
+          627.0,
+          418,
+          1254.0,
+          842
+        ]
+      },
+      {
+        "name": "玛丽珍鞋",
+        "description": "棕色 · 搭扣鞋带",
+        "image": "literary-spring-b-单品.png",
+        "cell": [
+          0,
+          2,
+          3
+        ],
+        "bounds": [
+          0.0,
+          842,
+          627.0,
+          1254
+        ]
+      }
+    ]
+  },
+  "literary-summer-b": {
+    "items": [
+      {
+        "name": "条纹T恤",
+        "description": "薄荷 · 圆领短袖",
+        "image": "literary-summer-b-单品.png",
+        "cell": [
+          0,
+          0,
+          2
+        ],
+        "bounds": [
+          0.0,
+          0,
+          627.0,
+          627
+        ]
+      },
+      {
+        "name": "牛仔短裤",
+        "description": "浅蓝 · 清晰车缝线",
+        "image": "literary-summer-b-单品.png",
+        "cell": [
+          1,
+          0,
+          2
+        ],
+        "bounds": [
+          627.0,
+          0,
+          1254.0,
+          627
+        ]
+      },
+      {
+        "name": "双带凉鞋",
+        "description": "奶白 · 双带平底",
+        "image": "literary-summer-b-单品.png",
+        "cell": [
+          0,
+          1,
+          2
+        ],
+        "bounds": [
+          0.0,
+          627,
+          627.0,
+          1254
+        ]
+      }
+    ]
+  },
+  "literary-autumn-a": {
+    "items": [
+      {
+        "name": "西装外套",
+        "description": "驼色 · 翻领口袋",
+        "image": "literary-autumn-a-单品.png",
+        "cell": [
+          0,
+          0,
+          3
+        ],
+        "bounds": [
+          0.0,
+          0,
+          627.0,
+          418
+        ]
+      },
+      {
+        "name": "针织衫",
+        "description": "奶白 · 柔软针织纹",
+        "image": "literary-autumn-a-单品.png",
+        "cell": [
+          1,
+          0,
+          3
+        ],
+        "bounds": [
+          627.0,
+          0,
+          1254.0,
+          418
+        ]
+      },
+      {
+        "name": "九分牛仔裤",
+        "description": "深蓝 · 清晰车缝线",
+        "image": "literary-autumn-a-单品.png",
+        "cell": [
+          0,
+          1,
+          3
+        ],
+        "bounds": [
+          0.0,
+          418,
+          627.0,
+          836
+        ]
+      },
+      {
+        "name": "短袜",
+        "description": "奶白 · 罗纹袜口",
+        "image": "literary-autumn-a-单品.png",
+        "cell": [
+          1,
+          1,
+          3
+        ],
+        "bounds": [
+          627.0,
+          418,
+          1254.0,
+          836
+        ]
+      },
+      {
+        "name": "系带皮鞋",
+        "description": "棕色 · 简洁轮廓",
+        "image": "literary-autumn-a-单品.png",
+        "cell": [
+          0,
+          2,
+          3
+        ],
+        "bounds": [
+          0.0,
+          836,
+          627.0,
+          1254
+        ]
+      }
+    ]
+  },
+  "literary-autumn-b": {
+    "items": [
+      {
+        "name": "针织衫",
+        "description": "暖橘 · 柔软针织纹",
+        "image": "literary-autumn-b-单品.png",
+        "cell": [
+          0,
+          0,
+          2
+        ],
+        "bounds": [
+          0.0,
+          0,
+          627.0,
+          627
+        ]
+      },
+      {
+        "name": "百褶半裙",
+        "description": "灰蓝 · 利落褶裥",
+        "image": "literary-autumn-b-单品.png",
+        "cell": [
+          1,
+          0,
+          2
+        ],
+        "bounds": [
+          627.0,
+          0,
+          1254.0,
+          627
+        ]
+      },
+      {
+        "name": "切尔西靴",
+        "description": "棕色 · 圆头厚底",
+        "image": "literary-autumn-b-单品.png",
+        "cell": [
+          0,
+          1,
+          2
+        ],
+        "bounds": [
+          0.0,
+          627,
+          627.0,
+          1254
+        ]
+      }
+    ]
+  },
+  "literary-winter-a": {
+    "items": [
+      {
+        "name": "绗缝棉服",
+        "description": "奶白 · 绗缝蓬松轮廓",
+        "image": "literary-winter-a-单品.png",
+        "cell": [
+          0,
+          0,
+          3
+        ],
+        "bounds": [
+          0.0,
+          0,
+          627.0,
+          418
+        ]
+      },
+      {
+        "name": "针织衫",
+        "description": "藏蓝 · 柔软针织纹",
+        "image": "literary-winter-a-单品.png",
+        "cell": [
+          1,
+          0,
+          3
+        ],
+        "bounds": [
+          627.0,
+          0,
+          1254.0,
+          418
+        ]
+      },
+      {
+        "name": "灯芯绒长裤",
+        "description": "驼色 · 细密纵向织纹",
+        "image": "literary-winter-a-单品.png",
+        "cell": [
+          0,
+          1,
+          3
+        ],
+        "bounds": [
+          0.0,
+          418,
+          627.0,
+          867
+        ]
+      },
+      {
+        "name": "短袜",
+        "description": "奶白 · 罗纹袜口",
+        "image": "literary-winter-a-单品.png",
+        "cell": [
+          1,
+          1,
+          3
+        ],
+        "bounds": [
+          627.0,
+          418,
+          1254.0,
+          867
+        ]
+      },
+      {
+        "name": "运动鞋",
+        "description": "绿白 · 系带厚底",
+        "image": "literary-winter-a-单品.png",
+        "cell": [
+          0,
+          2,
+          3
+        ],
+        "bounds": [
+          0.0,
+          867,
+          627.0,
+          1254
+        ]
+      }
+    ]
+  },
+  "literary-winter-b": {
+    "items": [
+      {
+        "name": "牛角扣大衣",
+        "description": "灰蓝 · 连帽牛角扣",
+        "image": "literary-winter-b-单品.png",
+        "cell": [
+          0,
+          0,
+          3
+        ],
+        "bounds": [
+          0.0,
+          0,
+          627.0,
+          418
+        ]
+      },
+      {
+        "name": "麻花毛衣",
+        "description": "奶白 · 柔软针织纹",
+        "image": "literary-winter-b-单品.png",
+        "cell": [
+          1,
+          0,
+          3
+        ],
+        "bounds": [
+          627.0,
+          0,
+          1254.0,
+          418
+        ]
+      },
+      {
+        "name": "百褶裙",
+        "description": "奶白 · 利落褶裥",
+        "image": "literary-winter-b-单品.png",
+        "cell": [
+          0,
+          1,
+          3
+        ],
+        "bounds": [
+          0.0,
+          418,
+          627.0,
+          836
+        ]
+      },
+      {
+        "name": "连裤袜",
+        "description": "藏蓝 · 柔软织纹",
+        "image": "literary-winter-b-单品.png",
+        "cell": [
+          1,
+          1,
+          3
+        ],
+        "bounds": [
+          627.0,
+          418,
+          1254.0,
+          836
+        ]
+      },
+      {
+        "name": "系带短靴",
+        "description": "棕色 · 圆头厚底",
+        "image": "literary-winter-b-单品.png",
+        "cell": [
+          0,
+          2,
+          3
+        ],
+        "bounds": [
+          0.0,
+          836,
+          627.0,
+          1254
+        ]
+      }
+    ]
+  }
+}
