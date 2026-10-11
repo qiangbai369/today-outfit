@@ -1,0 +1,8 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>穿搭照相馆</title><script src="../previews/complete-looks/data.js"></script></head><body><a href="./">进入穿搭照相馆</a><script>
+'use strict';
+const base = new URLSearchParams(location.search).get('base');
+const target = new URL('./', location.href);
+if (window.CompleteLookData.LOOKS.some(look => look.id === base)) target.searchParams.set('sample', base);
+location.replace(target.href);
+</script></body></html>
