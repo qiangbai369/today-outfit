@@ -297,7 +297,7 @@
   function load(look) {
     if (!images.has(look.id)) {
       const photo = new Image();
-      photo.src = '../previews/complete-looks/' + (look.display || look.image);
+      photo.src = breakdowns[look.id]?.figure || '../previews/complete-looks/' + (look.display || look.image);
       const pending = decodePhoto(photo).then(() => photo).catch(error => { images.delete(look.id); throw error; });
       images.set(look.id, pending);
     }
@@ -471,7 +471,7 @@
   async function initialize() {
     feedbackState('加载中…');
     try {
-      const response = await fetch('拆解小样信息.json?v=20261011-browse1', {signal: AbortSignal.timeout(15000)});
+      const response = await fetch('拆解小样信息.json?v=20261011-browse2', {signal: AbortSignal.timeout(15000)});
       if (!response.ok) throw new Error('单品信息读取失败');
       const data = await response.json();
       if (!allLooks.every(look => Array.isArray(data[look.id]?.items))) throw new Error('单品信息不完整');

@@ -5,7 +5,7 @@ const vm = require('node:vm');
 const data = require('../previews/complete-looks/data.js');
 const {boot,flush}=require('./helpers/mobile-harness.cjs');
 test('whole figure is displayed without fetching single-item images',async()=>{
- const app=boot();await flush();assert.equal(app.elements.get('stage').hidden,false);assert.equal(app.elements.get('stage').dataset.look,'sweet-summer-a');assert.equal(app.requests.length,2);assert.ok(app.requests.every(p=>p.startsWith('../previews/complete-looks/')));assert.equal(app.elements.get('items').children.length,0);
+ const app=boot();await flush();assert.equal(app.elements.get('stage').hidden,false);assert.equal(app.elements.get('stage').dataset.look,'sweet-summer-a');assert.equal(app.requests.length,2);assert.ok(app.requests.every(p=>p.startsWith('images/')));assert.equal(app.elements.get('items').children.length,0);
 });
 test('one failed item keeps other items visible and retry restores it',async()=>{
  const meta=JSON.parse(fs.readFileSync('mobile/拆解小样信息.json'));const broken=meta['sweet-summer-a'].items[0].image;
@@ -21,7 +21,7 @@ test('late item loading cannot replace content after collapse',async()=>{
 });
 
 test('failed figure offers retry and can enter after recovery',async()=>{
- const broken='../previews/complete-looks/assets/sweet-summer-a.png';
+ const broken='images/sweet-summer-a.webp';
  const app=boot({failedImages:new Set([broken])});await flush();
  assert.equal(app.elements.get('feedback').hidden,false);assert.equal(app.elements.get('retry').hidden,false);
  app.failedImages.clear();app.elements.get('retry').handlers.click();await flush();
