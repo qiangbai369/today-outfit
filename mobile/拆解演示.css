@@ -47,3 +47,6 @@
 .items[data-count="5"] .item-name,.items[data-count="6"] .item-name{font-size:14px}.items[data-count="5"] .item-description,.items[data-count="6"] .item-description{font-size:12px}
 .stage[data-scroll-items="true"]{touch-action:pan-y pinch-zoom}.stage[data-scroll-items="true"] .items{touch-action:pan-y pinch-zoom}
 @media(max-height:620px){.items{inset:64px 18px 20px;gap:16px 14px}.item-name{font-size:14px}.item-description{font-size:12px}.item-number{font-size:10px}.items[data-count="5"],.items[data-count="6"]{gap:18px 14px}.items[data-count="5"] .item-name,.items[data-count="6"] .item-name{font-size:14px}.items[data-count="5"] .item-description,.items[data-count="6"] .item-description{font-size:12px}}
+
+/* Only shown when an update or offline retry needs an action. */
+.pwa-action{position:fixed;z-index:12;bottom:max(24px,env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);min-width:72px;min-height:44px;padding:0 18px;border-radius:24px;background:#faf9f6f2;color:#566348;font-size:12px;box-shadow:0 2px 12px #353a3012}body:has(.favorite-toast:not([hidden])) .pwa-action,body:has(.load-feedback:not([hidden])) .pwa-action{bottom:92px}.pwa-action:disabled{opacity:.65}
