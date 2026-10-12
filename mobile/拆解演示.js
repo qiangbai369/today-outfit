@@ -471,7 +471,7 @@
   async function initialize() {
     feedbackState('加载中…');
     try {
-      const response = await fetch('拆解小样信息.json?v=20261011-browse2', {signal: AbortSignal.timeout(15000)});
+      const response = await fetch('拆解小样信息.json?v=20261012-unified1', {signal: AbortSignal.timeout(15000)});
       if (!response.ok) throw new Error('单品信息读取失败');
       const data = await response.json();
       if (!allLooks.every(look => Array.isArray(data[look.id]?.items))) throw new Error('单品信息不完整');

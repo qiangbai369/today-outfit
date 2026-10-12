@@ -1,7 +1,7 @@
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
 const {loadImage,createCanvas}=require('@napi-rs/canvas'),looks=require('../previews/complete-looks/data.js').LOOKS,meta=require('../mobile/拆解小样信息.json');
-test('mobile figures and single-item atlases preserve original dimensions and transparency',async()=>{
- const pairs=new Map();for(const look of looks){pairs.set('mobile/'+meta[look.id].figure,'previews/complete-looks/'+(look.display||look.image));for(const item of meta[look.id].items)pairs.set('mobile/'+item.image,'mobile/'+path.basename(item.image,'.webp')+'.png');}
+test('mobile single-item atlases preserve original dimensions, transparency and clothing details',async()=>{
+ const pairs=new Map();for(const look of looks){for(const item of meta[look.id].items)pairs.set('mobile/'+item.image,'mobile/'+path.basename(item.image,'.webp')+'.png');}
  let originalBytes=0,deliveryBytes=0;for(const [optimized,original] of pairs){const a=await loadImage(original),b=await loadImage(optimized);assert.equal(b.width,a.width,optimized);assert.equal(b.height,a.height,optimized);const c=createCanvas(a.width,a.height),ctx=c.getContext('2d');ctx.drawImage(a,0,0);const source=ctx.getImageData(0,0,a.width,a.height).data;ctx.clearRect(0,0,a.width,a.height);ctx.drawImage(b,0,0);const target=ctx.getImageData(0,0,a.width,a.height).data;let error=0,channels=0;for(let n=0;n<source.length;n+=4){assert.equal(target[n+3],source[n+3],optimized+' alpha');if(source[n+3]>240){for(let k=0;k<3;k++)error+=Math.abs(source[n+k]-target[n+k]);channels+=3;}}assert.ok(error/channels<4,optimized+' color difference');originalBytes+=fs.statSync(original).size;deliveryBytes+=fs.statSync(optimized).size;}
- assert.equal(pairs.size,61);assert.ok(deliveryBytes<originalBytes*.25,'mobile payload must be at least 75% smaller');
+ assert.equal(pairs.size,37);assert.ok(deliveryBytes<originalBytes*.25,'mobile payload must be at least 75% smaller');
 });

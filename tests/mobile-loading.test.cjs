@@ -21,7 +21,7 @@ test('late item loading cannot replace content after collapse',async()=>{
 });
 
 test('failed figure offers retry and can enter after recovery',async()=>{
- const broken='images/sweet-summer-a.webp';
+ const broken=JSON.parse(fs.readFileSync('mobile/拆解小样信息.json'))['sweet-summer-a'].figure;
  const app=boot({failedImages:new Set([broken])});await flush();
  assert.equal(app.elements.get('feedback').hidden,false);assert.equal(app.elements.get('retry').hidden,false);
  app.failedImages.clear();app.elements.get('retry').handlers.click();await flush();

@@ -1,0 +1,443 @@
+{
+  "version": "20261012-unified1",
+  "canvas": [
+    1024,
+    1536
+  ],
+  "headTop": 48,
+  "soleBottom": 1488,
+  "figures": {
+    "cool-autumn-a": {
+      "figure": "images/unified/cool-autumn-a.webp",
+      "canonical": "cool-summer-a",
+      "sha256": "041230905f90dff8994dce0f68093de27840d1f3fd1b57c13b8b03ebf3be8119",
+      "editSha256": "e329684b32324eba8d14ba789711b5de5a7b2fb25657e3c4b83a673760a9d652",
+      "bodyBounds": [
+        273,
+        47,
+        757,
+        1487
+      ],
+      "headCenterX": 512.3,
+      "scale": 0.984952,
+      "offset": [
+        8,
+        18
+      ]
+    },
+    "cool-autumn-b": {
+      "figure": "images/unified/cool-autumn-b.webp",
+      "canonical": "cool-summer-a",
+      "sha256": "1c52204ad224329ad2f5d862bdce71549d3cf908268e68e9da4d10c0a1434e4e",
+      "editSha256": "c99c4b615b2ffbe864fc51feaa48af0204eba71380deb42d5480c2265572cf7d",
+      "bodyBounds": [
+        269,
+        47,
+        764,
+        1488
+      ],
+      "headCenterX": 511.97,
+      "scale": 0.988332,
+      "offset": [
+        1,
+        17
+      ]
+    },
+    "cool-spring-a": {
+      "figure": "images/unified/cool-spring-a.webp",
+      "canonical": "cool-summer-a",
+      "sha256": "c6bb1df6442c6224b21a0c3f54a795441680abbc7d5a0b02c1601a2e55a434a0",
+      "editSha256": "040a508495584e9a2009f637a702ea4c902e31cad1b0332cb4b3cacf98a5e054",
+      "bodyBounds": [
+        266,
+        47,
+        756,
+        1488
+      ],
+      "headCenterX": 511.52,
+      "scale": 0.988332,
+      "offset": [
+        5,
+        17
+      ]
+    },
+    "cool-spring-b": {
+      "figure": "images/unified/cool-spring-b.webp",
+      "canonical": "cool-summer-a",
+      "sha256": "5992c76500dee57550daedeae7b383d452c50499415b7e8908c297ea066b6b3b",
+      "editSha256": "50dde2d1de8aaa948b59d0c0ef7ff4a234004ed51db354861510f2dcca66a0eb",
+      "bodyBounds": [
+        262,
+        47,
+        754,
+        1488
+      ],
+      "headCenterX": 511.62,
+      "scale": 0.987654,
+      "offset": [
+        1,
+        17
+      ]
+    },
+    "cool-summer-a": {
+      "figure": "images/unified/cool-summer-a.webp",
+      "canonical": "cool-summer-a",
+      "sha256": "5a00457bd3e390cf4086364fb13301e28863e37d5d3278dd69842abd0e41bbef",
+      "editSha256": "a5a3ed32dc59fc62dfca715faf683c16554e29ae690e912c9635bb045563489f",
+      "bodyBounds": [
+        272,
+        48,
+        753,
+        1489
+      ],
+      "headCenterX": 512.39,
+      "scale": 0.97561,
+      "offset": [
+        8,
+        18
+      ]
+    },
+    "cool-summer-b": {
+      "figure": "images/unified/cool-summer-b.webp",
+      "canonical": "cool-summer-a",
+      "sha256": "21cec70dea415f74eadeff681758f51102027fb648ac75991e513212e9460939",
+      "editSha256": "27174ac6e138621d576665ddedd44b3ee089c228a8cfaf626e8bfc9565d41fef",
+      "bodyBounds": [
+        272,
+        48,
+        757,
+        1488
+      ],
+      "headCenterX": 512.48,
+      "scale": 0.986301,
+      "offset": [
+        7,
+        22
+      ]
+    },
+    "cool-winter-a": {
+      "figure": "images/unified/cool-winter-a.webp",
+      "canonical": "cool-summer-a",
+      "sha256": "0cef51ee5a33b29f3656e3ae227ba3d551d0e293e94aace877643032d833eb59",
+      "editSha256": "912bd4a1d89ffd2a585895df18a09e5ba9155b9f5f180f3066785e597b25ac7a",
+      "bodyBounds": [
+        257,
+        48,
+        767,
+        1488
+      ],
+      "headCenterX": 512.34,
+      "scale": 0.982265,
+      "offset": [
+        5,
+        20
+      ]
+    },
+    "cool-winter-b": {
+      "figure": "images/unified/cool-winter-b.webp",
+      "canonical": "cool-summer-a",
+      "sha256": "43e332f352f1a2a2c6a9c3fe48d40f97b7de60d67789e53aa1c40401775cc89d",
+      "editSha256": "05d680e6cc9054eed4e6bece94f79d880b89c1560e643a850d45f6ec951e54d0",
+      "bodyBounds": [
+        248,
+        48,
+        781,
+        1488
+      ],
+      "headCenterX": 511.87,
+      "scale": 0.984279,
+      "offset": [
+        3,
+        22
+      ]
+    },
+    "literary-autumn-a": {
+      "figure": "images/unified/literary-autumn-a.webp",
+      "canonical": "literary-spring-a",
+      "sha256": "35a81aa2a7319ea63597ab1002a012542b071fbe507e7d47cb8ec5c3212b626a",
+      "editSha256": "a1c0319c3132b3e7d5f61024a9c5ca8f6fae6ab113446c03f75c64022823213a",
+      "bodyBounds": [
+        223,
+        48,
+        787,
+        1488
+      ],
+      "headCenterX": 511.54,
+      "scale": 0.963211,
+      "offset": [
+        2,
+        26
+      ]
+    },
+    "literary-autumn-b": {
+      "figure": "images/unified/literary-autumn-b.webp",
+      "canonical": "literary-spring-a",
+      "sha256": "e48c565ac264d0fb76ed7ab023d58a77724477e3285473baab321353d8b77526",
+      "editSha256": "e3fd26290be08f8bc2996b71c114962074ba617ba4c07b2e63930f3aa9ec3430",
+      "bodyBounds": [
+        219,
+        49,
+        773,
+        1489
+      ],
+      "headCenterX": 512.14,
+      "scale": 0.96064,
+      "offset": [
+        3,
+        31
+      ]
+    },
+    "literary-spring-a": {
+      "figure": "images/unified/literary-spring-a.webp",
+      "canonical": "literary-spring-a",
+      "sha256": "47158da4a572c04e6c9ed2786e967d5094336215d306fd2a4018a62d73cecb05",
+      "editSha256": "c6e09617067b9a3a0affb7b392bf49c1e5aecd5a79ced68e4c46efe1cce96118",
+      "bodyBounds": [
+        233,
+        48,
+        775,
+        1489
+      ],
+      "headCenterX": 512.22,
+      "scale": 0.96064,
+      "offset": [
+        5,
+        29
+      ]
+    },
+    "literary-spring-b": {
+      "figure": "images/unified/literary-spring-b.webp",
+      "canonical": "literary-spring-a",
+      "sha256": "b386f950a4b60a84975915ffd152e7e42f5ca4a6f3b1589d8020ff26aa752375",
+      "editSha256": "74b92887ece9bfefa442d0e27b1bcb72ddbef8d2261398c852fe82c06e82ec38",
+      "bodyBounds": [
+        244,
+        48,
+        755,
+        1488
+      ],
+      "headCenterX": 511.8,
+      "scale": 0.966443,
+      "offset": [
+        2,
+        27
+      ]
+    },
+    "literary-summer-a": {
+      "figure": "images/unified/literary-summer-a.webp",
+      "canonical": "literary-spring-a",
+      "sha256": "11c4df95c35d8eed6800a94622fababd2b20bdff0235debaf46cdafca2563baf",
+      "editSha256": "05f844455f86084aee33f2728afde57b568316d81837a619e460aa64e33fafbc",
+      "bodyBounds": [
+        267,
+        49,
+        774,
+        1488
+      ],
+      "headCenterX": 512.4,
+      "scale": 0.963855,
+      "offset": [
+        3,
+        32
+      ]
+    },
+    "literary-summer-b": {
+      "figure": "images/unified/literary-summer-b.webp",
+      "canonical": "literary-spring-a",
+      "sha256": "2b7051309b5770bfffc1a623a14af077634fb48c4ef369e8881e82d60bf830a7",
+      "editSha256": "5f32a915d64bf19b5c29a7aa334150ef89700698fdd2f021bdfae32b7af082b7",
+      "bodyBounds": [
+        276,
+        49,
+        742,
+        1489
+      ],
+      "headCenterX": 511.62,
+      "scale": 0.96064,
+      "offset": [
+        2,
+        35
+      ]
+    },
+    "literary-winter-a": {
+      "figure": "images/unified/literary-winter-a.webp",
+      "canonical": "literary-spring-a",
+      "sha256": "4d0a12d72337aafe14819e21f499c7c576506afc9fd43a5ccf9055ebfced2f4f",
+      "editSha256": "4b276c938bc915bd103d587e0b9f903d8cdf04afc87f668c86db0cc9966a588e",
+      "bodyBounds": [
+        218,
+        49,
+        784,
+        1489
+      ],
+      "headCenterX": 512.3,
+      "scale": 0.95936,
+      "offset": [
+        0,
+        30
+      ]
+    },
+    "literary-winter-b": {
+      "figure": "images/unified/literary-winter-b.webp",
+      "canonical": "literary-spring-a",
+      "sha256": "f2f93dd371a84d2b4c1cdf7f588a5a419011589f9287f9973dbcff3adb68006c",
+      "editSha256": "ce96b6f13f3c45ab6e300dc1cd9fc30634932c9f3e287c2f867b862cc16c1efa",
+      "bodyBounds": [
+        206,
+        49,
+        782,
+        1488
+      ],
+      "headCenterX": 511.98,
+      "scale": 0.965147,
+      "offset": [
+        -1,
+        28
+      ]
+    },
+    "sweet-autumn-a": {
+      "figure": "images/unified/sweet-autumn-a.webp",
+      "canonical": "sweet-summer-a",
+      "sha256": "64ebede0a1b8085950cf42d1343901778588361c2f5ed62f9b1a86759d957b27",
+      "editSha256": "bf4289e5a7e762d7b1ac27d5c4b180f210cde984c116e4ea07e91b3118bafeab",
+      "bodyBounds": [
+        211,
+        48,
+        829,
+        1488
+      ],
+      "headCenterX": 511.79,
+      "scale": 0.987654,
+      "offset": [
+        15,
+        12
+      ]
+    },
+    "sweet-autumn-b": {
+      "figure": "images/unified/sweet-autumn-b.webp",
+      "canonical": "sweet-summer-a",
+      "sha256": "dd281498c5ba9d01429b331741ecd128fc529929fa938fc716078c00d00a6c2a",
+      "editSha256": "56b4c5fef128c258771e2abec809d4a1504355b212e0324624e1421b669cccd6",
+      "bodyBounds": [
+        211,
+        47,
+        832,
+        1487
+      ],
+      "headCenterX": 511.94,
+      "scale": 0.986977,
+      "offset": [
+        15,
+        13
+      ]
+    },
+    "sweet-spring-a": {
+      "figure": "images/unified/sweet-spring-a.webp",
+      "canonical": "sweet-summer-a",
+      "sha256": "fd68308f143f67b05183d157f359d8a4088ed5c56d87877297e5b4a6ab9b728a",
+      "editSha256": "b487801fe6c1ad7719b74f501e6a0267c2bfef416aa81736e383979c543d75a6",
+      "bodyBounds": [
+        194,
+        47,
+        823,
+        1488
+      ],
+      "headCenterX": 512.38,
+      "scale": 0.984279,
+      "offset": [
+        4,
+        17
+      ]
+    },
+    "sweet-spring-b": {
+      "figure": "images/unified/sweet-spring-b.webp",
+      "canonical": "sweet-summer-a",
+      "sha256": "f4dfa9ad3425cbe5bef90e5fe4ba6f6e4a9dffcfea31f67d9968745abd60f1cf",
+      "editSha256": "9edb6da7f5a5199f4f57c636e5d4d94797346f3d82377c6b84cbfad8d5d0245e",
+      "bodyBounds": [
+        200,
+        48,
+        830,
+        1487
+      ],
+      "headCenterX": 512.5,
+      "scale": 0.990371,
+      "offset": [
+        -2,
+        16
+      ]
+    },
+    "sweet-summer-a": {
+      "figure": "images/unified/sweet-summer-a.webp",
+      "canonical": "sweet-summer-a",
+      "sha256": "614bcf894495f4a5ee49c19538523a7028f8a4745b6dd66e0d34d04795e9e7b4",
+      "editSha256": "ade6de396a5c8f8755097deb61281618e8d7bc1fe1fd69da311fbe8faad12720",
+      "bodyBounds": [
+        213,
+        49,
+        837,
+        1489
+      ],
+      "headCenterX": 512.05,
+      "scale": 0.980259,
+      "offset": [
+        18,
+        15
+      ]
+    },
+    "sweet-summer-b": {
+      "figure": "images/unified/sweet-summer-b.webp",
+      "canonical": "sweet-summer-a",
+      "sha256": "72b8996db00268a2b1ffa346085918e20cface57d19c152a4bac6746b2a3d6fa",
+      "editSha256": "a39e8f206003ca25908b8eb26e2e30a683f8e2886d3c4cd222f35409a6b8746e",
+      "bodyBounds": [
+        208,
+        48,
+        842,
+        1487
+      ],
+      "headCenterX": 512.01,
+      "scale": 0.993103,
+      "offset": [
+        10,
+        15
+      ]
+    },
+    "sweet-winter-a": {
+      "figure": "images/unified/sweet-winter-a.webp",
+      "canonical": "sweet-summer-a",
+      "sha256": "d5551b44a867df0425ee64098703c5bf050bbe543a590b0a086cfc7a5c124cdf",
+      "editSha256": "ddf8264102cf8fb4c7765b407c6fde07b65c7de257dd1534c1ed16e0911af784",
+      "bodyBounds": [
+        212,
+        48,
+        833,
+        1489
+      ],
+      "headCenterX": 512.05,
+      "scale": 0.980259,
+      "offset": [
+        18,
+        15
+      ]
+    },
+    "sweet-winter-b": {
+      "figure": "images/unified/sweet-winter-b.webp",
+      "canonical": "sweet-summer-a",
+      "sha256": "b8465b7bdbd9ad97c91c1473e9ad302d4f7eb6c543130f8b09b5a1c36dec245f",
+      "editSha256": "cb7ae3e60fa6f212cc2ba23fceb9330eb990d09000a31fb3f29b35a862f0cd57",
+      "bodyBounds": [
+        214,
+        48,
+        828,
+        1489
+      ],
+      "headCenterX": 511.73,
+      "scale": 0.977597,
+      "offset": [
+        20,
+        15
+      ]
+    }
+  }
+}

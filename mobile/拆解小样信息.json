@@ -46,7 +46,7 @@
         ]
       }
     ],
-    "figure": "images/sweet-summer-a.webp"
+    "figure": "images/unified/sweet-summer-a.webp"
   },
   "cool-summer-a": {
     "items": [
@@ -84,7 +84,7 @@
         ]
       }
     ],
-    "figure": "images/cool-summer-a.webp"
+    "figure": "images/unified/cool-summer-a.webp"
   },
   "literary-summer-a": {
     "items": [
@@ -133,7 +133,7 @@
         ]
       }
     ],
-    "figure": "images/literary-summer-a.webp"
+    "figure": "images/unified/literary-summer-a.webp"
   },
   "sweet-spring-a": {
     "items": [
@@ -226,7 +226,7 @@
         ]
       }
     ],
-    "figure": "images/sweet-spring-a.webp"
+    "figure": "images/unified/sweet-spring-a.webp"
   },
   "sweet-spring-b": {
     "items": [
@@ -341,7 +341,7 @@
         ]
       }
     ],
-    "figure": "images/sweet-spring-b.webp"
+    "figure": "images/unified/sweet-spring-b.webp"
   },
   "sweet-summer-b": {
     "items": [
@@ -412,7 +412,7 @@
         ]
       }
     ],
-    "figure": "images/sweet-summer-b.webp"
+    "figure": "images/unified/sweet-summer-b.webp"
   },
   "sweet-autumn-a": {
     "items": [
@@ -527,7 +527,7 @@
         ]
       }
     ],
-    "figure": "images/sweet-autumn-a.webp"
+    "figure": "images/unified/sweet-autumn-a.webp"
   },
   "sweet-autumn-b": {
     "items": [
@@ -664,7 +664,7 @@
         ]
       }
     ],
-    "figure": "images/sweet-autumn-b.webp"
+    "figure": "images/unified/sweet-autumn-b.webp"
   },
   "sweet-winter-a": {
     "items": [
@@ -801,7 +801,7 @@
         ]
       }
     ],
-    "figure": "images/sweet-winter-a.webp"
+    "figure": "images/unified/sweet-winter-a.webp"
   },
   "sweet-winter-b": {
     "items": [
@@ -938,7 +938,7 @@
         ]
       }
     ],
-    "figure": "images/sweet-winter-b.webp"
+    "figure": "images/unified/sweet-winter-b.webp"
   },
   "cool-spring-a": {
     "items": [
@@ -1020,7 +1020,7 @@
         ]
       }
     ],
-    "figure": "images/cool-spring-a.webp"
+    "figure": "images/unified/cool-spring-a.webp"
   },
   "cool-spring-b": {
     "items": [
@@ -1124,7 +1124,7 @@
         ]
       }
     ],
-    "figure": "images/cool-spring-b.webp"
+    "figure": "images/unified/cool-spring-b.webp"
   },
   "cool-summer-b": {
     "items": [
@@ -1217,7 +1217,7 @@
         ]
       }
     ],
-    "figure": "images/cool-summer-b.webp"
+    "figure": "images/unified/cool-summer-b.webp"
   },
   "cool-autumn-a": {
     "items": [
@@ -1299,7 +1299,7 @@
         ]
       }
     ],
-    "figure": "images/cool-autumn-a.webp"
+    "figure": "images/unified/cool-autumn-a.webp"
   },
   "cool-autumn-b": {
     "items": [
@@ -1403,7 +1403,7 @@
         ]
       }
     ],
-    "figure": "images/cool-autumn-b.webp"
+    "figure": "images/unified/cool-autumn-b.webp"
   },
   "cool-winter-a": {
     "items": [
@@ -1485,7 +1485,7 @@
         ]
       }
     ],
-    "figure": "images/cool-winter-a.webp"
+    "figure": "images/unified/cool-winter-a.webp"
   },
   "cool-winter-b": {
     "items": [
@@ -1600,7 +1600,7 @@
         ]
       }
     ],
-    "figure": "images/cool-winter-b.webp"
+    "figure": "images/unified/cool-winter-b.webp"
   },
   "literary-spring-a": {
     "items": [
@@ -1715,7 +1715,7 @@
         ]
       }
     ],
-    "figure": "images/literary-spring-a.webp"
+    "figure": "images/unified/literary-spring-a.webp"
   },
   "literary-spring-b": {
     "items": [
@@ -1830,7 +1830,7 @@
         ]
       }
     ],
-    "figure": "images/literary-spring-b.webp"
+    "figure": "images/unified/literary-spring-b.webp"
   },
   "literary-summer-b": {
     "items": [
@@ -1901,7 +1901,7 @@
         ]
       }
     ],
-    "figure": "images/literary-summer-b.webp"
+    "figure": "images/unified/literary-summer-b.webp"
   },
   "literary-autumn-a": {
     "items": [
@@ -2016,7 +2016,7 @@
         ]
       }
     ],
-    "figure": "images/literary-autumn-a.webp"
+    "figure": "images/unified/literary-autumn-a.webp"
   },
   "literary-autumn-b": {
     "items": [
@@ -2087,7 +2087,7 @@
         ]
       }
     ],
-    "figure": "images/literary-autumn-b.webp"
+    "figure": "images/unified/literary-autumn-b.webp"
   },
   "literary-winter-a": {
     "items": [
@@ -2202,7 +2202,7 @@
         ]
       }
     ],
-    "figure": "images/literary-winter-a.webp"
+    "figure": "images/unified/literary-winter-a.webp"
   },
   "literary-winter-b": {
     "items": [
@@ -2317,6 +2317,6 @@
         ]
       }
     ],
-    "figure": "images/literary-winter-b.webp"
+    "figure": "images/unified/literary-winter-b.webp"
   }
 }
