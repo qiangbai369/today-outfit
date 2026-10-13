@@ -1,9 +1,9 @@
 self.OUTFIT_OFFLINE = {
-  "version": "e1a37c33deb51ffa39c6",
+  "version": "a4e7f6ad8d956061cea9",
   "assets": [
     {
       "url": "../previews/complete-looks/data.js",
-      "sha256": "d4d2fea71b676d363e12dc0ac7f746a614f2da06a0cf1a8bb59107a3a5101c85"
+      "sha256": "900d4642d42534e4a0856e2cfef40499449df536f81cdce95226a08602252de7"
     },
     {
       "url": "icons/apple-touch-icon.png",
@@ -267,7 +267,7 @@ self.OUTFIT_OFFLINE = {
     },
     {
       "url": "index.html",
-      "sha256": "7cfde454bf160cde8fa75a05fcba941625d5462e99996dfff6ddb87feced72a3"
+      "sha256": "e06bc2a597378b3aab4e74e072ce914ddacfc3379ef6d393f8025c1205411392"
     },
     {
       "url": "manifest.webmanifest",

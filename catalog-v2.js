@@ -1,7 +1,7 @@
 (function(root,factory){const api=factory(typeof module==='object'?require('./data/catalog.js'):root.PlannerCatalog,typeof module==='object'?require('./data/cool-capsule.js'):root.CoolCapsule);if(typeof module==='object')module.exports=api;else root.OutfitCatalogV2=api;})(globalThis,function(Source,Capsule){
  'use strict';
  const VERSION='native-2',SLOTS=['top','bottom','dress','outer','shoes','bag','legwear'];
- const CHARACTERS=[{id:'sweet',name:'吴心媛',tone:'柔和 · 轻盈'},{id:'cool',name:'陈墨白',tone:'利落 · 随性'},{id:'literary',name:'顾书宁',tone:'清新 · 整洁'}];
+ const CHARACTERS=[{id:'sweet',name:'林初棠',tone:'柔和 · 轻盈'},{id:'cool',name:'陈墨白',tone:'利落 · 随性'},{id:'literary',name:'顾书宁',tone:'清新 · 整洁'}];
  const ITEMS=[...Source.ITEMS,...Capsule.ITEMS].map(i=>Object.freeze({...i,slot:i.category,warmth:i.conditions.map(x=>({'热':'hot','温暖':'mild','凉':'cool','冷':'cold'}[x])),detail:i.designNote}));
  const item=id=>ITEMS.find(i=>i.id===id),itemsFor=character=>ITEMS.filter(i=>character==='cool'?(i.nativeLayer||['shared-bag-01','shared-bag-02'].includes(i.id)):(i.character==='all'||i.character===character));
  const looksFor=character=>character==='cool'?Capsule.LOOKS:[];

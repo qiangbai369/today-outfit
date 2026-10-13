@@ -1172,7 +1172,7 @@ const ITEMS=Object.freeze([
     "asset": "assets/items/literary-bag-01.png"
   }
 ].map(i=>Object.freeze(i)));
-const CHARACTERS=Object.freeze([{id:'sweet',name:'吴心媛',style:'soft'},{id:'cool',name:'陈墨白',style:'street'},{id:'literary',name:'顾书宁',style:'neat'}]);
+const CHARACTERS=Object.freeze([{id:'sweet',name:'林初棠',style:'soft'},{id:'cool',name:'陈墨白',style:'street'},{id:'literary',name:'顾书宁',style:'neat'}]);
 const SLOTS=Object.freeze(['top','bottom','dress','outer','shoes','bag','legwear']);
 const item=id=>ITEMS.find(i=>i.id===id);
 const itemsFor=id=>CHARACTERS.some(c=>c.id===id)?ITEMS.filter(i=>i.character==='all'||i.character===id):[];

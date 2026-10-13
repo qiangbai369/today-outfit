@@ -2,7 +2,7 @@
   "CHARACTERS": [
     {
       "id": "sweet",
-      "name": "吴心媛",
+      "name": "林初棠",
       "portrait": "../../assets/characters/sweet/original.png"
     },
     {
