@@ -1,5 +1,5 @@
 self.OUTFIT_OFFLINE = {
-  "version": "32620f7b0ce9fc05c714",
+  "version": "b51f78c91ad59e7c6f34",
   "assets": [
     {
       "url": "../previews/complete-looks/data.js",
@@ -143,7 +143,7 @@ self.OUTFIT_OFFLINE = {
     },
     {
       "url": "images/unified/cool-summer-a.webp",
-      "sha256": "5a00457bd3e390cf4086364fb13301e28863e37d5d3278dd69842abd0e41bbef"
+      "sha256": "31ac762fea0ce81ab8e091adecb060290b59076799334ad3167a0ee948da9e55"
     },
     {
       "url": "images/unified/cool-summer-b.webp",
@@ -167,7 +167,7 @@ self.OUTFIT_OFFLINE = {
     },
     {
       "url": "images/unified/literary-spring-a.webp",
-      "sha256": "47158da4a572c04e6c9ed2786e967d5094336215d306fd2a4018a62d73cecb05"
+      "sha256": "cd4938bb8cfad5a873e8059db5ab6f7fbaba56a3e2f80298aec58a6e690bb771"
     },
     {
       "url": "images/unified/literary-spring-b.webp",
@@ -207,7 +207,7 @@ self.OUTFIT_OFFLINE = {
     },
     {
       "url": "images/unified/sweet-summer-a.webp",
-      "sha256": "614bcf894495f4a5ee49c19538523a7028f8a4745b6dd66e0d34d04795e9e7b4"
+      "sha256": "6c1930cdd0ee5294ea8ddc123bac361bcfbe062a9ab7233343beadd26e3119f4"
     },
     {
       "url": "images/unified/sweet-summer-b.webp",
@@ -295,7 +295,7 @@ self.OUTFIT_OFFLINE = {
     },
     {
       "url": "thumbnails/cool-summer-a.webp",
-      "sha256": "bd053676d6452365d2ebd768142ce269096fb714e6bb2fd6bf6f22bd43624369"
+      "sha256": "c1ddc577215b65dffcd86b6b4f16ade79928dbe5e9ae9b0c6025b6721c4a543e"
     },
     {
       "url": "thumbnails/cool-summer-b.webp",
@@ -323,7 +323,7 @@ self.OUTFIT_OFFLINE = {
     },
     {
       "url": "thumbnails/literary-spring-a.webp",
-      "sha256": "f53c958456792daf276896b70560df1076396c9ba114af23d529b39fcf7823f8"
+      "sha256": "4a57628a4374bba8cacb7ab8c8923f34f027da6698a9297982504a91b50a2ebd"
     },
     {
       "url": "thumbnails/literary-spring-b.webp",
@@ -363,7 +363,7 @@ self.OUTFIT_OFFLINE = {
     },
     {
       "url": "thumbnails/sweet-summer-a.webp",
-      "sha256": "94a9f7fa50c5265df8d6b15885903f0533e005a9b706044c7b10a07f8d2b2347"
+      "sha256": "9a6dd472487b79106071d0f67873a74b7174e668722cae3829678d85ccf94fae"
     },
     {
       "url": "thumbnails/sweet-summer-b.webp",

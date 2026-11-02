@@ -1,5 +1,5 @@
 {
-  "version": "20261012-unified1",
+  "version": "20261102-refined3",
   "canvas": [
     1024,
     1536
@@ -82,19 +82,19 @@
     "cool-summer-a": {
       "figure": "images/unified/cool-summer-a.webp",
       "canonical": "cool-summer-a",
-      "sha256": "5a00457bd3e390cf4086364fb13301e28863e37d5d3278dd69842abd0e41bbef",
-      "editSha256": "a5a3ed32dc59fc62dfca715faf683c16554e29ae690e912c9635bb045563489f",
+      "sha256": "31ac762fea0ce81ab8e091adecb060290b59076799334ad3167a0ee948da9e55",
+      "editSha256": "ceeb24e4795448f8f794c58f6bb0738427ba744442c102a6079cd60d4679a1c7",
       "bodyBounds": [
-        272,
-        48,
-        753,
-        1489
+        282,
+        49,
+        758,
+        1488
       ],
-      "headCenterX": 512.39,
-      "scale": 0.97561,
+      "headCenterX": 512.49,
+      "scale": 0.96064,
       "offset": [
-        8,
-        18
+        24,
+        33
       ]
     },
     "cool-summer-b": {
@@ -190,19 +190,19 @@
     "literary-spring-a": {
       "figure": "images/unified/literary-spring-a.webp",
       "canonical": "literary-spring-a",
-      "sha256": "47158da4a572c04e6c9ed2786e967d5094336215d306fd2a4018a62d73cecb05",
-      "editSha256": "c6e09617067b9a3a0affb7b392bf49c1e5aecd5a79ced68e4c46efe1cce96118",
+      "sha256": "cd4938bb8cfad5a873e8059db5ab6f7fbaba56a3e2f80298aec58a6e690bb771",
+      "editSha256": "bb1d34d867c3fa07fc737445c2bc1ac10d86bd546bd38c8dfe51bbc8d5c1ece6",
       "bodyBounds": [
-        233,
+        227,
         48,
-        775,
+        774,
         1489
       ],
-      "headCenterX": 512.22,
-      "scale": 0.96064,
+      "headCenterX": 512.04,
+      "scale": 0.961282,
       "offset": [
-        5,
-        29
+        4,
+        27
       ]
     },
     "literary-spring-b": {
@@ -370,19 +370,19 @@
     "sweet-summer-a": {
       "figure": "images/unified/sweet-summer-a.webp",
       "canonical": "sweet-summer-a",
-      "sha256": "614bcf894495f4a5ee49c19538523a7028f8a4745b6dd66e0d34d04795e9e7b4",
-      "editSha256": "ade6de396a5c8f8755097deb61281618e8d7bc1fe1fd69da311fbe8faad12720",
+      "sha256": "6c1930cdd0ee5294ea8ddc123bac361bcfbe062a9ab7233343beadd26e3119f4",
+      "editSha256": "d37b900c43be4dec40fef72e52a3759ac817aa711edc19531548fbb5a771182f",
       "bodyBounds": [
-        213,
+        224,
         49,
-        837,
-        1489
+        861,
+        1488
       ],
-      "headCenterX": 512.05,
-      "scale": 0.980259,
+      "headCenterX": 512.47,
+      "scale": 0.971005,
       "offset": [
-        18,
-        15
+        26,
+        23
       ]
     },
     "sweet-summer-b": {
