@@ -1,5 +1,5 @@
 self.OUTFIT_OFFLINE = {
-  "version": "a4e7f6ad8d956061cea9",
+  "version": "32620f7b0ce9fc05c714",
   "assets": [
     {
       "url": "../previews/complete-looks/data.js",
@@ -387,11 +387,11 @@ self.OUTFIT_OFFLINE = {
     },
     {
       "url": "拆解演示.css",
-      "sha256": "9f8d4e83c37f72b335a0142b0be6407d60e74c2f69d65c1253eeba883bcf88a2"
+      "sha256": "59682a84ed7aa76476d2aa75da1168e837c47310ca9a84041f01a90d09fd691e"
     },
     {
       "url": "拆解演示.js",
-      "sha256": "5c1f316616a41e429388394fa72824edd5ae12df6bfa70f325202ced52791e1d"
+      "sha256": "22bc8415b12420c6b52e88bf455638b55835aeaa88861fa3c8c89bb25dc40622"
     },
     {
       "url": "搭配.html",

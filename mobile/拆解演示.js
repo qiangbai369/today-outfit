@@ -274,9 +274,10 @@
       if (!storage) throw new Error('Storage unavailable');
       const raw = storage.getItem(FAVORITES_KEY);
       const records = G.addFavorite(raw, selected().id);
-      if (raw === null || records.length > JSON.parse(raw).length) storage.setItem(FAVORITES_KEY, JSON.stringify(records));
+      const added = raw === null || records.length > JSON.parse(raw).length;
+      if (added) storage.setItem(FAVORITES_KEY, JSON.stringify(records));
       renderFavorite();
-      announce('已收藏这套穿搭');
+      announce(added ? '已收藏这套穿搭' : '这套已经收藏啦', true);
       const box = stage.getBoundingClientRect();
       heart.style.left = Math.max(50, Math.min(box.width - 50, point.x - box.left)) + 'px';
       heart.style.top = Math.max(80, Math.min(box.height - 60, point.y - box.top)) + 'px';
