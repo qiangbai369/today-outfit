@@ -21,7 +21,11 @@
   let order = newRound('sweet-summer-a');
   const images = new Map();
   let breakdowns = {};
-  let expansionVersion = 0, retryAction = null;
+  let expansionVersion = 0, retryAction = null, feedbackTimer;
+  let season = 'all';
+  const filteredLooks = id => allLooks.filter(look => look.character === id && (season === 'all' || look.season === season));
+  $('season-filter').value = season;
+  $('season-filter').addEventListener('change', () => { season = $('season-filter').value; recordRoute(); });
   const itemFragments = new Map();
 
   function newRound(first, avoid) {
@@ -36,7 +40,12 @@
   function selected() { return looks.find(look => look.id === order[index]); }
   const feedback = $('feedback'), retryButton = $('retry');
   function feedbackState(text = '', retry = null) {
-    feedback.hidden = !text;
+    clearTimeout(feedbackTimer);
+    feedback.hidden = true;
+    if (text) {
+      if (retry) feedback.hidden = false;
+      else feedbackTimer = setTimeout(() => { feedback.hidden = false; }, 220);
+    }
     $('feedback-text').textContent = text;
     feedback.classList.toggle('loading', !!text && !retry);
     retryAction = retry;
@@ -56,7 +65,7 @@
       Number.isInteger(session.index) && session.index >= 0 && session.index < ids.length;
   }
   function persist() {
-    if (browseMode === 'favorites') return;
+    if (browseMode === 'favorites' || season !== 'all') return;
     sessions[character] = {order:[...order],index,finished};
     try { storage.setItem(SESSION_KEY, JSON.stringify(sessions)); } catch { }
   }
@@ -72,7 +81,7 @@
     }
   } catch { }
   function routeState() {
-    return {view,character,favoriteCharacter,browseMode,favoritesReturn,order:[...order],index,finished,expanded:stage.classList.contains('expanded')};
+    return {season,view,character,favoriteCharacter,browseMode,favoritesReturn,order:[...order],index,finished,expanded:stage.classList.contains('expanded')};
   }
   function recordRoute(push = false) {
     if (restoringRoute || pendingRoute || !window.history) return;
@@ -94,7 +103,9 @@
     try {
       if (!route || !characters.some(person=>person.id === route.character)) { openPicker(); return; }
       character = route.character; favoriteCharacter = route.favoriteCharacter;
-      looks = allLooks.filter(look=>look.character === character); ids = looks.map(look=>look.id);
+      season = ['spring','summer','autumn','winter'].includes(route.season) ? route.season : 'all';
+      $('season-filter').value = season;
+      looks = route.browseMode === 'favorites' ? allLooks.filter(look=>look.character === character) : filteredLooks(character); ids = looks.map(look=>look.id);
       browseMode = route.browseMode === 'favorites' ? 'favorites' : 'all'; favoritesReturn = route.favoritesReturn === 'stage' ? 'stage' : 'picker';
       order = Array.isArray(route.order) ? route.order.filter(id=>ids.includes(id)) : [];
       index = route.index; finished = !!route.finished;
@@ -131,7 +142,8 @@
     if (!ready || busy) return;
     const oldCharacter = character, oldLooks = looks, oldIds = ids, oldOrder = order, oldIndex = index, oldFinished = finished, oldBrowseMode = browseMode;
     if (view === 'stage') persist();
-    character = id; looks = allLooks.filter(look => look.character === id); ids = looks.map(look => look.id);
+    if (favoriteId && !fromFavorites) { season = 'all'; $('season-filter').value = season; }
+    character = id; looks = fromFavorites ? allLooks.filter(look => look.character === id) : filteredLooks(id); ids = looks.map(look => look.id);
     browseMode = fromFavorites ? 'favorites' : 'all';
     const session = sessions[id];
     if (fromFavorites) {
@@ -141,7 +153,7 @@
     } else if (validSession(session,ids) && (!session.finished || favoriteId)) {
       order = [...session.order]; index = session.index; finished = !!session.finished;
     } else {
-      order = newRound(id === 'sweet' && !session ? 'sweet-summer-a' : undefined); index = 0; finished = false;
+      order = newRound(id === 'sweet' && !session && ids.includes('sweet-summer-a') ? 'sweet-summer-a' : undefined); index = 0; finished = false;
     }
     if (favoriteId && !fromFavorites) { index = order.indexOf(favoriteId); finished = false; }
     const ok = await show(index);
@@ -174,7 +186,9 @@
       button.append(photo); button.addEventListener('click', () => { if (!editingFavorites) enterCharacter(look.character,look.id,true); });
       const card = document.createElement('div'); card.className = 'favorite-card'; card.append(button);
       const remove = document.createElement('button'); remove.className = 'favorite-remove'; remove.textContent = '×'; remove.hidden = !editingFavorites; remove.setAttribute('aria-label','取消收藏'+look.name);
-      remove.addEventListener('click',()=>removeFavorite(look.id)); card.append(remove); grid.append(card);
+      remove.addEventListener('click',()=>removeFavorite(look.id)); card.append(remove);
+      const more = document.createElement('button'); more.className = 'favorite-details'; more.textContent = look.name + ' ···'; more.setAttribute('aria-label',look.name + '，分享与保存'); more.hidden = editingFavorites;
+      more.addEventListener('click',()=>window.OutfitExtras?.openLook(look,breakdowns[look.id].figure)); card.append(more); grid.append(card);
     }
     $('favorite-empty').textContent = '暂无收藏'; $('favorite-empty').hidden = savedLooks.length > 0;
   }
@@ -192,6 +206,8 @@
     const tab = document.createElement('button'); tab.textContent = person.name; tab.dataset.character = person.id; tab.setAttribute('role','tab');
     tab.addEventListener('click',()=>{favoriteCharacter = person.id;renderFavorites();recordRoute();}); $('favorite-tabs').append(tab);
   }
+  const allTab = document.createElement('button'); allTab.textContent = '全部'; allTab.dataset.character = 'all'; allTab.setAttribute('role','tab');
+  allTab.addEventListener('click',()=>{favoriteCharacter = 'all';renderFavorites();recordRoute();}); $('favorite-tabs').append(allTab);
   $('favorite-tabs').setAttribute('role','tablist');
   $('picker-favorites').addEventListener('click',openFavorites);
   $('stage-favorites').addEventListener('click',openFavorites);
@@ -335,6 +351,10 @@
       stage.classList.remove('switching');
       const next = looks.find(entry => entry.id === order[index + 1]);
       if (next) load(next).catch(() => {});
+      const previousLook = looks.find(entry => entry.id === order[index - 1]);
+      if (previousLook) load(previousLook).catch(() => {});
+      const keep = new Set([look.id, next?.id, previousLook?.id]);
+      for (const cachedId of images.keys()) if (!keep.has(cachedId)) images.delete(cachedId);
       feedbackState();
       return true;
     } catch { feedbackState('人物未加载', () => view === 'stage' ? show(nextIndex, animate) : enterCharacter(characterForRetry, lookForRetry, favoritesForRetry)); }
@@ -386,7 +406,7 @@
   const point = event => ({x:event.clientX,y:event.clientY,time:performance.now()});
   stage.addEventListener('pointerdown', event => {
     if (stage.dataset.scrollItems === 'true' && event.target.closest('#items')) { start = null; taps.reset(); return; }
-    if (event.target.closest('#collapse, #character-back, #stage-favorites') || !ready || busy) return;
+    if (event.target.closest('#collapse, #character-back, #stage-favorites, .item-photo') || !ready || busy) return;
     if (!event.isPrimary) { start = null; taps.reset(); return; }
     start = {...point(event),id:event.pointerId,onFigure:!!event.target.closest('#figure')};
     taps.secondPress(start);
@@ -422,7 +442,7 @@
   figure.addEventListener('click', event => { if (event.detail === 0) setExpanded(true); });
   collapse.addEventListener('click', () => { taps.reset(); setExpanded(false); });
   document.addEventListener('keydown', event => {
-    if (view !== 'stage') return;
+    if (view !== 'stage' || $('detail-dialog').open) return;
     if (event.key === 'Escape') { taps.reset(); setExpanded(false); }
     if (event.key === 'ArrowUp' || event.key === 'PageUp') { event.preventDefault(); previous(); }
     if (event.key === 'ArrowDown' || event.key === 'PageDown') { event.preventDefault(); next(); }
@@ -433,7 +453,8 @@
       const pending = Promise.all(breakdowns[id].items.map(async (item, index) => {
         const wrapper = document.createElement('div'); wrapper.className = 'item';
         const photo = document.createElement('img'); photo.src = item.image; photo.alt = item.name; photo.draggable = false;
-        const photoBox = document.createElement('div'); photoBox.className = 'item-photo';
+        const photoBox = document.createElement('button'); photoBox.className = 'item-photo'; photoBox.setAttribute('aria-label','放大查看' + item.name);
+        photoBox.addEventListener('click',()=>window.OutfitExtras?.openItem(item,photoBox));
         try { await decodePhoto(photo); } catch { wrapper.dataset.failed = 'true'; }
         if (wrapper.dataset.failed === 'true') {
           const placeholder = document.createElement('span'); placeholder.className = 'item-unavailable'; placeholder.textContent = '未加载'; photoBox.append(placeholder);
@@ -484,10 +505,11 @@
       const look = allLooks.find(look=>look.id === sample);
       if (look && breakdowns[look.id]) await enterCharacter(look.character,look.id);
       else if (initialQuery.get('view') === 'favorites') {
-        favoriteCharacter = characters.some(person=>person.id === initialQuery.get('character')) ? initialQuery.get('character') : 'sweet';
+        favoriteCharacter = ['all',...characters.map(person=>person.id)].includes(initialQuery.get('character')) ? initialQuery.get('character') : 'sweet';
         switchView('favorites');renderFavorites();
       }
     } catch { feedbackState('暂时未能加载', initialize); }
   }
+  window.OutfitExtras?.mount({allLooks, characters, storage, favoritesKey:FAVORITES_KEY, render:()=>{if(view === 'favorites') renderFavorites(); else if(view === 'stage') renderFavorite();}});
   await initialize();
 }());

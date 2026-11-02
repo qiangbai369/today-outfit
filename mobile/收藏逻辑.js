@@ -3,7 +3,7 @@
   const idOf = record => typeof record === 'string' ? record : record?.id;
   function read(raw){const records=raw===null?[]:JSON.parse(raw);if(!Array.isArray(records))throw new Error('收藏记录无法读取');return records;}
   function orderedIds(records,looks,character){
-    const valid=new Set(looks.filter(look=>look.character===character).map(look=>look.id));
+    const valid=new Set(looks.filter(look=>(character==='all'||look.character===character)).map(look=>look.id));
     return [...new Set([...records].reverse().map(idOf).filter(id=>valid.has(id)))];
   }
   function remove(records,id){

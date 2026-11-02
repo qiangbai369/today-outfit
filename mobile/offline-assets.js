@@ -1,5 +1,5 @@
 self.OUTFIT_OFFLINE = {
-  "version": "b51f78c91ad59e7c6f34",
+  "version": "f37c3b6f72a82d7372ac",
   "assets": [
     {
       "url": "../previews/complete-looks/data.js",
@@ -267,7 +267,7 @@ self.OUTFIT_OFFLINE = {
     },
     {
       "url": "index.html",
-      "sha256": "e06bc2a597378b3aab4e74e072ce914ddacfc3379ef6d393f8025c1205411392"
+      "sha256": "089d75227b64ffaa5d7c79aed280c00cb767838b5309459f50168b50a872bdcc"
     },
     {
       "url": "manifest.webmanifest",
@@ -378,20 +378,24 @@ self.OUTFIT_OFFLINE = {
       "sha256": "7e87b95d0455477253fa60e7c50c8e635b48f129829f21b4f84d5b9a5461a212"
     },
     {
+      "url": "体验工具.js",
+      "sha256": "a0e072b85477434e0f3a3e75badbe042ef197f5a79baeefd2c594003e5a8e772"
+    },
+    {
       "url": "手势逻辑.js",
       "sha256": "fa42cb07c19dd2e93529c257adac55489a18e72c90ec1314b3e01c98e63a3980"
     },
     {
       "url": "拆解小样信息.json",
-      "sha256": "90ada59b8b88dcf1d6293ad58d2cac77b52410b78962315e18b549c7d4fdcd0f"
+      "sha256": "8f9ccf8ff7fe1a6ef5a801fd93eebce6285e27322f21c1389b05b2968b8f5383"
     },
     {
       "url": "拆解演示.css",
-      "sha256": "59682a84ed7aa76476d2aa75da1168e837c47310ca9a84041f01a90d09fd691e"
+      "sha256": "6dec4b33ca20435c9e708cf3908421eec0d165b71f79f2c59a0c1e0785b3a3d7"
     },
     {
       "url": "拆解演示.js",
-      "sha256": "22bc8415b12420c6b52e88bf455638b55835aeaa88861fa3c8c89bb25dc40622"
+      "sha256": "63e13e6640271329c1e82f167286d9f7dcb17576180d2d344c51a22a122ba6c8"
     },
     {
       "url": "搭配.html",
@@ -399,7 +403,7 @@ self.OUTFIT_OFFLINE = {
     },
     {
       "url": "收藏逻辑.js",
-      "sha256": "1cb7a810abde2739e344df1ab945061a52e76db38f9438cf160412bb8629f2cd"
+      "sha256": "95991fd3b14d3b6237a8dff3567977de17566306d12f868cb78e8cf3ca34f5cd"
     }
   ]
 };

@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <title>穿搭照相馆</title>
   <meta name="theme-color" content="#eeeae2">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -16,17 +16,19 @@
   <script defer src="../previews/complete-looks/data.js"></script>
   <script defer src="手势逻辑.js"></script>
   <script defer src="收藏逻辑.js?v=20261013-name1"></script>
+  <script defer src="体验工具.js"></script>
   <script defer src="拆解演示.js?v=20261013-name1"></script>
 </head>
 <body>
   <main class="studio">
     <section id="picker" class="mobile-page">
-      <header class="mobile-header"><span></span><button id="picker-favorites">收藏</button></header>
+      <header class="mobile-header"><label class="season-label"><span class="sr-only">季节</span><select id="season-filter" aria-label="季节"><option value="all">四季</option><option value="spring">春</option><option value="summer">夏</option><option value="autumn">秋</option><option value="winter">冬</option></select></label><button id="picker-favorites">收藏</button></header>
       <div id="character-choices" class="character-choices"></div>
     </section>
     <section id="favorites" class="mobile-page" hidden>
       <header class="mobile-header"><button id="favorites-back" aria-label="返回">‹</button><span>收藏</span><button id="favorites-edit" aria-pressed="false">编辑</button></header>
       <nav id="favorite-tabs" class="favorite-tabs" aria-label="收藏人物"></nav>
+      <div class="collection-tools"><button id="collection-tools">备份与恢复</button></div>
       <div id="favorite-photos" class="favorite-photos"></div>
       <p id="favorite-empty" class="favorite-empty" hidden>暂无收藏</p>
     </section>
@@ -46,6 +48,10 @@
   <div id="favorite-toast" class="favorite-toast" role="status" hidden><span>已取消收藏</span><button id="undo-favorite">撤销</button></div>
   <output id="pwa-status" class="sr-only" aria-live="polite"></output>
   <button id="pwa-action" class="pwa-action" hidden>更新</button>
+  <dialog id="detail-dialog" aria-labelledby="detail-title">
+    <header class="detail-header"><h2 id="detail-title"></h2><button id="detail-close" aria-label="关闭">×</button></header>
+    <div id="detail-body"></div><p id="detail-status" role="status"></p>
+  </dialog>
   <noscript>请开启 JavaScript 查看穿搭拆解。</noscript>
 </body>
 </html>

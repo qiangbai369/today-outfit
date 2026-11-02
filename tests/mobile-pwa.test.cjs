@@ -12,12 +12,12 @@ function worker({active=false,store=new Map(),offline=false,bad=false,version}={
 }
 test('manifest uses stable relative app identity and every required offline asset has the exact release hash',()=>{
  const manifest=JSON.parse(fs.readFileSync(path.join(root,'mobile/manifest.webmanifest')));assert.equal(manifest.id,'./');assert.equal(manifest.start_url,'./');assert.equal(manifest.scope,'./');assert.equal(manifest.display,'standalone');
- const r=release(),files=new Set(r.assets.map(x=>x.url)),meta=require('../mobile/拆解小样信息.json');assert.equal(files.size,100);for(const item of r.assets){assert.ok(!/output|source-art|tryons|搭配逻辑/.test(item.url));assert.equal(createHash('sha256').update(fs.readFileSync(path.resolve(root,'mobile',item.url))).digest('hex'),item.sha256,item.url);}
+ const r=release(),files=new Set(r.assets.map(x=>x.url)),meta=require('../mobile/拆解小样信息.json');assert.equal(files.size,101);assert(files.has('体验工具.js'));for(const item of r.assets){assert.ok(!/output|source-art|tryons|搭配逻辑/.test(item.url));assert.equal(createHash('sha256').update(fs.readFileSync(path.resolve(root,'mobile',item.url))).digest('hex'),item.sha256,item.url);}
  for(const [id,look]of Object.entries(meta)){assert(files.has(look.figure));assert(files.has('thumbnails/'+id+'.webp'));for(const item of look.items)assert(files.has(item.image));}
  for(const icon of manifest.icons)assert(files.has(icon.src));assert(files.has('icons/apple-touch-icon.png'));
 });
-test('all 100 assets and query-bearing look links remain usable with network unavailable',async()=>{
- const w=worker();await w.event('install');await w.event('activate');assert.equal(w.store.get(w.cache).size,101);const count=w.stats().requests;w.setOffline(true);
+test('all 101 assets and query-bearing look links remain usable with network unavailable',async()=>{
+ const w=worker();await w.event('install');await w.event('activate');assert.equal(w.store.get(w.cache).size,102);const count=w.stats().requests;w.setOffline(true);
  for(const asset of w.data.assets){const url=new URL(asset.url,scope);url.search='?v=old';const {handled,result}=await w.event('fetch',{request:{url:url.href,method:'GET',mode:'cors'}});assert(handled);assert.equal(result.status,200);assert.equal(createHash('sha256').update(Buffer.from(await result.arrayBuffer())).digest('hex'),asset.sha256);}
  const page=await w.event('fetch',{request:{url:scope+'?sample=cool-winter-b',method:'GET',mode:'navigate'}});assert.match(await page.result.text(),/id="picker"/);assert.equal(w.stats().requests,count);
  assert.equal((await w.event('fetch',{request:{url:'https://elsewhere.test/',method:'GET',mode:'navigate'}})).handled,false);

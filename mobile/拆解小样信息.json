@@ -298,7 +298,7 @@
       },
       {
         "name": "白蓝运动鞋",
-        "description": "白蓝运动鞋 · 系带厚底",
+        "description": "白蓝拼色 · 系带厚底",
         "image": "images/sweet-spring-b-单品.webp",
         "cell": [
           1,
@@ -391,7 +391,7 @@
       },
       {
         "name": "踝带奶白鞋",
-        "description": "粉色 · 简洁轮廓",
+        "description": "奶白鞋面 · 浅桃粉踝带",
         "image": "images/sweet-summer-b-单品.webp",
         "cell": [
           0,
@@ -439,7 +439,7 @@
         ]
       },
       {
-        "name": "半裙",
+        "name": "A字半裙",
         "description": "奶白 · 展开A字裙摆",
         "image": "images/sweet-autumn-a-单品.webp",
         "cell": [
@@ -713,7 +713,7 @@
         ]
       },
       {
-        "name": "半裙",
+        "name": "A字半裙",
         "description": "奶白 · 展开A字裙摆",
         "image": "images/sweet-winter-a-单品.webp",
         "cell": [
@@ -850,8 +850,8 @@
         ]
       },
       {
-        "name": "麻花半裙",
-        "description": "奶白 · 展开A字裙摆",
+        "name": "麻花针织半裙",
+        "description": "奶白 · 立体麻花纹",
         "image": "images/sweet-winter-b-单品.webp",
         "cell": [
           0,
@@ -1694,7 +1694,7 @@
       },
       {
         "name": "棕边乐福鞋",
-        "description": "奶白 · 简洁轮廓",
+        "description": "奶白鞋面 · 棕色拼边",
         "image": "images/literary-spring-a-单品.webp",
         "cell": [
           0,
