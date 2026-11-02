@@ -1,5 +1,5 @@
 self.OUTFIT_OFFLINE = {
-  "version": "f37c3b6f72a82d7372ac",
+  "version": "9aa723938a0e5c49bac3",
   "assets": [
     {
       "url": "../previews/complete-looks/data.js",
@@ -391,7 +391,7 @@ self.OUTFIT_OFFLINE = {
     },
     {
       "url": "拆解演示.css",
-      "sha256": "6dec4b33ca20435c9e708cf3908421eec0d165b71f79f2c59a0c1e0785b3a3d7"
+      "sha256": "f5c28d0e32caa9926598a100a7a6934879a515f6ac7f9d8dde1e50f9abdaaee7"
     },
     {
       "url": "拆解演示.js",

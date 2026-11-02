@@ -72,3 +72,7 @@ body:has(.favorite-toast:not([hidden])) .pwa-action,body:has(.load-feedback:not(
 .detail-actions{display:grid;gap:8px;margin-top:16px}.detail-actions button,.detail-actions a{display:flex;align-items:center;justify-content:center;min-height:44px;border:1px solid #d8dbd0;border-radius:12px;text-decoration:none;color:#566348;font:inherit;font-size:14px}
 #detail-body p,#detail-status{font-size:12px;line-height:1.7;color:#646b5d;margin-top:12px}.share-link{box-sizing:border-box;width:100%;padding:12px;margin-top:12px;border:1px solid #d8dbd0;border-radius:10px;background:white;font:inherit;font-size:12px}
 @media(max-height:620px){.items{top:calc(64px + var(--safe-top));bottom:calc(20px + var(--safe-bottom));grid-auto-rows:minmax(160px,1fr);grid-template-rows:repeat(2,minmax(160px,1fr));overflow-y:auto;overscroll-behavior:contain}.figure{top:calc(58px + var(--safe-top))}}
+/* A quick like after returning from collection must not cover pending undo. */
+body:has(.favorite-toast:not([hidden])) .notice{bottom:calc(88px + var(--safe-bottom))}
+body:has(.load-feedback:not([hidden])) .notice{bottom:calc(24px + var(--feedback-height,52px) + 12px + var(--safe-bottom))}
+body:has(.favorite-toast:not([hidden])):has(.load-feedback:not([hidden])) .notice{bottom:calc(24px + var(--feedback-height,52px) + 12px + 44px + 12px + var(--safe-bottom))}
