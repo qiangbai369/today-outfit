@@ -253,5 +253,308 @@
         ]
       }
     ]
+  },
+  "hupo-weekend": {
+    "figure": "images/hupo-weekend.webp",
+    "items": [
+      {
+        "name": "条纹针织衫",
+        "description": "奶白藏蓝 · 圆领长袖",
+        "image": "images/hupo-weekend-items.webp",
+        "cell": [
+          0,
+          0,
+          3
+        ],
+        "bounds": [
+          0,
+          0,
+          512,
+          512
+        ]
+      },
+      {
+        "name": "直筒牛仔裤",
+        "description": "靛蓝 · 高腰水洗",
+        "image": "images/hupo-weekend-items.webp",
+        "cell": [
+          1,
+          0,
+          3
+        ],
+        "bounds": [
+          512,
+          0,
+          1024,
+          512
+        ]
+      },
+      {
+        "name": "系带平底鞋",
+        "description": "奶白 · 低帮圆头",
+        "image": "images/hupo-weekend-items.webp",
+        "cell": [
+          0,
+          1,
+          3
+        ],
+        "bounds": [
+          0,
+          512,
+          512,
+          1024
+        ]
+      },
+      {
+        "name": "帆布托特包",
+        "description": "原色 · 棕色提手",
+        "image": "images/hupo-weekend-items.webp",
+        "cell": [
+          1,
+          1,
+          3
+        ],
+        "bounds": [
+          512,
+          512,
+          1024,
+          1024
+        ]
+      },
+      {
+        "name": "素圈手镯",
+        "description": "银色 · 纤细光泽",
+        "image": "images/hupo-weekend-items.webp",
+        "cell": [
+          0,
+          2,
+          3
+        ],
+        "bounds": [
+          0,
+          1024,
+          512,
+          1536
+        ]
+      },
+      {
+        "name": "水滴耳坠",
+        "description": "银白 · 珍珠光泽",
+        "image": "images/hupo-weekend-items.webp",
+        "cell": [
+          1,
+          2,
+          3
+        ],
+        "bounds": [
+          512,
+          1024,
+          1024,
+          1536
+        ]
+      }
+    ]
+  },
+  "hupo-rain": {
+    "figure": "images/hupo-rain.webp",
+    "items": [
+      {
+        "name": "连帽外套",
+        "description": "鼠尾草绿 · 拉链开襟",
+        "image": "images/hupo-rain-items.webp",
+        "cell": [
+          0,
+          0,
+          3
+        ],
+        "bounds": [
+          0,
+          0,
+          512,
+          512
+        ]
+      },
+      {
+        "name": "圆领T恤",
+        "description": "藏蓝 · 简洁短袖",
+        "image": "images/hupo-rain-items.webp",
+        "cell": [
+          1,
+          0,
+          3
+        ],
+        "bounds": [
+          512,
+          0,
+          1024,
+          512
+        ]
+      },
+      {
+        "name": "直筒长裤",
+        "description": "炭灰 · 利落裤型",
+        "image": "images/hupo-rain-items.webp",
+        "cell": [
+          0,
+          1,
+          3
+        ],
+        "bounds": [
+          0,
+          512,
+          512,
+          1024
+        ]
+      },
+      {
+        "name": "胶质短靴",
+        "description": "黑色 · 低跟齿纹底",
+        "image": "images/hupo-rain-items.webp",
+        "cell": [
+          1,
+          1,
+          3
+        ],
+        "bounds": [
+          512,
+          512,
+          1024,
+          1024
+        ]
+      },
+      {
+        "name": "折叠伞",
+        "description": "藏蓝 · 黑色直柄",
+        "image": "images/hupo-rain-items.webp",
+        "cell": [
+          0,
+          2,
+          3
+        ],
+        "bounds": [
+          0,
+          1024,
+          512,
+          1536
+        ]
+      },
+      {
+        "name": "水滴耳坠",
+        "description": "银白 · 珍珠光泽",
+        "image": "images/hupo-rain-items.webp",
+        "cell": [
+          1,
+          2,
+          3
+        ],
+        "bounds": [
+          512,
+          1024,
+          1024,
+          1536
+        ]
+      }
+    ]
+  },
+  "hupo-winter": {
+    "figure": "images/hupo-winter.webp",
+    "items": [
+      {
+        "name": "翻领大衣",
+        "description": "驼色 · 单排扣贴袋",
+        "image": "images/hupo-winter-items.webp",
+        "cell": [
+          0,
+          0,
+          3
+        ],
+        "bounds": [
+          0,
+          0,
+          512,
+          512
+        ]
+      },
+      {
+        "name": "高领针织衫",
+        "description": "奶白 · 细密罗纹",
+        "image": "images/hupo-winter-items.webp",
+        "cell": [
+          1,
+          0,
+          3
+        ],
+        "bounds": [
+          512,
+          0,
+          1024,
+          512
+        ]
+      },
+      {
+        "name": "直筒长裤",
+        "description": "炭灰 · 利落裤型",
+        "image": "images/hupo-winter-items.webp",
+        "cell": [
+          0,
+          1,
+          3
+        ],
+        "bounds": [
+          0,
+          512,
+          512,
+          1024
+        ]
+      },
+      {
+        "name": "切尔西短靴",
+        "description": "深棕 · 低方跟",
+        "image": "images/hupo-winter-items.webp",
+        "cell": [
+          1,
+          1,
+          3
+        ],
+        "bounds": [
+          512,
+          512,
+          1024,
+          1024
+        ]
+      },
+      {
+        "name": "流苏围巾",
+        "description": "灰褐 · 柔软绒感",
+        "image": "images/hupo-winter-items.webp",
+        "cell": [
+          0,
+          2,
+          3
+        ],
+        "bounds": [
+          0,
+          1024,
+          512,
+          1536
+        ]
+      },
+      {
+        "name": "水滴耳坠",
+        "description": "银白 · 珍珠光泽",
+        "image": "images/hupo-winter-items.webp",
+        "cell": [
+          1,
+          2,
+          3
+        ],
+        "bounds": [
+          512,
+          1024,
+          1024,
+          1536
+        ]
+      }
+    ]
   }
 }

@@ -22,10 +22,27 @@
   const images = new Map();
   let breakdowns = {};
   let expansionVersion = 0, retryAction = null, feedbackTimer;
-  let season = 'all';
-  const filteredLooks = id => allLooks.filter(look => look.character === id && (season === 'all' || look.season === season));
-  $('season-filter').value = season;
-  $('season-filter').addEventListener('change', () => { season = $('season-filter').value; recordRoute(); });
+  let scene = 'all';
+  const scenes = window.CompleteLookData.SCENES;
+  const filteredLooks = id => allLooks.filter(look => look.character === id && (scene === 'all' || look.scenes.includes(scene)));
+  for (const entry of scenes) {
+    const option = document.createElement('option'); option.value = entry.id; option.textContent = entry.name;
+    $('scene-filter').append(option);
+  }
+  function renderScene() {
+    $('scene-filter').value = scene;
+    for (const card of $('character-choices').children) {
+      const matches = filteredLooks(card.dataset.character);
+      const cover = matches.find(look => look.id === 'hupo-summer-a') || matches[0];
+      card.disabled = !cover;
+      if (cover) card.querySelector('img').src = 'thumbnails/' + cover.id + '.webp';
+    }
+  }
+  $('scene-filter').addEventListener('change', () => {
+    scene = $('scene-filter').value;
+    for (const id of Object.keys(priorRounds)) delete priorRounds[id];
+    renderScene(); recordRoute();
+  });
   const itemFragments = new Map();
 
   function newRound(first, avoid) {
@@ -64,8 +81,15 @@
       new Set(session.order).size === ids.length && session.order.every(id => ids.includes(id)) &&
       Number.isInteger(session.index) && session.index >= 0 && session.index < ids.length;
   }
+  function extendSession(session, available) {
+    if (!session || !Array.isArray(session.order) || !Number.isInteger(session.index) ||
+        session.index < 0 || session.index >= session.order.length || new Set(session.order).size !== session.order.length ||
+        !session.order.every(id => available.includes(id))) return null;
+    const added = available.filter(id => !session.order.includes(id));
+    return {order:[...session.order,...added],index:session.index,finished:added.length ? false : !!session.finished};
+  }
   function persist() {
-    if (browseMode === 'favorites' || season !== 'all') return;
+    if (browseMode === 'favorites' || scene !== 'all') return;
     sessions[character] = {order:[...order],index,finished};
     try { storage.setItem(SESSION_KEY, JSON.stringify(sessions)); } catch { }
   }
@@ -73,15 +97,17 @@
     const saved = JSON.parse(storage.getItem(SESSION_KEY));
     for (const person of characters) {
       const personIds = allLooks.filter(look => look.character === person.id).map(look => look.id);
-      if (validSession(saved?.[person.id], personIds)) sessions[person.id] = saved[person.id];
+      const restored = extendSession(saved?.[person.id], personIds);
+      if (restored) sessions[person.id] = restored;
     }
     if (!sessions.hupo) {
       const old = JSON.parse(storage.getItem(LEGACY_SESSION_KEY));
-      if (validSession(old, ids)) sessions.hupo = old;
+      const restored = extendSession(old, ids);
+      if (restored) sessions.hupo = restored;
     }
   } catch { }
   function routeState() {
-    return {season,view,character,favoriteCharacter,browseMode,favoritesReturn,order:[...order],index,finished,expanded:stage.classList.contains('expanded')};
+    return {scene,view,character,favoriteCharacter,browseMode,favoritesReturn,order:[...order],index,finished,expanded:stage.classList.contains('expanded')};
   }
   function recordRoute(push = false) {
     if (restoringRoute || pendingRoute || !window.history) return;
@@ -103,13 +129,23 @@
     try {
       if (!route || !characters.some(person=>person.id === route.character)) { openPicker(); return; }
       character = route.character; favoriteCharacter = route.favoriteCharacter;
-      season = ['spring','summer','autumn','winter'].includes(route.season) ? route.season : 'all';
-      $('season-filter').value = season;
+      scene = scenes.some(entry => entry.id === route.scene) ? route.scene : 'all';
+      renderScene();
+      delete priorRounds[character];
       looks = route.browseMode === 'favorites' ? allLooks.filter(look=>look.character === character) : filteredLooks(character); ids = looks.map(look=>look.id);
       browseMode = route.browseMode === 'favorites' ? 'favorites' : 'all'; favoritesReturn = route.favoritesReturn === 'stage' ? 'stage' : 'picker';
+      if (route.view === 'picker' || (route.view === 'favorites' && favoritesReturn === 'picker')) {
+        editingFavorites = false; switchView(route.view);
+        if (route.view === 'favorites') renderFavorites();
+        return;
+      }
       order = Array.isArray(route.order) ? route.order.filter(id=>ids.includes(id)) : [];
       index = route.index; finished = !!route.finished;
       if (!order[index] || new Set(order).size !== order.length) { browseMode = 'all'; openPicker(); return; }
+      if (browseMode === 'all') {
+        const restored = extendSession({order,index,finished},ids);
+        order = restored.order; finished = restored.finished;
+      }
       if (browseMode === 'favorites') {
         const saved = F.orderedIds(F.read(storage.getItem(FAVORITES_KEY)),allLooks,character), current = order[index];
         if (!saved.includes(current)) { openFavorites(); return; }
@@ -142,7 +178,7 @@
     if (!ready || busy) return;
     const oldCharacter = character, oldLooks = looks, oldIds = ids, oldOrder = order, oldIndex = index, oldFinished = finished, oldBrowseMode = browseMode;
     if (view === 'stage') persist();
-    if (favoriteId && !fromFavorites) { season = 'all'; $('season-filter').value = season; }
+    if (favoriteId && !fromFavorites) { scene = 'all'; renderScene(); }
     character = id; looks = fromFavorites ? allLooks.filter(look => look.character === id) : filteredLooks(id); ids = looks.map(look => look.id);
     browseMode = fromFavorites ? 'favorites' : 'all';
     const session = sessions[id];
@@ -493,7 +529,7 @@
   async function initialize() {
     feedbackState('加载中…');
     try {
-      const response = await fetch('拆解小样信息.json?v=20261012-unified1', {signal: AbortSignal.timeout(15000)});
+      const response = await fetch('拆解小样信息.json?v=20261103-hupo6', {signal: AbortSignal.timeout(15000)});
       if (!response.ok) throw new Error('单品信息读取失败');
       const data = await response.json();
       if (!allLooks.every(look => Array.isArray(data[look.id]?.items))) throw new Error('单品信息不完整');

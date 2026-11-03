@@ -1,9 +1,9 @@
 self.OUTFIT_OFFLINE = {
-  "version": "1673311909fa21252678",
+  "version": "69e89991b6b512599763",
   "assets": [
     {
       "url": "data.js",
-      "sha256": "b33499f2d7d6ed2bd6630ced0c9a286e67014ca12e6fa09e30b60da2778a713c"
+      "sha256": "f2c3de9ac7c2c475b3c1842484554cceaa126664a0acd7ad489747c57b43d50a"
     },
     {
       "url": "hupo.css",
@@ -34,6 +34,14 @@ self.OUTFIT_OFFLINE = {
       "sha256": "6f63cc760622e6fcdb9eaf18bedfa7399c81ad465ebfe7bd8a3fe063b024169d"
     },
     {
+      "url": "images/hupo-rain-items.webp",
+      "sha256": "e0a874ec4c378dc5093d34d244bc3e6cf16e7d2b4f38b7a2468dab754d86ef47"
+    },
+    {
+      "url": "images/hupo-rain.webp",
+      "sha256": "3f19500a4fc3329b41afc1947e1e3768464b7bb58c389810a4ca302d6c170b57"
+    },
+    {
       "url": "images/hupo-summer-a-items.webp",
       "sha256": "87b144476a40ee345169860aeff8cce73362328f741eac3ba8315b36a69c689d"
     },
@@ -50,8 +58,24 @@ self.OUTFIT_OFFLINE = {
       "sha256": "0f5eb5a859ebe4385f81681cc8c9fb75756f0e6e9834260816a19c022cbc7e23"
     },
     {
+      "url": "images/hupo-weekend-items.webp",
+      "sha256": "66d7fdc9f4c28c6efce8d54f3a4952b621791485abdf7a59af069df7d3dd4fd2"
+    },
+    {
+      "url": "images/hupo-weekend.webp",
+      "sha256": "bf00e9aadd01886927deb35eb77ac6e964d578583d338bd65d55da3e78670309"
+    },
+    {
+      "url": "images/hupo-winter-items.webp",
+      "sha256": "b6d6674d288fbcbc46d008e9b5808fa8a2228a0927780d86bbe39f86b8bd3f5c"
+    },
+    {
+      "url": "images/hupo-winter.webp",
+      "sha256": "4d50ff34111e49b799405f2ea677ddf9c750c8fc4b0cb0336a9e10f8e032e5db"
+    },
+    {
       "url": "index.html",
-      "sha256": "3d5891106b649c9d60b65109d7d01ba843110872f84dc35243ec52adcc467780"
+      "sha256": "ac1caaf8305a7eaa76f1b60bd3d4696f80fd31d910a95548ae44b04f5f399c25"
     },
     {
       "url": "manifest.webmanifest",
@@ -74,12 +98,24 @@ self.OUTFIT_OFFLINE = {
       "sha256": "b5e1d2ec85206267548e78abcec7b87785837fcc5f541f0c0a3059db60fda2de"
     },
     {
+      "url": "thumbnails/hupo-rain.webp",
+      "sha256": "c76e415a2e743b4a233cbae756669118fd46865807fae0ad0f9a6037f9ad6b54"
+    },
+    {
       "url": "thumbnails/hupo-summer-a.webp",
       "sha256": "53902fa78b55542660ca9a0ccf0f084b23ce39406c2cad9b4e6fdb38156c0c68"
     },
     {
       "url": "thumbnails/hupo-summer-b.webp",
       "sha256": "9fc698cecb328f5a29c56208dc4009e8e3cc7f8eeaf0f035356f8914f20ae39f"
+    },
+    {
+      "url": "thumbnails/hupo-weekend.webp",
+      "sha256": "4bd91a464042968de9baeb6a5535a0e2b88ad705ce4b4118469875ae70e963d3"
+    },
+    {
+      "url": "thumbnails/hupo-winter.webp",
+      "sha256": "569d845091033273f4a56438dc4a583d5076bdf5f2e485967cd5608a7dea2086"
     },
     {
       "url": "体验工具.js",
@@ -91,7 +127,7 @@ self.OUTFIT_OFFLINE = {
     },
     {
       "url": "拆解小样信息.json",
-      "sha256": "7364a4cf6ffce8f22ec1e7de992c9cacd11a2c5d7aa7411aae5175e509041436"
+      "sha256": "497bee41efb7e77c6b015a86f77fd06071d2c0ac996ddc636cb392d14a664313"
     },
     {
       "url": "拆解演示.css",
@@ -99,7 +135,7 @@ self.OUTFIT_OFFLINE = {
     },
     {
       "url": "拆解演示.js",
-      "sha256": "d94e7309deab6b4db987efb7d2592f8f1392a21dc5a19bcfffdf8ca8700a35c1"
+      "sha256": "7c8bd156ad005aae90863b80910ad7d02aa81fb9c445c96f4d896a70e044faa3"
     },
     {
       "url": "收藏逻辑.js",
