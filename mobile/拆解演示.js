@@ -25,7 +25,11 @@
   let season = 'all';
   const filteredLooks = id => allLooks.filter(look => look.character === id && (season === 'all' || look.season === season));
   $('season-filter').value = season;
-  $('season-filter').addEventListener('change', () => { season = $('season-filter').value; recordRoute(); });
+  $('season-filter').addEventListener('change', () => {
+    season = $('season-filter').value;
+    for (const id of Object.keys(priorRounds)) delete priorRounds[id];
+    recordRoute();
+  });
   const itemFragments = new Map();
 
   function newRound(first, avoid) {
@@ -107,6 +111,11 @@
       $('season-filter').value = season;
       looks = route.browseMode === 'favorites' ? allLooks.filter(look=>look.character === character) : filteredLooks(character); ids = looks.map(look=>look.id);
       browseMode = route.browseMode === 'favorites' ? 'favorites' : 'all'; favoritesReturn = route.favoritesReturn === 'stage' ? 'stage' : 'picker';
+      if (route.view === 'picker' || (route.view === 'favorites' && favoritesReturn === 'picker')) {
+        editingFavorites = false; switchView(route.view);
+        if (route.view === 'favorites') renderFavorites();
+        return;
+      }
       order = Array.isArray(route.order) ? route.order.filter(id=>ids.includes(id)) : [];
       index = route.index; finished = !!route.finished;
       if (!order[index] || new Set(order).size !== order.length) { browseMode = 'all'; openPicker(); return; }
@@ -392,7 +401,7 @@
     if (!ready || busy || view !== 'stage') return;
     if (!refreshFavoriteOrder()) return;
     taps.reset();
-    if (index === 0 && browseMode === 'all' && priorRounds[character]) {
+    if (index === 0 && browseMode === 'all' && priorRounds[character] && validSession(priorRounds[character],ids)) {
       const oldOrder = order, oldIndex = index, oldFinished = finished, previous = priorRounds[character];
       order = previous.order; finished = false;
       if (await show(previous.index,true)) delete priorRounds[character];
@@ -493,7 +502,7 @@
   async function initialize() {
     feedbackState('加载中…');
     try {
-      const response = await fetch('拆解小样信息.json?v=20261012-unified1', {signal: AbortSignal.timeout(15000)});
+      const response = await fetch('拆解小样信息.json?v=20261103-refined24', {signal: AbortSignal.timeout(15000)});
       if (!response.ok) throw new Error('单品信息读取失败');
       const data = await response.json();
       if (!allLooks.every(look => Array.isArray(data[look.id]?.items))) throw new Error('单品信息不完整');

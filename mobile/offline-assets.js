@@ -1,5 +1,5 @@
 self.OUTFIT_OFFLINE = {
-  "version": "4e08d2fff1107a5d4fbb",
+  "version": "c9c2d1dddfd6a8e40761",
   "assets": [
     {
       "url": "../previews/complete-looks/data.js",
@@ -127,19 +127,19 @@ self.OUTFIT_OFFLINE = {
     },
     {
       "url": "images/unified/cool-autumn-a.webp",
-      "sha256": "041230905f90dff8994dce0f68093de27840d1f3fd1b57c13b8b03ebf3be8119"
+      "sha256": "0ab5836d8f6bdb7e5455d7698e982f416aae7d0cb91fcb571722b3e025adf75e"
     },
     {
       "url": "images/unified/cool-autumn-b.webp",
-      "sha256": "1c52204ad224329ad2f5d862bdce71549d3cf908268e68e9da4d10c0a1434e4e"
+      "sha256": "5cbb8357db5c19c06b1e2af0e393239375aae0499ab182a4147db8d4221cab50"
     },
     {
       "url": "images/unified/cool-spring-a.webp",
-      "sha256": "c6bb1df6442c6224b21a0c3f54a795441680abbc7d5a0b02c1601a2e55a434a0"
+      "sha256": "2d1a530601d3ef843ad8c0482ae3923d48034873822176a401c2c0c68a8a183e"
     },
     {
       "url": "images/unified/cool-spring-b.webp",
-      "sha256": "5992c76500dee57550daedeae7b383d452c50499415b7e8908c297ea066b6b3b"
+      "sha256": "aca900e22d3b618c465f3dfa07036819be182b604176817eaa5f203f31cf37c2"
     },
     {
       "url": "images/unified/cool-summer-a.webp",
@@ -147,23 +147,23 @@ self.OUTFIT_OFFLINE = {
     },
     {
       "url": "images/unified/cool-summer-b.webp",
-      "sha256": "21cec70dea415f74eadeff681758f51102027fb648ac75991e513212e9460939"
+      "sha256": "d4ea4a3ebdae04c1a588edeb5d34cb63b40e1193f0ec50e1fb78299cdaec6197"
     },
     {
       "url": "images/unified/cool-winter-a.webp",
-      "sha256": "0cef51ee5a33b29f3656e3ae227ba3d551d0e293e94aace877643032d833eb59"
+      "sha256": "c754b1dd5f94414703b9291a3692c2baa4894a7b02794303f3d38368344baa26"
     },
     {
       "url": "images/unified/cool-winter-b.webp",
-      "sha256": "43e332f352f1a2a2c6a9c3fe48d40f97b7de60d67789e53aa1c40401775cc89d"
+      "sha256": "eef66ad1510550bf47efdf43aad0b25f7ec13da4282870fd4a0429a0c48fe14c"
     },
     {
       "url": "images/unified/literary-autumn-a.webp",
-      "sha256": "35a81aa2a7319ea63597ab1002a012542b071fbe507e7d47cb8ec5c3212b626a"
+      "sha256": "d930d2ced3f41008d0a9d86df8f448490e9839de97961f9383eebb69056b4632"
     },
     {
       "url": "images/unified/literary-autumn-b.webp",
-      "sha256": "e48c565ac264d0fb76ed7ab023d58a77724477e3285473baab321353d8b77526"
+      "sha256": "8882dd32161bedb3c0380a467acf31c053caa8dc72a78ed25c606228dc82c86e"
     },
     {
       "url": "images/unified/literary-spring-a.webp",
@@ -171,39 +171,39 @@ self.OUTFIT_OFFLINE = {
     },
     {
       "url": "images/unified/literary-spring-b.webp",
-      "sha256": "b386f950a4b60a84975915ffd152e7e42f5ca4a6f3b1589d8020ff26aa752375"
+      "sha256": "efffd8ead3c28380883ce1be1fe269fec25a0d1f18d580d107f4c6fcf6e49ad4"
     },
     {
       "url": "images/unified/literary-summer-a.webp",
-      "sha256": "11c4df95c35d8eed6800a94622fababd2b20bdff0235debaf46cdafca2563baf"
+      "sha256": "e9212a4ed28ad5b08982b5ed0e62f864027374aa859b99fd71554e1d33591d8c"
     },
     {
       "url": "images/unified/literary-summer-b.webp",
-      "sha256": "2b7051309b5770bfffc1a623a14af077634fb48c4ef369e8881e82d60bf830a7"
+      "sha256": "2db888f7b4e21973e35662dba95183b727bc5ac14da34b2e581c5fda0070d95f"
     },
     {
       "url": "images/unified/literary-winter-a.webp",
-      "sha256": "4d0a12d72337aafe14819e21f499c7c576506afc9fd43a5ccf9055ebfced2f4f"
+      "sha256": "87d441067084520832c3b41f53a025709b10cc1bd345076e56c2178a5e20249a"
     },
     {
       "url": "images/unified/literary-winter-b.webp",
-      "sha256": "f2f93dd371a84d2b4c1cdf7f588a5a419011589f9287f9973dbcff3adb68006c"
+      "sha256": "08c932a59fdf6887c0fa25660a6324dcaedccd0ccd0d06257b54903dd1363376"
     },
     {
       "url": "images/unified/sweet-autumn-a.webp",
-      "sha256": "64ebede0a1b8085950cf42d1343901778588361c2f5ed62f9b1a86759d957b27"
+      "sha256": "2295af07d93a363f03c2ace0cc2e2329c83ac53c94bb59ce84bb7ff1bc4d9d8a"
     },
     {
       "url": "images/unified/sweet-autumn-b.webp",
-      "sha256": "dd281498c5ba9d01429b331741ecd128fc529929fa938fc716078c00d00a6c2a"
+      "sha256": "274570c9cf8c9518a0731bac6b671d7dfe37cd5c315a5bd14dcf77c3c0b587bf"
     },
     {
       "url": "images/unified/sweet-spring-a.webp",
-      "sha256": "fd68308f143f67b05183d157f359d8a4088ed5c56d87877297e5b4a6ab9b728a"
+      "sha256": "2dc399863e15c3de8fac4c144a5683b78b8afdb1ffd2732778b1905fbff5a6d3"
     },
     {
       "url": "images/unified/sweet-spring-b.webp",
-      "sha256": "f4dfa9ad3425cbe5bef90e5fe4ba6f6e4a9dffcfea31f67d9968745abd60f1cf"
+      "sha256": "bf5e1c89c966de870c9ebe28ec05bb45f72409d9617a061563b4047e18a359cc"
     },
     {
       "url": "images/unified/sweet-summer-a.webp",
@@ -211,15 +211,15 @@ self.OUTFIT_OFFLINE = {
     },
     {
       "url": "images/unified/sweet-summer-b.webp",
-      "sha256": "72b8996db00268a2b1ffa346085918e20cface57d19c152a4bac6746b2a3d6fa"
+      "sha256": "58d6b91b774fcc641832104885a44b3c9b915982267bc35df0efc919605cc6c2"
     },
     {
       "url": "images/unified/sweet-winter-a.webp",
-      "sha256": "d5551b44a867df0425ee64098703c5bf050bbe543a590b0a086cfc7a5c124cdf"
+      "sha256": "dd5a910bc6feaaf71660df8569e266197fd4702b82efd972787fde1e8eeb67ec"
     },
     {
       "url": "images/unified/sweet-winter-b.webp",
-      "sha256": "b8465b7bdbd9ad97c91c1473e9ad302d4f7eb6c543130f8b09b5a1c36dec245f"
+      "sha256": "10b26e28607cd2aa0a60a4e6ebf759754dc9de484cbc131200f88b487a2a2bd9"
     },
     {
       "url": "images/上衣-v2.webp",
@@ -267,7 +267,7 @@ self.OUTFIT_OFFLINE = {
     },
     {
       "url": "index.html",
-      "sha256": "920c53c4bfc93c0e77798a704c87cd193593de02cf5ff504c0962ab2d5aac724"
+      "sha256": "3dddeea40bb0e41c4bd39d7c29bad95914c0ec4d4c4b2bfa33d9fc949e0eb1a7"
     },
     {
       "url": "manifest.webmanifest",
@@ -279,19 +279,19 @@ self.OUTFIT_OFFLINE = {
     },
     {
       "url": "thumbnails/cool-autumn-a.webp",
-      "sha256": "45323901c349d3994620f9909b7e6c658fb9620bdf2b47572cfcefaa708feab3"
+      "sha256": "7f936f4e5a67060cafc29b38cf9885f42af59cd1e713fee027dda049e196ce14"
     },
     {
       "url": "thumbnails/cool-autumn-b.webp",
-      "sha256": "90355fe1a36b68d06201b5e5564884fb78628d354bf04262272e7d3c0d20417c"
+      "sha256": "a599fe94fbc804a7892656e6bfbec6277bb373e7e4955a2265ec98e1e5717353"
     },
     {
       "url": "thumbnails/cool-spring-a.webp",
-      "sha256": "7fdcdd2b09e0faad3b68abf9e2819b63db8982b0d985b1082f494f4a3e99a0c7"
+      "sha256": "4a2e652247e6952c636aeb4e52f612ade0716441faf253472fcd31431efae733"
     },
     {
       "url": "thumbnails/cool-spring-b.webp",
-      "sha256": "e25cd7d0c13f0ffcd37c2841890811474bdf8fc46c65e6275ba294db2bcf53bb"
+      "sha256": "4fbb5387ccb6a41592fe8592b18f61d37b89d93f2ae1b92017d62802da59dc7a"
     },
     {
       "url": "thumbnails/cool-summer-a.webp",
@@ -299,15 +299,15 @@ self.OUTFIT_OFFLINE = {
     },
     {
       "url": "thumbnails/cool-summer-b.webp",
-      "sha256": "abd64740da0721c8d3a649da2e8c27e4c4a0ebed1e59f8d9ed543a1f94647430"
+      "sha256": "a58662713bc7fd5dedfa99c6bff3f531d13a4b933001432b15647470bac75bd2"
     },
     {
       "url": "thumbnails/cool-winter-a.webp",
-      "sha256": "9006af2f2c6f0333176e2dde588b90afd1ec5fad49db8401d481491bb6f69aa4"
+      "sha256": "3b13f3248a3286911591003376c2b6c89314d477c4e08e175a3f833e8b181772"
     },
     {
       "url": "thumbnails/cool-winter-b.webp",
-      "sha256": "4b853d00a0a7a76cf1fce66f39b3e104637275ab9859fe0ae859a919688316d1"
+      "sha256": "011691bc3a5f79138c62cc8be53232ac35abd8a59829339a8d2b00f57273dd41"
     },
     {
       "url": "thumbnails/heart.webp",
@@ -315,11 +315,11 @@ self.OUTFIT_OFFLINE = {
     },
     {
       "url": "thumbnails/literary-autumn-a.webp",
-      "sha256": "2d11a9914e64595d4b60aeaca4b46534cc0f9f35a79e99ca1a2ec1195270cbe2"
+      "sha256": "d652ee513dc6da1f37d2d2b2d386fd092d1a9c5e37fa58b3c45c46540ccf3f2d"
     },
     {
       "url": "thumbnails/literary-autumn-b.webp",
-      "sha256": "b7278eec53e604df9ad403570d309e2b170a21d55ff68c494e19aba7028f3921"
+      "sha256": "7406b969aebded547d882a0c9a867d5143969a39727fae03fda45910ebd8b369"
     },
     {
       "url": "thumbnails/literary-spring-a.webp",
@@ -327,39 +327,39 @@ self.OUTFIT_OFFLINE = {
     },
     {
       "url": "thumbnails/literary-spring-b.webp",
-      "sha256": "2aafcc66dbc565b0ed43a46f10cf60a23158ccc4fe51d91969cb36d37bf884eb"
+      "sha256": "e58d6d5bdb405f421b1a8d294628603a946bdc816fd7a8497fb4eba42253f85a"
     },
     {
       "url": "thumbnails/literary-summer-a.webp",
-      "sha256": "9b10ea36fabecaaef42efb6dffb5cde5c86ea19d6e99ea03225a49c660438752"
+      "sha256": "c559305262405b586d02265d5d819d1b73980418949bc325610cc288df27714d"
     },
     {
       "url": "thumbnails/literary-summer-b.webp",
-      "sha256": "1badcb2fc94a53d69894220942b8e61d60ccdb820ffc80f1011f345299d64948"
+      "sha256": "bfbe0ab1f18a0a4d7760f5de4ba4decef3c769982778851c346059c83f2484f4"
     },
     {
       "url": "thumbnails/literary-winter-a.webp",
-      "sha256": "5ec2ce6633b189b1e2d2751551488feed5d17b8bc44f2204de532f5e2af9e71d"
+      "sha256": "80cd7778978c95dcd9815aa4b82cbe2b4972cc98ca114656f590067e2db97294"
     },
     {
       "url": "thumbnails/literary-winter-b.webp",
-      "sha256": "b130415a6abc89c263cd0a946e6fa7a21496e4c43aae66f528b18139f219896f"
+      "sha256": "cbaf5790512b50a83ffc35d24be4bb7bc40af14d1309e5104d706d2dc3bf3357"
     },
     {
       "url": "thumbnails/sweet-autumn-a.webp",
-      "sha256": "99af23ff3ac4b166851323a945d7a4411c5021e8217061a18db6d3c6a163d7bb"
+      "sha256": "a94f14163b85fa2cc407d56153246386ecca664a0dd17db2585d3f96203022a5"
     },
     {
       "url": "thumbnails/sweet-autumn-b.webp",
-      "sha256": "a55812c17fcdbfbc589e739493b38419af4b1f8d7f97bd72b0b583ab590f0472"
+      "sha256": "5a59b390508d08e9a10fae25891ffd8b06633d95258e78dd8f8082297221acc2"
     },
     {
       "url": "thumbnails/sweet-spring-a.webp",
-      "sha256": "f32098bcd379c0fa6612cebb00a43eb3e27bd6afb9fdbfe403898931aa072c7c"
+      "sha256": "1ac998a8f5b495803a9660edba150034e128bc19bf085d5efe3d2d6015671aa4"
     },
     {
       "url": "thumbnails/sweet-spring-b.webp",
-      "sha256": "ebfa90258163ccd55fac2f45424b40e8bd0e844bf59fbc4aa06221ea1a875fc4"
+      "sha256": "6532c15edaad01bffbca8f8df32e46269cd0a0063630494558ac13083edb0bfe"
     },
     {
       "url": "thumbnails/sweet-summer-a.webp",
@@ -367,15 +367,15 @@ self.OUTFIT_OFFLINE = {
     },
     {
       "url": "thumbnails/sweet-summer-b.webp",
-      "sha256": "ec9e24156cdfa5d1d6be6ecb7a5cfcdfb5801d9ada304726a1e34ba937ae24b2"
+      "sha256": "3e918d55c8142e4776ca9bd13512c53e3c5861699360287041839ebfe9af9b65"
     },
     {
       "url": "thumbnails/sweet-winter-a.webp",
-      "sha256": "42188b1dcad05d483e929730b1299ecf91841c6ac0bb842699cbf8104c464b17"
+      "sha256": "4fb98c374ae188908196613c205c371423f4d9d7ad3a5c539e2a897797cd4515"
     },
     {
       "url": "thumbnails/sweet-winter-b.webp",
-      "sha256": "7e87b95d0455477253fa60e7c50c8e635b48f129829f21b4f84d5b9a5461a212"
+      "sha256": "ec903c058a270757a92728841891ae2c2298ec770c8dd0ec4d722e888f32f89b"
     },
     {
       "url": "体验工具.js",
@@ -387,7 +387,7 @@ self.OUTFIT_OFFLINE = {
     },
     {
       "url": "拆解小样信息.json",
-      "sha256": "8f9ccf8ff7fe1a6ef5a801fd93eebce6285e27322f21c1389b05b2968b8f5383"
+      "sha256": "c4b3f9db2e44d51e988286601d13297b08195dca6fbd7ef10b915ebc9bf42152"
     },
     {
       "url": "拆解演示.css",
@@ -395,7 +395,7 @@ self.OUTFIT_OFFLINE = {
     },
     {
       "url": "拆解演示.js",
-      "sha256": "7a636dfc785059fa7732359aa89618b66c96abd8b152332b65575ee3190428dc"
+      "sha256": "92494a58dc73c74434093a8739924a268d7575b7897d2786f6771d36191148c6"
     },
     {
       "url": "搭配.html",

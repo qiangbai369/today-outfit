@@ -1,5 +1,5 @@
 {
-  "version": "20261102-refined3",
+  "version": "20261103-refined24",
   "canvas": [
     1024,
     1536
@@ -10,73 +10,73 @@
     "cool-autumn-a": {
       "figure": "images/unified/cool-autumn-a.webp",
       "canonical": "cool-summer-a",
-      "sha256": "041230905f90dff8994dce0f68093de27840d1f3fd1b57c13b8b03ebf3be8119",
-      "editSha256": "e329684b32324eba8d14ba789711b5de5a7b2fb25657e3c4b83a673760a9d652",
+      "sha256": "0ab5836d8f6bdb7e5455d7698e982f416aae7d0cb91fcb571722b3e025adf75e",
+      "editSha256": "39201a8762de72d0f382787641113a4281e49ea4083ca02243938069faab660f",
       "bodyBounds": [
-        273,
-        47,
-        757,
-        1487
+        269,
+        48,
+        756,
+        1488
       ],
-      "headCenterX": 512.3,
-      "scale": 0.984952,
+      "headCenterX": 511.93,
+      "scale": 0.997921,
       "offset": [
-        8,
-        18
+        -1,
+        2
       ]
     },
     "cool-autumn-b": {
       "figure": "images/unified/cool-autumn-b.webp",
       "canonical": "cool-summer-a",
-      "sha256": "1c52204ad224329ad2f5d862bdce71549d3cf908268e68e9da4d10c0a1434e4e",
-      "editSha256": "c99c4b615b2ffbe864fc51feaa48af0204eba71380deb42d5480c2265572cf7d",
+      "sha256": "5cbb8357db5c19c06b1e2af0e393239375aae0499ab182a4147db8d4221cab50",
+      "editSha256": "7d013c0da6e2f4d3e357512a96c6feb10bad5abe51ac1284cfad398f56bf0e55",
       "bodyBounds": [
-        269,
-        47,
-        764,
+        262,
+        48,
+        771,
         1488
       ],
-      "headCenterX": 511.97,
-      "scale": 0.988332,
+      "headCenterX": 512.29,
+      "scale": 1.019108,
       "offset": [
-        1,
-        17
+        -10,
+        4
       ]
     },
     "cool-spring-a": {
       "figure": "images/unified/cool-spring-a.webp",
       "canonical": "cool-summer-a",
-      "sha256": "c6bb1df6442c6224b21a0c3f54a795441680abbc7d5a0b02c1601a2e55a434a0",
-      "editSha256": "040a508495584e9a2009f637a702ea4c902e31cad1b0332cb4b3cacf98a5e054",
+      "sha256": "2d1a530601d3ef843ad8c0482ae3923d48034873822176a401c2c0c68a8a183e",
+      "editSha256": "c97ef14d6067d7c4c222795ffa2df17af7f04b5596f58124c51ec2f920d20255",
       "bodyBounds": [
-        266,
+        262,
         47,
-        756,
+        763,
         1488
       ],
-      "headCenterX": 511.52,
-      "scale": 0.988332,
+      "headCenterX": 511.94,
+      "scale": 0.997921,
       "offset": [
-        5,
-        17
+        1,
+        2
       ]
     },
     "cool-spring-b": {
       "figure": "images/unified/cool-spring-b.webp",
       "canonical": "cool-summer-a",
-      "sha256": "5992c76500dee57550daedeae7b383d452c50499415b7e8908c297ea066b6b3b",
-      "editSha256": "50dde2d1de8aaa948b59d0c0ef7ff4a234004ed51db354861510f2dcca66a0eb",
+      "sha256": "aca900e22d3b618c465f3dfa07036819be182b604176817eaa5f203f31cf37c2",
+      "editSha256": "3a68971ed626796405184515bc81a15e94776fb2f007e2b207268c9ad38db6f7",
       "bodyBounds": [
-        262,
-        47,
-        754,
+        266,
+        48,
+        763,
         1488
       ],
-      "headCenterX": 511.62,
-      "scale": 0.987654,
+      "headCenterX": 512.32,
+      "scale": 0.993789,
       "offset": [
-        1,
-        17
+        3,
+        2
       ]
     },
     "cool-summer-a": {
@@ -100,91 +100,91 @@
     "cool-summer-b": {
       "figure": "images/unified/cool-summer-b.webp",
       "canonical": "cool-summer-a",
-      "sha256": "21cec70dea415f74eadeff681758f51102027fb648ac75991e513212e9460939",
-      "editSha256": "27174ac6e138621d576665ddedd44b3ee089c228a8cfaf626e8bfc9565d41fef",
+      "sha256": "d4ea4a3ebdae04c1a588edeb5d34cb63b40e1193f0ec50e1fb78299cdaec6197",
+      "editSha256": "5b07249a714ed5df5767b4b07a758a24b5b9db2fb1697e4f635c2b61a35c6db5",
       "bodyBounds": [
-        272,
+        270,
         48,
-        757,
+        758,
         1488
       ],
-      "headCenterX": 512.48,
-      "scale": 0.986301,
+      "headCenterX": 512.29,
+      "scale": 0.998613,
       "offset": [
-        7,
-        22
+        1,
+        2
       ]
     },
     "cool-winter-a": {
       "figure": "images/unified/cool-winter-a.webp",
       "canonical": "cool-summer-a",
-      "sha256": "0cef51ee5a33b29f3656e3ae227ba3d551d0e293e94aace877643032d833eb59",
-      "editSha256": "912bd4a1d89ffd2a585895df18a09e5ba9155b9f5f180f3066785e597b25ac7a",
+      "sha256": "c754b1dd5f94414703b9291a3692c2baa4894a7b02794303f3d38368344baa26",
+      "editSha256": "796dbcd223f682c091700bb50cfa0c07d08bfbc3f29f9b6b00d9d182b1243e79",
       "bodyBounds": [
-        257,
+        254,
         48,
-        767,
+        772,
         1488
       ],
-      "headCenterX": 512.34,
-      "scale": 0.982265,
+      "headCenterX": 511.58,
+      "scale": 0.99723,
       "offset": [
-        5,
-        20
+        2,
+        1
       ]
     },
     "cool-winter-b": {
       "figure": "images/unified/cool-winter-b.webp",
       "canonical": "cool-summer-a",
-      "sha256": "43e332f352f1a2a2c6a9c3fe48d40f97b7de60d67789e53aa1c40401775cc89d",
-      "editSha256": "05d680e6cc9054eed4e6bece94f79d880b89c1560e643a850d45f6ec951e54d0",
+      "sha256": "eef66ad1510550bf47efdf43aad0b25f7ec13da4282870fd4a0429a0c48fe14c",
+      "editSha256": "5d18ca7737bfa62e145bcfb1e360a5e4b955256f9f1f32e63be5481c88e3a386",
       "bodyBounds": [
-        248,
+        246,
         48,
-        781,
+        791,
         1488
       ],
-      "headCenterX": 511.87,
-      "scale": 0.984279,
+      "headCenterX": 511.91,
+      "scale": 1.023454,
       "offset": [
-        3,
-        22
+        -8,
+        -2
       ]
     },
     "literary-autumn-a": {
       "figure": "images/unified/literary-autumn-a.webp",
       "canonical": "literary-spring-a",
-      "sha256": "35a81aa2a7319ea63597ab1002a012542b071fbe507e7d47cb8ec5c3212b626a",
-      "editSha256": "a1c0319c3132b3e7d5f61024a9c5ca8f6fae6ab113446c03f75c64022823213a",
+      "sha256": "d930d2ced3f41008d0a9d86df8f448490e9839de97961f9383eebb69056b4632",
+      "editSha256": "6bec24e595a008354b8a63d02d4c157f36c354a14f3057f6676ca44b60ab8198",
       "bodyBounds": [
-        223,
+        220,
         48,
-        787,
+        789,
         1488
       ],
-      "headCenterX": 511.54,
-      "scale": 0.963211,
+      "headCenterX": 511.73,
+      "scale": 0.99654,
       "offset": [
         2,
-        26
+        4
       ]
     },
     "literary-autumn-b": {
       "figure": "images/unified/literary-autumn-b.webp",
       "canonical": "literary-spring-a",
-      "sha256": "e48c565ac264d0fb76ed7ab023d58a77724477e3285473baab321353d8b77526",
-      "editSha256": "e3fd26290be08f8bc2996b71c114962074ba617ba4c07b2e63930f3aa9ec3430",
+      "sha256": "8882dd32161bedb3c0380a467acf31c053caa8dc72a78ed25c606228dc82c86e",
+      "editSha256": "0abbe6bf8888303ac12cca318bab33a94e8037c3f0009ea734b2a1f2f8646a90",
       "bodyBounds": [
-        219,
-        49,
-        773,
-        1489
+        217,
+        48,
+        772,
+        1488
       ],
-      "headCenterX": 512.14,
-      "scale": 0.96064,
+      "headCenterX": 512.17,
+      "scale": 0.994475,
       "offset": [
-        3,
-        31
+        2,
+        5
       ]
     },
     "literary-spring-a": {
@@ -208,163 +208,163 @@
     "literary-spring-b": {
       "figure": "images/unified/literary-spring-b.webp",
       "canonical": "literary-spring-a",
-      "sha256": "b386f950a4b60a84975915ffd152e7e42f5ca4a6f3b1589d8020ff26aa752375",
-      "editSha256": "74b92887ece9bfefa442d0e27b1bcb72ddbef8d2261398c852fe82c06e82ec38",
+      "sha256": "efffd8ead3c28380883ce1be1fe269fec25a0d1f18d580d107f4c6fcf6e49ad4",
+      "editSha256": "4a79c8b52c5ca6ee226dbeba0d25d0a295013b9a90b43c88ae985dfbc7dfbf82",
       "bodyBounds": [
-        244,
+        242,
         48,
-        755,
+        758,
         1488
       ],
-      "headCenterX": 511.8,
-      "scale": 0.966443,
+      "headCenterX": 511.73,
+      "scale": 0.99654,
       "offset": [
-        2,
-        27
+        3,
+        2
       ]
     },
     "literary-summer-a": {
       "figure": "images/unified/literary-summer-a.webp",
       "canonical": "literary-spring-a",
-      "sha256": "11c4df95c35d8eed6800a94622fababd2b20bdff0235debaf46cdafca2563baf",
-      "editSha256": "05f844455f86084aee33f2728afde57b568316d81837a619e460aa64e33fafbc",
+      "sha256": "e9212a4ed28ad5b08982b5ed0e62f864027374aa859b99fd71554e1d33591d8c",
+      "editSha256": "c503e3549991db316a62f662f53ed996ff9ee537f7586b7555809ea688e78a48",
       "bodyBounds": [
-        267,
-        49,
-        774,
+        264,
+        48,
+        772,
         1488
       ],
-      "headCenterX": 512.4,
-      "scale": 0.963855,
+      "headCenterX": 511.64,
+      "scale": 0.999306,
       "offset": [
-        3,
-        32
+        -1,
+        2
       ]
     },
     "literary-summer-b": {
       "figure": "images/unified/literary-summer-b.webp",
       "canonical": "literary-spring-a",
-      "sha256": "2b7051309b5770bfffc1a623a14af077634fb48c4ef369e8881e82d60bf830a7",
-      "editSha256": "5f32a915d64bf19b5c29a7aa334150ef89700698fdd2f021bdfae32b7af082b7",
+      "sha256": "2db888f7b4e21973e35662dba95183b727bc5ac14da34b2e581c5fda0070d95f",
+      "editSha256": "e8ee41d0b1a6746f68a6d840e4e633d70b46980e3c2be86bc355c878df642d65",
       "bodyBounds": [
-        276,
-        49,
-        742,
-        1489
+        271,
+        48,
+        748,
+        1488
       ],
-      "headCenterX": 511.62,
-      "scale": 0.96064,
+      "headCenterX": 512.01,
+      "scale": 0.995162,
       "offset": [
-        2,
-        35
+        -1,
+        3
       ]
     },
     "literary-winter-a": {
       "figure": "images/unified/literary-winter-a.webp",
       "canonical": "literary-spring-a",
-      "sha256": "4d0a12d72337aafe14819e21f499c7c576506afc9fd43a5ccf9055ebfced2f4f",
-      "editSha256": "4b276c938bc915bd103d587e0b9f903d8cdf04afc87f668c86db0cc9966a588e",
+      "sha256": "87d441067084520832c3b41f53a025709b10cc1bd345076e56c2178a5e20249a",
+      "editSha256": "f61e30240ff380d5da0acdeb8d53ce1db4b79bb140645dd9d7322644872648fc",
       "bodyBounds": [
-        218,
-        49,
+        214,
+        48,
         784,
-        1489
+        1488
       ],
-      "headCenterX": 512.3,
-      "scale": 0.95936,
+      "headCenterX": 512.23,
+      "scale": 0.99654,
       "offset": [
-        0,
-        30
+        2,
+        3
       ]
     },
     "literary-winter-b": {
       "figure": "images/unified/literary-winter-b.webp",
       "canonical": "literary-spring-a",
-      "sha256": "f2f93dd371a84d2b4c1cdf7f588a5a419011589f9287f9973dbcff3adb68006c",
-      "editSha256": "ce96b6f13f3c45ab6e300dc1cd9fc30634932c9f3e287c2f867b862cc16c1efa",
+      "sha256": "08c932a59fdf6887c0fa25660a6324dcaedccd0ccd0d06257b54903dd1363376",
+      "editSha256": "cce1882c69abde9cd8008d997aa345127e81e09bfc57bbf31351f9f4bd84cf86",
       "bodyBounds": [
-        206,
-        49,
-        782,
+        204,
+        48,
+        786,
         1488
       ],
-      "headCenterX": 511.98,
-      "scale": 0.965147,
+      "headCenterX": 512.23,
+      "scale": 0.99654,
       "offset": [
-        -1,
-        28
+        3,
+        3
       ]
     },
     "sweet-autumn-a": {
       "figure": "images/unified/sweet-autumn-a.webp",
       "canonical": "sweet-summer-a",
-      "sha256": "64ebede0a1b8085950cf42d1343901778588361c2f5ed62f9b1a86759d957b27",
-      "editSha256": "bf4289e5a7e762d7b1ac27d5c4b180f210cde984c116e4ea07e91b3118bafeab",
+      "sha256": "2295af07d93a363f03c2ace0cc2e2329c83ac53c94bb59ce84bb7ff1bc4d9d8a",
+      "editSha256": "9ffa5b83d1859c5dcc5e321e22d2dbbab3c9d35a96d9f642d845ed76532cb283",
       "bodyBounds": [
-        211,
+        215,
         48,
-        829,
+        833,
         1488
       ],
-      "headCenterX": 511.79,
-      "scale": 0.987654,
+      "headCenterX": 512.03,
+      "scale": 0.995162,
       "offset": [
-        15,
-        12
+        3,
+        6
       ]
     },
     "sweet-autumn-b": {
       "figure": "images/unified/sweet-autumn-b.webp",
       "canonical": "sweet-summer-a",
-      "sha256": "dd281498c5ba9d01429b331741ecd128fc529929fa938fc716078c00d00a6c2a",
-      "editSha256": "56b4c5fef128c258771e2abec809d4a1504355b212e0324624e1421b669cccd6",
+      "sha256": "274570c9cf8c9518a0731bac6b671d7dfe37cd5c315a5bd14dcf77c3c0b587bf",
+      "editSha256": "a258f03345a29ab17fe74e8b80eb3dccf1e414d3f8c7469c9765686554f7e992",
       "bodyBounds": [
-        211,
-        47,
-        832,
-        1487
+        209,
+        48,
+        835,
+        1488
       ],
-      "headCenterX": 511.94,
-      "scale": 0.986977,
+      "headCenterX": 512.29,
+      "scale": 0.998613,
       "offset": [
-        15,
-        13
+        2,
+        1
       ]
     },
     "sweet-spring-a": {
       "figure": "images/unified/sweet-spring-a.webp",
       "canonical": "sweet-summer-a",
-      "sha256": "fd68308f143f67b05183d157f359d8a4088ed5c56d87877297e5b4a6ab9b728a",
-      "editSha256": "b487801fe6c1ad7719b74f501e6a0267c2bfef416aa81736e383979c543d75a6",
+      "sha256": "2dc399863e15c3de8fac4c144a5683b78b8afdb1ffd2732778b1905fbff5a6d3",
+      "editSha256": "d54e17c9cb124b2564e64a39e18d3a2d749c957c6afce5aac0784e1472c09ba7",
       "bodyBounds": [
-        194,
-        47,
-        823,
+        195,
+        48,
+        824,
         1488
       ],
-      "headCenterX": 512.38,
-      "scale": 0.984279,
+      "headCenterX": 512.14,
+      "scale": 0.999306,
       "offset": [
-        4,
-        17
+        0,
+        1
       ]
     },
     "sweet-spring-b": {
       "figure": "images/unified/sweet-spring-b.webp",
       "canonical": "sweet-summer-a",
-      "sha256": "f4dfa9ad3425cbe5bef90e5fe4ba6f6e4a9dffcfea31f67d9968745abd60f1cf",
-      "editSha256": "9edb6da7f5a5199f4f57c636e5d4d94797346f3d82377c6b84cbfad8d5d0245e",
+      "sha256": "bf5e1c89c966de870c9ebe28ec05bb45f72409d9617a061563b4047e18a359cc",
+      "editSha256": "d9d1c5fc509bd2c42aca054e7a937e3a377533f523a6ac16d2b6a50b747c5142",
       "bodyBounds": [
-        200,
+        196,
         48,
-        830,
-        1487
+        824,
+        1488
       ],
-      "headCenterX": 512.5,
-      "scale": 0.990371,
+      "headCenterX": 511.86,
+      "scale": 1.000695,
       "offset": [
-        -2,
-        16
+        -1,
+        1
       ]
     },
     "sweet-summer-a": {
@@ -388,55 +388,55 @@
     "sweet-summer-b": {
       "figure": "images/unified/sweet-summer-b.webp",
       "canonical": "sweet-summer-a",
-      "sha256": "72b8996db00268a2b1ffa346085918e20cface57d19c152a4bac6746b2a3d6fa",
-      "editSha256": "a39e8f206003ca25908b8eb26e2e30a683f8e2886d3c4cd222f35409a6b8746e",
+      "sha256": "58d6b91b774fcc641832104885a44b3c9b915982267bc35df0efc919605cc6c2",
+      "editSha256": "4bbeaa49abe7ac7d1ec718a0343266fbdd8260b8d99845b8061f35b7a57dcc04",
       "bodyBounds": [
         208,
         48,
-        842,
-        1487
+        840,
+        1488
       ],
-      "headCenterX": 512.01,
-      "scale": 0.993103,
+      "headCenterX": 512.08,
+      "scale": 0.99723,
       "offset": [
-        10,
-        15
+        0,
+        4
       ]
     },
     "sweet-winter-a": {
       "figure": "images/unified/sweet-winter-a.webp",
       "canonical": "sweet-summer-a",
-      "sha256": "d5551b44a867df0425ee64098703c5bf050bbe543a590b0a086cfc7a5c124cdf",
-      "editSha256": "ddf8264102cf8fb4c7765b407c6fde07b65c7de257dd1534c1ed16e0911af784",
+      "sha256": "dd5a910bc6feaaf71660df8569e266197fd4702b82efd972787fde1e8eeb67ec",
+      "editSha256": "da5fec09dd369333b1b90f7aa612329e0cd73fcb5baa174be8ec6939b38832f5",
       "bodyBounds": [
-        212,
+        208,
         48,
-        833,
+        827,
         1489
       ],
-      "headCenterX": 512.05,
-      "scale": 0.980259,
+      "headCenterX": 512.01,
+      "scale": 0.995162,
       "offset": [
-        18,
-        15
+        0,
+        5
       ]
     },
     "sweet-winter-b": {
       "figure": "images/unified/sweet-winter-b.webp",
       "canonical": "sweet-summer-a",
-      "sha256": "b8465b7bdbd9ad97c91c1473e9ad302d4f7eb6c543130f8b09b5a1c36dec245f",
-      "editSha256": "cb7ae3e60fa6f212cc2ba23fceb9330eb990d09000a31fb3f29b35a862f0cd57",
+      "sha256": "10b26e28607cd2aa0a60a4e6ebf759754dc9de484cbc131200f88b487a2a2bd9",
+      "editSha256": "d7e491ffd634ef8c3ba5fbd84cc36b5b5690ca3c98efb69cfc25d587383aa5bb",
       "bodyBounds": [
-        214,
+        209,
         48,
-        828,
-        1489
+        827,
+        1487
       ],
-      "headCenterX": 511.73,
-      "scale": 0.977597,
+      "headCenterX": 511.8,
+      "scale": 0.993789,
       "offset": [
-        20,
-        15
+        -1,
+        7
       ]
     }
   }

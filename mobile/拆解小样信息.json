@@ -101,7 +101,7 @@
       },
       {
         "name": "高腰短裤",
-        "description": "奶白色 · 翻边裤脚",
+        "description": "奶白色 · 高腰斜插袋",
         "image": "images/顾书宁-短裤.webp",
         "displayBounds": [
           57,
@@ -232,7 +232,7 @@
     "items": [
       {
         "name": "藏蓝领Polo衫",
-        "description": "奶白 · 翻领胸袋",
+        "description": "奶白短袖 · 藏蓝翻领",
         "image": "images/sweet-spring-b-单品.webp",
         "cell": [
           0,
