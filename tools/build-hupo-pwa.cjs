@@ -1,0 +1,3 @@
+const fs=require('fs'),path=require('path'),crypto=require('crypto'),root=path.resolve(__dirname,'../hupo');
+const files=[];function walk(dir){for(const e of fs.readdirSync(dir,{withFileTypes:true})){const p=path.join(dir,e.name);if(e.isDirectory())walk(p);else if(!['offline-assets.js','AGENTS.md','README.md'].includes(e.name))files.push(path.relative(root,p));}}walk(root);
+const hash=x=>crypto.createHash('sha256').update(x).digest('hex');const assets=files.sort().map(url=>({url,sha256:hash(fs.readFileSync(path.join(root,url)))}));const version=hash(JSON.stringify(assets)).slice(0,20);fs.writeFileSync(path.join(root,'offline-assets.js'),'self.OUTFIT_OFFLINE = '+JSON.stringify({version,assets},null,2)+';\n');console.log('Hu Po offline:',version,assets.length);

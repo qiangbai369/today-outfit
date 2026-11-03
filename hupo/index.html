@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>胡珀 · 穿搭照相馆</title>
+  <meta name="theme-color" content="#eeeae2">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="胡珀 · 穿搭照相馆">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+  <script defer src="pwa.js"></script>
+  <link rel="stylesheet" href="拆解演示.css?v=20261103-hupo1">
+  <link rel="stylesheet" href="hupo.css">
+  <script defer src="data.js"></script>
+  <script defer src="手势逻辑.js"></script>
+  <script defer src="收藏逻辑.js?v=20261103-hupo1"></script>
+  <script defer src="体验工具.js"></script>
+  <script defer src="拆解演示.js?v=20261103-hupo1"></script>
+</head>
+<body>
+  <main class="studio">
+    <section id="picker" class="mobile-page">
+      <header class="mobile-header"><label class="season-label" hidden><span class="sr-only">季节</span><select id="season-filter" aria-label="季节"><option value="all">四季</option><option value="spring">春</option><option value="summer">夏</option><option value="autumn">秋</option><option value="winter">冬</option></select></label><button id="picker-favorites">收藏</button></header>
+      <div id="character-choices" class="character-choices"></div>
+    </section>
+    <section id="favorites" class="mobile-page" hidden>
+      <header class="mobile-header"><button id="favorites-back" aria-label="返回">‹</button><span>收藏</span><button id="favorites-edit" aria-pressed="false">编辑</button></header>
+      <nav id="favorite-tabs" class="favorite-tabs" aria-label="收藏人物"></nav>
+      <div class="collection-tools"><button id="compare-favorites">对比穿搭</button><button id="collection-tools">备份与恢复</button></div>
+      <div id="favorite-photos" class="favorite-photos"></div>
+      <p id="favorite-empty" class="favorite-empty" hidden>暂无收藏</p>
+    </section>
+    <section class="stage" id="stage" hidden aria-label="轻夏微风穿搭">
+      <button class="identity" id="character-back" aria-label="返回选角色">‹ <span id="character-name">胡珀</span></button>
+      <button class="stage-favorites" id="stage-favorites"><span id="favorite-indicator" class="favorite-indicator" hidden aria-hidden="true">♥</span>收藏</button>
+      <button class="collapse" id="collapse" hidden>收起</button>
+      <button class="figure" id="figure" aria-label="查看轻夏微风穿搭拆解" aria-expanded="false" aria-controls="items" disabled>
+        <img id="look-image"  alt="胡珀身穿薄荷绿上衣与奶白小花半裙，搭配浅粉凉鞋和草编包" draggable="false">
+      </button>
+      <div class="items" id="items" aria-label="四件穿搭单品" aria-hidden="true" inert></div>
+      <img id="heart" class="heart" src="thumbnails/heart.webp" alt="" aria-hidden="true" draggable="false">
+      <p id="notice" class="notice" hidden></p><p id="status" class="sr-only" role="status" aria-live="polite"></p>
+    </section>
+  </main>
+  <div id="feedback" class="load-feedback" role="status" hidden><span id="feedback-text"></span><button id="retry" hidden>重试</button></div>
+  <div id="favorite-toast" class="favorite-toast" role="status" hidden><span>已取消收藏</span><button id="undo-favorite">撤销</button></div>
+  <output id="pwa-status" class="sr-only" aria-live="polite"></output>
+  <button id="pwa-action" class="pwa-action" hidden>更新</button>
+  <dialog id="detail-dialog" aria-labelledby="detail-title">
+    <header class="detail-header"><h2 id="detail-title"></h2><button id="detail-close" aria-label="关闭">×</button></header>
+    <div id="detail-body"></div><p id="detail-status" role="status"></p>
+  </dialog>
+  <noscript>请开启 JavaScript 查看穿搭拆解。</noscript>
+</body>
+</html>

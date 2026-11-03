@@ -1,0 +1,257 @@
+{
+  "hupo-autumn-a": {
+    "figure": "images/hupo-autumn-a.webp",
+    "items": [
+      {
+        "name": "短西装",
+        "description": "孔雀蓝 · 尖翻领短款",
+        "image": "images/hupo-autumn-a-items.webp",
+        "cell": [
+          0,
+          0,
+          3
+        ],
+        "bounds": [
+          0,
+          0,
+          512,
+          512
+        ]
+      },
+      {
+        "name": "方领针织背心",
+        "description": "孔雀蓝 · 细罗纹",
+        "image": "images/hupo-autumn-a-items.webp",
+        "cell": [
+          1,
+          0,
+          3
+        ],
+        "bounds": [
+          512,
+          0,
+          1024,
+          512
+        ]
+      },
+      {
+        "name": "微喇西裤",
+        "description": "灰褐 · 高腰中缝",
+        "image": "images/hupo-autumn-a-items.webp",
+        "cell": [
+          0,
+          1,
+          3
+        ],
+        "bounds": [
+          0,
+          512,
+          512,
+          1060
+        ]
+      },
+      {
+        "name": "尖头短靴",
+        "description": "深灰 · 细高跟",
+        "image": "images/hupo-autumn-a-items.webp",
+        "cell": [
+          1,
+          1,
+          3
+        ],
+        "bounds": [
+          512,
+          512,
+          1024,
+          1024
+        ]
+      },
+      {
+        "name": "窄腰带",
+        "description": "黑色 · 银色矩形扣",
+        "image": "images/hupo-autumn-a-items.webp",
+        "cell": [
+          0,
+          2,
+          3
+        ],
+        "bounds": [
+          0,
+          1080,
+          512,
+          1536
+        ]
+      },
+      {
+        "name": "水滴耳坠",
+        "description": "银色 · 细长轮廓",
+        "image": "images/hupo-autumn-a-items.webp",
+        "cell": [
+          1,
+          2,
+          3
+        ],
+        "bounds": [
+          512,
+          1024,
+          1024,
+          1536
+        ]
+      }
+    ]
+  },
+  "hupo-summer-a": {
+    "figure": "images/hupo-summer-a.webp",
+    "items": [
+      {
+        "name": "罗纹短背心",
+        "description": "浅紫 · 方领宽肩带",
+        "image": "images/hupo-summer-a-items.webp",
+        "cell": [
+          0,
+          0,
+          3
+        ],
+        "bounds": [
+          0,
+          0,
+          512,
+          512
+        ]
+      },
+      {
+        "name": "毛边牛仔短裤",
+        "description": "浅蓝 · 高腰水洗",
+        "image": "images/hupo-summer-a-items.webp",
+        "cell": [
+          1,
+          0,
+          3
+        ],
+        "bounds": [
+          512,
+          0,
+          1024,
+          512
+        ]
+      },
+      {
+        "name": "细带凉鞋",
+        "description": "奶白 · 踝带细高跟",
+        "image": "images/hupo-summer-a-items.webp",
+        "cell": [
+          0,
+          1,
+          3
+        ],
+        "bounds": [
+          0,
+          512,
+          512,
+          1024
+        ]
+      },
+      {
+        "name": "翻盖手拿包",
+        "description": "奶白 · 小巧轮廓",
+        "image": "images/hupo-summer-a-items.webp",
+        "cell": [
+          1,
+          1,
+          3
+        ],
+        "bounds": [
+          512,
+          512,
+          1024,
+          1024
+        ]
+      },
+      {
+        "name": "素圈手镯",
+        "description": "银色 · 纤细光泽",
+        "image": "images/hupo-summer-a-items.webp",
+        "cell": [
+          0,
+          2,
+          3
+        ],
+        "bounds": [
+          0,
+          1024,
+          512,
+          1536
+        ]
+      },
+      {
+        "name": "水滴耳坠",
+        "description": "银白 · 小水滴",
+        "image": "images/hupo-summer-a-items.webp",
+        "cell": [
+          1,
+          2,
+          3
+        ],
+        "bounds": [
+          512,
+          1024,
+          1024,
+          1536
+        ]
+      }
+    ]
+  },
+  "hupo-summer-b": {
+    "figure": "images/hupo-summer-b.webp",
+    "items": [
+      {
+        "name": "露肩缎面裙",
+        "description": "浅玫瑰粉 · 修身褶皱",
+        "image": "images/hupo-summer-b-items.webp",
+        "cell": [
+          0,
+          0,
+          2
+        ],
+        "bounds": [
+          0,
+          0,
+          627,
+          627
+        ]
+      },
+      {
+        "name": "尖头高跟鞋",
+        "description": "香槟裸色 · 漆面细跟",
+        "image": "images/hupo-summer-b-items.webp",
+        "cell": [
+          1,
+          0,
+          2
+        ],
+        "bounds": [
+          627,
+          0,
+          1254,
+          627
+        ]
+      },
+      {
+        "name": "串珠耳坠",
+        "description": "银色 · 垂坠光泽",
+        "image": "images/hupo-summer-b-items.webp",
+        "cell": [
+          0,
+          1,
+          2
+        ],
+        "bounds": [
+          0,
+          627,
+          627,
+          1254
+        ]
+      }
+    ]
+  }
+}

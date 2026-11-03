@@ -1,5 +1,5 @@
 self.OUTFIT_OFFLINE = {
-  "version": "9aa723938a0e5c49bac3",
+  "version": "4e08d2fff1107a5d4fbb",
   "assets": [
     {
       "url": "../previews/complete-looks/data.js",
@@ -267,7 +267,7 @@ self.OUTFIT_OFFLINE = {
     },
     {
       "url": "index.html",
-      "sha256": "089d75227b64ffaa5d7c79aed280c00cb767838b5309459f50168b50a872bdcc"
+      "sha256": "920c53c4bfc93c0e77798a704c87cd193593de02cf5ff504c0962ab2d5aac724"
     },
     {
       "url": "manifest.webmanifest",
@@ -379,7 +379,7 @@ self.OUTFIT_OFFLINE = {
     },
     {
       "url": "体验工具.js",
-      "sha256": "a0e072b85477434e0f3a3e75badbe042ef197f5a79baeefd2c594003e5a8e772"
+      "sha256": "652a09d7b8a821cad51d44f554fe8431112e7e76a24aedede7b1d4c6f5112578"
     },
     {
       "url": "手势逻辑.js",
@@ -391,11 +391,11 @@ self.OUTFIT_OFFLINE = {
     },
     {
       "url": "拆解演示.css",
-      "sha256": "f5c28d0e32caa9926598a100a7a6934879a515f6ac7f9d8dde1e50f9abdaaee7"
+      "sha256": "2e03677fb89b5298ab8b19dfb1dd53ba4f39538cf98e894c3edb0f4de5626e08"
     },
     {
       "url": "拆解演示.js",
-      "sha256": "63e13e6640271329c1e82f167286d9f7dcb17576180d2d344c51a22a122ba6c8"
+      "sha256": "7a636dfc785059fa7732359aa89618b66c96abd8b152332b65575ee3190428dc"
     },
     {
       "url": "搭配.html",

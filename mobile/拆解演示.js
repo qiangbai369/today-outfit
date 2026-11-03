@@ -510,6 +510,6 @@
       }
     } catch { feedbackState('暂时未能加载', initialize); }
   }
-  window.OutfitExtras?.mount({allLooks, characters, storage, favoritesKey:FAVORITES_KEY, render:()=>{if(view === 'favorites') renderFavorites(); else if(view === 'stage') renderFavorite();}});
+  window.OutfitExtras?.mount({allLooks, characters, figureOf:id=>breakdowns[id].figure, storage, favoritesKey:FAVORITES_KEY, render:()=>{if(view === 'favorites') renderFavorites(); else if(view === 'stage') renderFavorite();}});
   await initialize();
 }());

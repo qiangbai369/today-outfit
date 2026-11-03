@@ -20,10 +20,10 @@
     for(const r of data.records)if(!seen.has(idOf(r))){seen.add(idOf(r));result.push(r);}
     return result;
   }
-  let config,dialog,body,status,title,revision=0;
+  let config,dialog,body,status,title,revision=0,cleanup=()=>{};
   const $=id=>document.getElementById(id);
   function element(tag,text,className){const node=document.createElement(tag);if(text)node.textContent=text;if(className)node.className=className;return node;}
-  function open(name){revision++;title.textContent=name;body.replaceChildren();status.textContent='';if(!dialog.open)dialog.showModal();return revision;}
+  function open(name){cleanup();cleanup=()=>{};revision++;title.textContent=name;body.replaceChildren();status.textContent='';if(!dialog.open)dialog.showModal();return revision;}
   function action(parent,text,handler){const b=element('button',text);b.type='button';b.addEventListener('click',handler);parent.append(b);return b;}
   function download(blob,name){const url=URL.createObjectURL(blob),a=element('a');a.href=url;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),60000);}
   function readRecords(){return window.OutfitFavorites.read(config.storage?.getItem(config.favoritesKey)??null);}
@@ -31,7 +31,8 @@
     config=options;dialog=$('detail-dialog');body=$('detail-body');status=$('detail-status');title=$('detail-title');
     if ('ResizeObserver' in window) new ResizeObserver(entries=>{const height=entries[0].target.getBoundingClientRect().height;if(height)document.documentElement.style.setProperty('--feedback-height',height+'px');}).observe($('feedback'));
     $('detail-close').addEventListener('click',()=>dialog.close());
-    dialog.addEventListener('close',()=>{revision++;});
+    dialog.addEventListener('close',()=>{cleanup();cleanup=()=>{};revision++;});
+    $('compare-favorites').addEventListener('click',openCompare);
     $('collection-tools').addEventListener('click',()=>{
       open('收藏备份');body.append(element('p','备份保存到文件；恢复时合并收藏，不覆盖已有记录。'));
       const actions=element('div',null,'detail-actions');body.append(actions);
@@ -59,6 +60,41 @@
     // A cloned atlas needs its own clip identifier, independent of the item grid.
     for(const clip of art.querySelectorAll('clipPath')){const old=clip.id;clip.id='detail-'+old;for(const img of art.querySelectorAll('image'))if(img.getAttribute('clip-path')===`url(#${old})`)img.setAttribute('clip-path',`url(#${clip.id})`);}
     body.append(art,element('p',item.description));
+    enableZoom(art);
+  }
+
+  function enableZoom(art){
+    const frame=element('div',null,'zoom-frame');while(art.firstChild)frame.append(art.firstChild);art.append(frame);art.classList.add('zoom-art');
+    let scale=1,x=0,y=0,baseline=null;const points=new Map();
+    const controls=element('div',null,'zoom-controls');body.append(controls);
+    const label=element('output','100%');label.setAttribute('aria-live','polite');
+    const minus=action(controls,'−',()=>change(scale/1.5));minus.setAttribute('aria-label','缩小单品');
+    controls.append(label);
+    const plus=action(controls,'＋',()=>change(scale*1.5));plus.setAttribute('aria-label','放大单品');
+    const reset=action(controls,'复位',()=>{x=0;y=0;change(1);});
+    function render(){const box=art.getBoundingClientRect();x=Math.max(-box.width*(scale-1)/2,Math.min(box.width*(scale-1)/2,x));y=Math.max(-box.height*(scale-1)/2,Math.min(box.height*(scale-1)/2,y));frame.style.transform=`translate(${x}px,${y}px) scale(${scale})`;label.value=Math.round(scale*100)+'%';label.textContent=label.value;minus.disabled=scale<=1;plus.disabled=scale>=4;art.dataset.zoom=String(scale);}
+    function change(value){scale=Math.min(4,Math.max(1,value));render();}
+    function metrics(){const p=[...points.values()];return p.length>1?{cx:(p[0].x+p[1].x)/2,cy:(p[0].y+p[1].y)/2,d:Math.hypot(p[1].x-p[0].x,p[1].y-p[0].y)}:{cx:p[0]?.x||0,cy:p[0]?.y||0,d:0};}
+    function begin(){baseline={...metrics(),scale,x,y};}
+    art.addEventListener('pointerdown',e=>{if(e.pointerType==='mouse'&&e.button!==0)return;points.set(e.pointerId,{x:e.clientX,y:e.clientY});art.setPointerCapture(e.pointerId);begin();});
+    art.addEventListener('pointermove',e=>{if(!points.has(e.pointerId))return;points.set(e.pointerId,{x:e.clientX,y:e.clientY});const m=metrics(),box=art.getBoundingClientRect();if(points.size>1&&baseline.d>0){scale=Math.min(4,Math.max(1,baseline.scale*m.d/baseline.d));const ratio=scale/baseline.scale;x=m.cx-(box.left+box.width/2)-(baseline.cx-(box.left+box.width/2)-baseline.x)*ratio;y=m.cy-(box.top+box.height/2)-(baseline.cy-(box.top+box.height/2)-baseline.y)*ratio;}else{x=baseline.x+m.cx-baseline.cx;y=baseline.y+m.cy-baseline.cy;}render();});
+    const end=e=>{points.delete(e.pointerId);begin();};art.addEventListener('pointerup',end);art.addEventListener('pointercancel',end);art.addEventListener('lostpointercapture',end);
+    art.addEventListener('wheel',e=>{e.preventDefault();change(scale*(e.deltaY<0?1.15:1/1.15));},{passive:false});
+    art.addEventListener('dblclick',()=>{x=0;y=0;change(scale>1?1:2);});
+    const observer=new ResizeObserver(render);observer.observe(art);cleanup=()=>{observer.disconnect();points.clear();};render();
+  }
+  function openCompare(){
+    open('选择两套');let ids;
+    try{ids=window.OutfitFavorites.orderedIds(readRecords(),config.allLooks,'all');}catch{status.textContent='收藏暂时无法读取';return;}
+    if(ids.length<2){body.append(element('p','收藏两套穿搭后即可对比'));return;}
+    const selected=new Set(),grid=element('div',null,'compare-picker'),actions=element('div',null,'detail-actions');body.append(grid,actions);
+    const go=action(actions,'查看对比',()=>showComparison([...selected]));go.disabled=true;
+    for(const id of ids){const look=config.allLooks.find(l=>l.id===id),button=element('button',null,'compare-choice'),img=element('img');img.src='thumbnails/'+id+'.webp';img.alt='';img.loading='lazy';button.append(img,element('span',look.name));button.setAttribute('aria-pressed','false');button.setAttribute('aria-label',look.name);button.addEventListener('click',()=>{if(selected.has(id))selected.delete(id);else if(selected.size<2)selected.add(id);else{status.textContent='已选两套，请先取消一套';return;}button.setAttribute('aria-pressed',String(selected.has(id)));go.disabled=selected.size!==2;status.textContent=selected.size+' / 2';});grid.append(button);}
+  }
+  function showComparison(ids){
+    open('穿搭对比');const grid=element('div',null,'compare-view');body.append(grid);
+    for(const id of ids){const look=config.allLooks.find(l=>l.id===id),card=element('figure'),img=element('img');img.src=config.figureOf(id);img.alt=look.name;card.append(img,element('figcaption',config.characters.find(p=>p.id===look.character).name+' · '+look.name));grid.append(card);}
+    const actions=element('div',null,'detail-actions');body.append(actions);action(actions,'重新选择',openCompare);
   }
   function openLook(look,src){
     const rev=open(look.name),photo=element('img');photo.src=src;photo.alt=look.name;
